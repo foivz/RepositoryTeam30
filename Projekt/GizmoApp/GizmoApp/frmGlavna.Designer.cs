@@ -280,6 +280,7 @@
             this.Text = "Gizmo App";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGlavna_Load);
+            this.MdiChildActivate += new System.EventHandler(this.frmGlavna_MdiChildActivate);
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.ResumeLayout(false);

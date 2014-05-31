@@ -8,13 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GizmoApp.Podforme.Administracija
+namespace GizmoApp.Podforme.Prodaja
 {
-
-
-    public partial class frmAdministracijaDodajZaposlenika : Form
+    public partial class frmProdajaUrediKupcaDetalji : Form
     {
-        public frmAdministracijaDodajZaposlenika()
+        public frmProdajaUrediKupcaDetalji()
         {
             InitializeComponent();
         }

@@ -48,9 +48,8 @@ namespace GizmoApp
         private void miProdajaDodajKupca_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Prodaja.frmProdajaDodajKupca frmProdajaDodajKupca = new Podforme.Prodaja.frmProdajaDodajKupca();
-            frmProdajaDodajKupca.MdiParent = this;
-            frmProdajaDodajKupca.WindowState = FormWindowState.Maximized;
-            frmProdajaDodajKupca.Show();
+            frmProdajaDodajKupca.WindowState = FormWindowState.Normal;
+            frmProdajaDodajKupca.ShowDialog();
 
         }
 
@@ -82,16 +81,15 @@ namespace GizmoApp
         private void miNabavaDodajDobavljaca_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Nabava.frmNabavaDodajDobavljaca frmNabavaDodajDobavljaca = new Podforme.Nabava.frmNabavaDodajDobavljaca();
-            frmNabavaDodajDobavljaca.MdiParent = this;
-            frmNabavaDodajDobavljaca.WindowState = FormWindowState.Maximized;
-            frmNabavaDodajDobavljaca.Show();
+            frmNabavaDodajDobavljaca.WindowState = FormWindowState.Normal;
+            frmNabavaDodajDobavljaca.ShowDialog();
         }
 
         private void miNabavaUrediDobavljaca_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Nabava.frmNabavaUrediDobavljaca frmNabavaUrediDobavljaca = new Podforme.Nabava.frmNabavaUrediDobavljaca();
-            frmNabavaUrediDobavljaca.MdiParent = this;
             frmNabavaUrediDobavljaca.WindowState = FormWindowState.Maximized;
+            frmNabavaUrediDobavljaca.MdiParent = this;
             frmNabavaUrediDobavljaca.Show();
         }
 
@@ -115,9 +113,8 @@ namespace GizmoApp
         private void miAdministracijaDodajZaposlenika_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Administracija.frmAdministracijaDodajZaposlenika frmAdministracijaDodajZaposlenika = new Podforme.Administracija.frmAdministracijaDodajZaposlenika();
-            frmAdministracijaDodajZaposlenika.MdiParent = this;
-            frmAdministracijaDodajZaposlenika.WindowState = FormWindowState.Maximized;
-            frmAdministracijaDodajZaposlenika.Show();
+            frmAdministracijaDodajZaposlenika.WindowState = FormWindowState.Normal;
+            frmAdministracijaDodajZaposlenika.ShowDialog();
         }
 
         private void miAdministracijaUrediZaposlenika_MouseUp(object sender, MouseEventArgs e)
@@ -148,6 +145,14 @@ namespace GizmoApp
         {
             string info = "Gizmo App version 1.0\n Služi za evidenciju bla bla bla\n Katarina Zrisnki d.o.o.";
             MessageBox.Show(info);
+        }
+
+        private void frmGlavna_MdiChildActivate(object sender, EventArgs e)
+        {
+            if (MdiChildren.Count() > 1)
+            {
+                MdiChildren.ElementAt(0).Close();
+            }
         }
 
     }

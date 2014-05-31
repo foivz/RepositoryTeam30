@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Prodaja
 {
+    
     public partial class frmProdajaDodajKupca : Form
     {
         public frmProdajaDodajKupca()
         {
             InitializeComponent();
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+
+
     }
 }

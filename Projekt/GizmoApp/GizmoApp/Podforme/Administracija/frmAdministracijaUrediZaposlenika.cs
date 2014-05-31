@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Administracija
 {
+
     public partial class frmAdministracijaUrediZaposlenika : Form
     {
         public frmAdministracijaUrediZaposlenika()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAdministracijaUrediZaposlenikaDetalji forma = new frmAdministracijaUrediZaposlenikaDetalji();
+            forma.WindowState = FormWindowState.Normal;
+            forma.ShowDialog();
         }
     }
 }

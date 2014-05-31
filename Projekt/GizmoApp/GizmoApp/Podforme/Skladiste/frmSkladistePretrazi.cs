@@ -16,5 +16,12 @@ namespace GizmoApp.Podforme.Skladiste
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmSkladistePretraziDetalji forma = new frmSkladistePretraziDetalji();
+            forma.WindowState = FormWindowState.Normal;
+            forma.ShowDialog();
+        }
     }
 }

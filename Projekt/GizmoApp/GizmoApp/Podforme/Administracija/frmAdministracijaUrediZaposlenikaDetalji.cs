@@ -11,10 +11,9 @@ using System.Windows.Forms;
 namespace GizmoApp.Podforme.Administracija
 {
 
-
-    public partial class frmAdministracijaDodajZaposlenika : Form
+    public partial class frmAdministracijaUrediZaposlenikaDetalji : Form
     {
-        public frmAdministracijaDodajZaposlenika()
+        public frmAdministracijaUrediZaposlenikaDetalji()
         {
             InitializeComponent();
         }

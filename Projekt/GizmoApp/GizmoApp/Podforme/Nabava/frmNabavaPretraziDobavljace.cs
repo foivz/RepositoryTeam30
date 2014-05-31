@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Nabava
 {
+
     public partial class frmNabavaPretraziDobavljace : Form
     {
         public frmNabavaPretraziDobavljace()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmNabavaPretraziDobavljaceDetalji forma = new frmNabavaPretraziDobavljaceDetalji();
+            forma.WindowState = FormWindowState.Normal;
+            forma.ShowDialog();
         }
     }
 }

@@ -16,5 +16,18 @@ namespace GizmoApp.Podforme.Prodaja
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmProdajaUrediKupcaDetalji forma = new frmProdajaUrediKupcaDetalji();
+            forma.WindowState = FormWindowState.Normal;
+            forma.ShowDialog();
+        }
+
+        private void dgvPopis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

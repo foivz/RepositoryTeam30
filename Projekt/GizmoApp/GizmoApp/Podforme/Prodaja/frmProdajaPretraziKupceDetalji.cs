@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GizmoApp.Podforme.Administracija
+namespace GizmoApp.Podforme.Prodaja
 {
-
-
-    public partial class frmAdministracijaDodajZaposlenika : Form
+    public partial class frmProdajaPretraziKupceDetalji : Form
     {
-        public frmAdministracijaDodajZaposlenika()
+        public frmProdajaPretraziKupceDetalji()
         {
             InitializeComponent();
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        private void btnZatvori_Click(object sender, EventArgs e)
         {
             this.Close();
         }

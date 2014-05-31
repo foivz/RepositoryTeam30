@@ -87,6 +87,12 @@
     <Compile Include="Podforme\Administracija\frmAdministracijaUrediZaposlenika.Designer.cs">
       <DependentUpon>frmAdministracijaUrediZaposlenika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Administracija\frmAdministracijaUrediZaposlenikaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Administracija\frmAdministracijaUrediZaposlenikaDetalji.Designer.cs">
+      <DependentUpon>frmAdministracijaUrediZaposlenikaDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Izvjesca\frmIzvjescaKreirajIzvjesce.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +123,23 @@
     <Compile Include="Podforme\Nabava\frmNabavaPretraziDobavljace.Designer.cs">
       <DependentUpon>frmNabavaPretraziDobavljace.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaPretraziDobavljaceDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaPretraziDobavljaceDetalji.Designer.cs">
+      <DependentUpon>frmNabavaPretraziDobavljaceDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Nabava\frmNabavaUrediDobavljaca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Podforme\Nabava\frmNabavaUrediDobavljaca.Designer.cs">
       <DependentUpon>frmNabavaUrediDobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaUrediDobavljacaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaUrediDobavljacaDetalji.Designer.cs">
+      <DependentUpon>frmNabavaUrediDobavljacaDetalji.cs</DependentUpon>
     </Compile>
     <Compile Include="Podforme\Prodaja\frmProdajaDodajKupca.cs">
       <SubType>Form</SubType>
@@ -141,11 +159,23 @@
     <Compile Include="Podforme\Prodaja\frmProdajaPretraziKupce.Designer.cs">
       <DependentUpon>frmProdajaPretraziKupce.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Prodaja\frmProdajaPretraziKupceDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Prodaja\frmProdajaPretraziKupceDetalji.Designer.cs">
+      <DependentUpon>frmProdajaPretraziKupceDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Prodaja\frmProdajaUrediKupca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Podforme\Prodaja\frmProdajaUrediKupca.Designer.cs">
       <DependentUpon>frmProdajaUrediKupca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podforme\Prodaja\frmProdajaUrediKupcaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Prodaja\frmProdajaUrediKupcaDetalji.Designer.cs">
+      <DependentUpon>frmProdajaUrediKupcaDetalji.cs</DependentUpon>
     </Compile>
     <Compile Include="Podforme\Skladiste\frmSkladistePretrazi.cs">
       <SubType>Form</SubType>
@@ -153,11 +183,23 @@
     <Compile Include="Podforme\Skladiste\frmSkladistePretrazi.Designer.cs">
       <DependentUpon>frmSkladistePretrazi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladistePretraziDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladistePretraziDetalji.Designer.cs">
+      <DependentUpon>frmSkladistePretraziDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Skladiste\frmSkladisteUredi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Podforme\Skladiste\frmSkladisteUredi.Designer.cs">
       <DependentUpon>frmSkladisteUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladisteUrediDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladisteUrediDetalji.Designer.cs">
+      <DependentUpon>frmSkladisteUrediDetalji.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Administracija\frmAdministracijaUrediZaposlenika.resx">
       <DependentUpon>frmAdministracijaUrediZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Administracija\frmAdministracijaUrediZaposlenikaDetalji.resx">
+      <DependentUpon>frmAdministracijaUrediZaposlenikaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Izvjesca\frmIzvjescaKreirajIzvjesce.resx">
       <DependentUpon>frmIzvjescaKreirajIzvjesce.cs</DependentUpon>
@@ -188,8 +233,14 @@
     <EmbeddedResource Include="Podforme\Nabava\frmNabavaPretraziDobavljace.resx">
       <DependentUpon>frmNabavaPretraziDobavljace.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Nabava\frmNabavaPretraziDobavljaceDetalji.resx">
+      <DependentUpon>frmNabavaPretraziDobavljaceDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Nabava\frmNabavaUrediDobavljaca.resx">
       <DependentUpon>frmNabavaUrediDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Nabava\frmNabavaUrediDobavljacaDetalji.resx">
+      <DependentUpon>frmNabavaUrediDobavljacaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Prodaja\frmProdajaDodajKupca.resx">
       <DependentUpon>frmProdajaDodajKupca.cs</DependentUpon>
@@ -200,14 +251,26 @@
     <EmbeddedResource Include="Podforme\Prodaja\frmProdajaPretraziKupce.resx">
       <DependentUpon>frmProdajaPretraziKupce.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Prodaja\frmProdajaPretraziKupceDetalji.resx">
+      <DependentUpon>frmProdajaPretraziKupceDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Prodaja\frmProdajaUrediKupca.resx">
       <DependentUpon>frmProdajaUrediKupca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Prodaja\frmProdajaUrediKupcaDetalji.resx">
+      <DependentUpon>frmProdajaUrediKupcaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Skladiste\frmSkladistePretrazi.resx">
       <DependentUpon>frmSkladistePretrazi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Skladiste\frmSkladistePretraziDetalji.resx">
+      <DependentUpon>frmSkladistePretraziDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Skladiste\frmSkladisteUredi.resx">
       <DependentUpon>frmSkladisteUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Skladiste\frmSkladisteUrediDetalji.resx">
+      <DependentUpon>frmSkladisteUrediDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -15,6 +15,16 @@ namespace GizmoApp.Podforme.Prodaja
         public frmProdajaPretraziKupce()
         {
             InitializeComponent();
+
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmProdajaPretraziKupceDetalji form = new frmProdajaPretraziKupceDetalji();
+            form.WindowState = FormWindowState.Normal;
+            form.Show();
+        }
+
+    
     }
 }
