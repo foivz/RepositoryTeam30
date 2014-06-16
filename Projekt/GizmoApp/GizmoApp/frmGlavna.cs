@@ -39,9 +39,7 @@ namespace GizmoApp
         private void miSkladistePretrazi_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Skladiste.frmSkladistePretrazi frmSkladistePretrazi = new Podforme.Skladiste.frmSkladistePretrazi();
-            frmSkladistePretrazi.MdiParent = this;
-            frmSkladistePretrazi.WindowState = FormWindowState.Maximized;
-            frmSkladistePretrazi.Show();
+            frmSkladistePretrazi.ShowDialog();
         }
 
         // Prodaja
@@ -64,9 +62,8 @@ namespace GizmoApp
         private void miProdajaPretraziKupce_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Prodaja.frmProdajaPretraziKupce frmProdajaPretraziKupce = new Podforme.Prodaja.frmProdajaPretraziKupce();
-            frmProdajaPretraziKupce.MdiParent = this;
-            frmProdajaPretraziKupce.WindowState = FormWindowState.Maximized;
-            frmProdajaPretraziKupce.Show();
+            frmProdajaPretraziKupce.WindowState = FormWindowState.Normal;
+            frmProdajaPretraziKupce.ShowDialog();
         }
 
         private void miProdajaKreirajOtpremnicu_MouseUp(object sender, MouseEventArgs e)
@@ -95,10 +92,9 @@ namespace GizmoApp
 
         private void miNabavaPretraziDobavljace_MouseUp(object sender, MouseEventArgs e)
         {
-            Podforme.Nabava.frmNabavaPretraziDobavljace frmNabavaPretraziDobavljace = new Podforme.Nabava.frmNabavaPretraziDobavljace();
-            frmNabavaPretraziDobavljace.MdiParent = this;
-            frmNabavaPretraziDobavljace.WindowState = FormWindowState.Maximized;
-            frmNabavaPretraziDobavljace.Show();
+            Podforme.Nabava.frmNabavaPretraziDobavljace frmNabavaPretraziDobavljace = new Podforme.Nabava.frmNabavaPretraziDobavljace();     
+            frmNabavaPretraziDobavljace.WindowState = FormWindowState.Normal;
+            frmNabavaPretraziDobavljace.ShowDialog();
         }
 
         private void miNabavaKreirajNarudzbenicu_MouseUp(object sender, MouseEventArgs e)
@@ -120,9 +116,8 @@ namespace GizmoApp
         private void miAdministracijaUrediZaposlenika_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Administracija.frmAdministracijaUrediZaposlenika frmAdministracijaUrediZaposlenika = new Podforme.Administracija.frmAdministracijaUrediZaposlenika();
-            frmAdministracijaUrediZaposlenika.MdiParent = this;
-            frmAdministracijaUrediZaposlenika.WindowState = FormWindowState.Maximized;
-            frmAdministracijaUrediZaposlenika.Show();
+            frmAdministracijaUrediZaposlenika.WindowState = FormWindowState.Normal;
+            frmAdministracijaUrediZaposlenika.ShowDialog();
         }
 
         private void miIzvjescaKreirajIzvjesce_MouseUp(object sender, MouseEventArgs e)

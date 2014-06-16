@@ -22,3 +22,10 @@ D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.resources
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaUrediDobavljacaDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaUrediKupcaDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteUrediDetalji.resources

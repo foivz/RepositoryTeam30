@@ -19,14 +19,15 @@ namespace GizmoApp
 
         private void Prijava()
         {
-            GizmoApp.Program.prijava = true;
-
             string korime = txtboxKorisnickoIme.Text.ToString();
             string lozinka = txtboxLozinka.Text.ToString();
 
             MessageBox.Show("Korime: " + korime + "\n" + "Lozinka: " + lozinka);
 
             //provjera login podataka, zatim close
+
+            GizmoApp.Program.prijava = true;
+
             this.Close();
         }
 
