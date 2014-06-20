@@ -27,15 +27,7 @@ namespace GizmoApp
             this.Close();
         }
         
-        // Skladiste    
-        private void miSkladisteUredi_MouseUp(object sender, MouseEventArgs e)
-        {
-            Podforme.Skladiste.frmSkladisteUredi frmSkladisteUredi = new Podforme.Skladiste.frmSkladisteUredi();
-            frmSkladisteUredi.MdiParent = this;
-            frmSkladisteUredi.WindowState = FormWindowState.Maximized;
-            frmSkladisteUredi.Show();
-        }
-
+        // Skladiste   
         private void miSkladistePretrazi_MouseUp(object sender, MouseEventArgs e)
         {
             Podforme.Skladiste.frmSkladistePretrazi frmSkladistePretrazi = new Podforme.Skladiste.frmSkladistePretrazi();
@@ -49,14 +41,6 @@ namespace GizmoApp
             frmProdajaDodajKupca.WindowState = FormWindowState.Normal;
             frmProdajaDodajKupca.ShowDialog();
 
-        }
-
-        private void miProdajaUrediKupca_MouseUp(object sender, MouseEventArgs e)
-        {
-            Podforme.Prodaja.frmProdajaUrediKupca frmProdajaUrediKupca = new Podforme.Prodaja.frmProdajaUrediKupca();
-            frmProdajaUrediKupca.MdiParent = this;
-            frmProdajaUrediKupca.WindowState = FormWindowState.Maximized;
-            frmProdajaUrediKupca.Show();
         }
 
         private void miProdajaPretraziKupce_MouseUp(object sender, MouseEventArgs e)
@@ -82,13 +66,7 @@ namespace GizmoApp
             frmNabavaDodajDobavljaca.ShowDialog();
         }
 
-        private void miNabavaUrediDobavljaca_MouseUp(object sender, MouseEventArgs e)
-        {
-            Podforme.Nabava.frmNabavaUrediDobavljaca frmNabavaUrediDobavljaca = new Podforme.Nabava.frmNabavaUrediDobavljaca();
-            frmNabavaUrediDobavljaca.WindowState = FormWindowState.Maximized;
-            frmNabavaUrediDobavljaca.MdiParent = this;
-            frmNabavaUrediDobavljaca.Show();
-        }
+
 
         private void miNabavaPretraziDobavljace_MouseUp(object sender, MouseEventArgs e)
         {

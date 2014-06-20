@@ -228,6 +228,7 @@
             this.dgvDobavljaci.Name = "dgvDobavljaci";
             this.dgvDobavljaci.Size = new System.Drawing.Size(645, 220);
             this.dgvDobavljaci.TabIndex = 1;
+            this.dgvDobavljaci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDobavljaci_CellDoubleClick);
             this.dgvDobavljaci.SelectionChanged += new System.EventHandler(this.dgvDobavljaci_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdajaPretraziKupce));
             this.kupciBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.kupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -41,35 +43,33 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvKupci = new System.Windows.Forms.DataGridView();
-            this.dgvKnjigaHasKupci = new System.Windows.Forms.DataGridView();
-            this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
-            this.knjiga_has_KupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvKnjigaHasKupci = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.knjiga_has_KupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KupciTableAdapter();
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.knjiga_has_KupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter();
             this.knjigahasDobavljaciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.knjiga_has_DobavljaciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_DobavljaciTableAdapter();
             this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kupciBindingNavigator)).BeginInit();
             this.kupciBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kupciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasKupci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kupciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigahasDobavljaciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,16 @@
             this.kupciBindingNavigator.Size = new System.Drawing.Size(682, 25);
             this.kupciBindingNavigator.TabIndex = 0;
             this.kupciBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // kupciBindingSource
+            // 
+            this.kupciBindingSource.DataMember = "Kupci";
+            this.kupciBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // gizmoDBDataSet
+            // 
+            this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
+            this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -185,39 +195,8 @@
             this.dgvKupci.Name = "dgvKupci";
             this.dgvKupci.Size = new System.Drawing.Size(649, 212);
             this.dgvKupci.TabIndex = 1;
+            this.dgvKupci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKupci_CellDoubleClick);
             this.dgvKupci.SelectionChanged += new System.EventHandler(this.kupciDataGridView_SelectionChanged);
-            // 
-            // dgvKnjigaHasKupci
-            // 
-            this.dgvKnjigaHasKupci.AllowUserToAddRows = false;
-            this.dgvKnjigaHasKupci.AllowUserToDeleteRows = false;
-            this.dgvKnjigaHasKupci.AutoGenerateColumns = false;
-            this.dgvKnjigaHasKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKnjigaHasKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
-            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(304, 273);
-            this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
-            this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(357, 220);
-            this.dgvKnjigaHasKupci.TabIndex = 2;
-            // 
-            // knjigaBindingSource
-            // 
-            this.knjigaBindingSource.DataMember = "Knjiga";
-            this.knjigaBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // gizmoDBDataSet
-            // 
-            this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
-            this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // knjiga_has_KupciBindingSource
-            // 
-            this.knjiga_has_KupciBindingSource.DataMember = "Knjiga_has_Kupci";
-            this.knjiga_has_KupciBindingSource.DataSource = this.gizmoDBDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -256,10 +235,64 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Telefon";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // kupciBindingSource
+            // dgvKnjigaHasKupci
             // 
-            this.kupciBindingSource.DataMember = "Kupci";
-            this.kupciBindingSource.DataSource = this.gizmoDBDataSet;
+            this.dgvKnjigaHasKupci.AllowUserToAddRows = false;
+            this.dgvKnjigaHasKupci.AllowUserToDeleteRows = false;
+            this.dgvKnjigaHasKupci.AutoGenerateColumns = false;
+            this.dgvKnjigaHasKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKnjigaHasKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
+            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(304, 273);
+            this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
+            this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(357, 220);
+            this.dgvKnjigaHasKupci.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Kupci_idKupci";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ID kupca";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Knjiga_idKnjiga";
+            this.dataGridViewTextBoxColumn7.DataSource = this.knjigaBindingSource;
+            this.dataGridViewTextBoxColumn7.DisplayMember = "Naziv";
+            this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Knjiga";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn7.ValueMember = "idKnjiga";
+            // 
+            // knjigaBindingSource
+            // 
+            this.knjigaBindingSource.DataMember = "Knjiga";
+            this.knjigaBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Kolicina";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Kolicina";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Datum_prodaje";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Datum prodaje";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // knjiga_has_KupciBindingSource
+            // 
+            this.knjiga_has_KupciBindingSource.DataMember = "Knjiga_has_Kupci";
+            this.knjiga_has_KupciBindingSource.DataSource = this.gizmoDBDataSet;
             // 
             // kupciTableAdapter
             // 
@@ -300,38 +333,6 @@
             // 
             this.knjigaTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Kupci_idKupci";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ID kupca";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Knjiga_idKnjiga";
-            this.dataGridViewTextBoxColumn7.DataSource = this.knjigaBindingSource;
-            this.dataGridViewTextBoxColumn7.DisplayMember = "Naziv";
-            this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Knjiga";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn7.ValueMember = "idKnjiga";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Kolicina";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Kolicina";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Datum_prodaje";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Datum prodaje";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
             // frmProdajaPretraziKupce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,12 +349,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kupciBindingNavigator)).EndInit();
             this.kupciBindingNavigator.ResumeLayout(false);
             this.kupciBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kupciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasKupci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kupciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigahasDobavljaciBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

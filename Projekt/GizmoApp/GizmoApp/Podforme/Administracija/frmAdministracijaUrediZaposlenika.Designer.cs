@@ -49,15 +49,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.zaposlenikBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dgvZaposlenik = new System.Windows.Forms.DataGridView();
-            this.odjel_has_PogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvOdjelHasPogled = new System.Windows.Forms.DataGridView();
-            this.odjelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
-            this.pogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.PogledTableAdapter();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.odjelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,14 +60,21 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.odjel_has_PogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvOdjelHasPogled = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.pogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
+            this.pogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.PogledTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingNavigator)).BeginInit();
             this.zaposlenikBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odjel_has_PogledBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pogledBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -260,70 +260,8 @@
             this.dgvZaposlenik.Name = "dgvZaposlenik";
             this.dgvZaposlenik.Size = new System.Drawing.Size(952, 220);
             this.dgvZaposlenik.TabIndex = 1;
+            this.dgvZaposlenik.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZaposlenik_CellDoubleClick);
             this.dgvZaposlenik.SelectionChanged += new System.EventHandler(this.dgvZaposlenik_SelectionChanged);
-            // 
-            // odjel_has_PogledBindingSource
-            // 
-            this.odjel_has_PogledBindingSource.DataMember = "Odjel_has_Pogled";
-            this.odjel_has_PogledBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // dgvOdjelHasPogled
-            // 
-            this.dgvOdjelHasPogled.AllowUserToAddRows = false;
-            this.dgvOdjelHasPogled.AllowUserToDeleteRows = false;
-            this.dgvOdjelHasPogled.AutoGenerateColumns = false;
-            this.dgvOdjelHasPogled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdjelHasPogled.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.dgvOdjelHasPogled.DataSource = this.odjel_has_PogledBindingSource;
-            this.dgvOdjelHasPogled.Location = new System.Drawing.Point(12, 284);
-            this.dgvOdjelHasPogled.Name = "dgvOdjelHasPogled";
-            this.dgvOdjelHasPogled.Size = new System.Drawing.Size(160, 202);
-            this.dgvOdjelHasPogled.TabIndex = 2;
-            // 
-            // odjelBindingSource
-            // 
-            this.odjelBindingSource.DataMember = "Odjel";
-            this.odjelBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // odjelTableAdapter
-            // 
-            this.odjelTableAdapter.ClearBeforeFill = true;
-            // 
-            // pogledBindingSource
-            // 
-            this.pogledBindingSource.DataMember = "Pogled";
-            this.pogledBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // pogledTableAdapter
-            // 
-            this.pogledTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Odjel_idOdjel";
-            this.dataGridViewTextBoxColumn11.DataSource = this.odjelBindingSource;
-            this.dataGridViewTextBoxColumn11.DisplayMember = "Naziv";
-            this.dataGridViewTextBoxColumn11.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Odjel";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn11.ValueMember = "idOdjel";
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Pogled_idPogled";
-            this.dataGridViewTextBoxColumn12.DataSource = this.pogledBindingSource;
-            this.dataGridViewTextBoxColumn12.DisplayMember = "Razina_pogleda";
-            this.dataGridViewTextBoxColumn12.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn12.HeaderText = "Pogled";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn12.ValueMember = "idPogled";
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -336,6 +274,11 @@
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn10.ValueMember = "idOdjel";
+            // 
+            // odjelBindingSource
+            // 
+            this.odjelBindingSource.DataMember = "Odjel";
+            this.odjelBindingSource.DataSource = this.gizmoDBDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -393,6 +336,64 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Lozinka";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // odjel_has_PogledBindingSource
+            // 
+            this.odjel_has_PogledBindingSource.DataMember = "Odjel_has_Pogled";
+            this.odjel_has_PogledBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // dgvOdjelHasPogled
+            // 
+            this.dgvOdjelHasPogled.AllowUserToAddRows = false;
+            this.dgvOdjelHasPogled.AllowUserToDeleteRows = false;
+            this.dgvOdjelHasPogled.AutoGenerateColumns = false;
+            this.dgvOdjelHasPogled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOdjelHasPogled.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dgvOdjelHasPogled.DataSource = this.odjel_has_PogledBindingSource;
+            this.dgvOdjelHasPogled.Location = new System.Drawing.Point(12, 284);
+            this.dgvOdjelHasPogled.Name = "dgvOdjelHasPogled";
+            this.dgvOdjelHasPogled.Size = new System.Drawing.Size(160, 202);
+            this.dgvOdjelHasPogled.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Odjel_idOdjel";
+            this.dataGridViewTextBoxColumn11.DataSource = this.odjelBindingSource;
+            this.dataGridViewTextBoxColumn11.DisplayMember = "Naziv";
+            this.dataGridViewTextBoxColumn11.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Odjel";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn11.ValueMember = "idOdjel";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Pogled_idPogled";
+            this.dataGridViewTextBoxColumn12.DataSource = this.pogledBindingSource;
+            this.dataGridViewTextBoxColumn12.DisplayMember = "Razina_pogleda";
+            this.dataGridViewTextBoxColumn12.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Pogled";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn12.ValueMember = "idPogled";
+            // 
+            // pogledBindingSource
+            // 
+            this.pogledBindingSource.DataMember = "Pogled";
+            this.pogledBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // odjelTableAdapter
+            // 
+            this.odjelTableAdapter.ClearBeforeFill = true;
+            // 
+            // pogledTableAdapter
+            // 
+            this.pogledTableAdapter.ClearBeforeFill = true;
+            // 
             // frmAdministracijaUrediZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,9 +412,9 @@
             this.zaposlenikBindingNavigator.ResumeLayout(false);
             this.zaposlenikBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.odjel_has_PogledBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pogledBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,13 +18,6 @@ namespace GizmoApp.Podforme.Administracija
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmAdministracijaUrediZaposlenikaDetalji forma = new frmAdministracijaUrediZaposlenikaDetalji();
-            forma.WindowState = FormWindowState.Normal;
-            forma.ShowDialog();
-        }
-
         private void zaposlenikBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -42,6 +35,11 @@ namespace GizmoApp.Podforme.Administracija
             this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
         }
 
+        /// <summary>
+        /// Na selekciju zaposlenika dohvaća podatke o njegovom odjelu preko ID-a odjela.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvZaposlenik_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvZaposlenik.RowCount > 0)
@@ -50,6 +48,18 @@ namespace GizmoApp.Podforme.Administracija
 
                 this.odjel_has_PogledTableAdapter.FillByZaposlenikHasPogled(this.gizmoDBDataSet.Odjel_has_Pogled, IDodjel);
             }
+        }
+
+        /// <summary>
+        /// Na dvoklik pojedinog zaposlenika otvara novu formu za uredivanje tog zaposlenika.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvZaposlenik_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmAdministracijaUrediZaposlenikaDetalji forma = new frmAdministracijaUrediZaposlenikaDetalji();
+            forma.WindowState = FormWindowState.Normal;
+            forma.ShowDialog();
         }
 
 

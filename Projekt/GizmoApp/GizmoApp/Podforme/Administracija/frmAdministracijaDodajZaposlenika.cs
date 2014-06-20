@@ -23,5 +23,44 @@ namespace GizmoApp.Podforme.Administracija
         {
             this.Close();
         }
+
+        private void frmAdministracijaDodajZaposlenika_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
+            this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
+            zaposlenikBindingSource.AddNew();
+
+        }
+
+        private void btnSpremi_MouseUp(object sender, MouseEventArgs e)
+        {
+            createNewZaposlenik();
+            
+        }
+
+        /// <summary>
+        /// Provjerava unos podataka i kreira novog zaposlenika.
+        /// Uspjesan unos otvora uredivanje zaposlenika.
+        /// </summary>
+        private void createNewZaposlenik()
+        {
+            this.Validate();
+            try
+            {
+                this.zaposlenikBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
+                MessageBox.Show("Uspjesan unos zaposlenika.");
+                this.Close();
+
+                Podforme.Administracija.frmAdministracijaUrediZaposlenika frmAdministracijaUrediZaposlenika = new Podforme.Administracija.frmAdministracijaUrediZaposlenika();
+                frmAdministracijaUrediZaposlenika.WindowState = FormWindowState.Normal;
+                frmAdministracijaUrediZaposlenika.ShowDialog();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Nepravilan unos podatka!");
+                //MessageBox.Show(error.ToString());
+            }
+        }
     }
 }

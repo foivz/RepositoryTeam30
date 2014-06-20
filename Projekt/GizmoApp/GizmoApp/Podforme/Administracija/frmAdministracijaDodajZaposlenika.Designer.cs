@@ -28,124 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label lblIme;
+            System.Windows.Forms.Label lblPrezime;
+            System.Windows.Forms.Label lblOIB;
+            System.Windows.Forms.Label lblAdresa;
+            System.Windows.Forms.Label lblEmail;
+            System.Windows.Forms.Label lblTelefon;
+            System.Windows.Forms.Label lblKorisnickoIme;
+            System.Windows.Forms.Label lblLozinka;
+            System.Windows.Forms.Label odjel_idOdjelLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracijaDodajZaposlenika));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblAdresa = new System.Windows.Forms.Label();
+            this.grpbxOsobneInformacije = new System.Windows.Forms.GroupBox();
+            this.txtbxAdresa = new System.Windows.Forms.TextBox();
+            this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
             this.txtOIB = new System.Windows.Forms.TextBox();
-            this.lblOIB = new System.Windows.Forms.Label();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.lblPrezime = new System.Windows.Forms.Label();
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.lblIme = new System.Windows.Forms.Label();
+            this.txtbxPrezime = new System.Windows.Forms.TextBox();
+            this.txtbxIme = new System.Windows.Forms.TextBox();
             this.gpxKontakt = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblTelefon = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.telefonTextBox = new System.Windows.Forms.TextBox();
+            this.txtbxEmail = new System.Windows.Forms.TextBox();
             this.gpxPoslovneInformacije = new System.Windows.Forms.GroupBox();
-            this.cbxOdjel = new System.Windows.Forms.ComboBox();
-            this.lblOdjel = new System.Windows.Forms.Label();
-            this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.lblLozinka = new System.Windows.Forms.Label();
-            this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
-            this.lblKorisnickoIme = new System.Windows.Forms.Label();
+            this.txtbxLozinka = new System.Windows.Forms.TextBox();
+            this.txtbxKorisnickoIme = new System.Windows.Forms.TextBox();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
+            this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
+            this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
+            this.odjel_idOdjelTextBox = new System.Windows.Forms.TextBox();
+            lblIme = new System.Windows.Forms.Label();
+            lblPrezime = new System.Windows.Forms.Label();
+            lblOIB = new System.Windows.Forms.Label();
+            lblAdresa = new System.Windows.Forms.Label();
+            lblEmail = new System.Windows.Forms.Label();
+            lblTelefon = new System.Windows.Forms.Label();
+            lblKorisnickoIme = new System.Windows.Forms.Label();
+            lblLozinka = new System.Windows.Forms.Label();
+            odjel_idOdjelLabel = new System.Windows.Forms.Label();
+            this.grpbxOsobneInformacije.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             this.gpxKontakt.SuspendLayout();
             this.gpxPoslovneInformacije.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // lblIme
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.lblAdresa);
-            this.groupBox1.Controls.Add(this.txtOIB);
-            this.groupBox1.Controls.Add(this.lblOIB);
-            this.groupBox1.Controls.Add(this.txtPrezime);
-            this.groupBox1.Controls.Add(this.lblPrezime);
-            this.groupBox1.Controls.Add(this.txtIme);
-            this.groupBox1.Controls.Add(this.lblIme);
-            this.groupBox1.Location = new System.Drawing.Point(22, 59);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 165);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Osobne informacije";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(85, 129);
-            this.textBox1.MaxLength = 11;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // lblAdresa
-            // 
-            this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Location = new System.Drawing.Point(21, 132);
-            this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(46, 13);
-            this.lblAdresa.TabIndex = 6;
-            this.lblAdresa.Text = "Adresa: ";
-            // 
-            // txtOIB
-            // 
-            this.txtOIB.Location = new System.Drawing.Point(85, 93);
-            this.txtOIB.MaxLength = 11;
-            this.txtOIB.Name = "txtOIB";
-            this.txtOIB.Size = new System.Drawing.Size(100, 20);
-            this.txtOIB.TabIndex = 5;
-            // 
-            // lblOIB
-            // 
-            this.lblOIB.AutoSize = true;
-            this.lblOIB.Location = new System.Drawing.Point(21, 96);
-            this.lblOIB.Name = "lblOIB";
-            this.lblOIB.Size = new System.Drawing.Size(31, 13);
-            this.lblOIB.TabIndex = 4;
-            this.lblOIB.Text = "OIB: ";
-            // 
-            // txtPrezime
-            // 
-            this.txtPrezime.Location = new System.Drawing.Point(85, 62);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(127, 20);
-            this.txtPrezime.TabIndex = 3;
+            lblIme.AutoSize = true;
+            lblIme.Location = new System.Drawing.Point(21, 35);
+            lblIme.Name = "lblIme";
+            lblIme.Size = new System.Drawing.Size(27, 13);
+            lblIme.TabIndex = 6;
+            lblIme.Text = "Ime:";
             // 
             // lblPrezime
             // 
-            this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Location = new System.Drawing.Point(21, 65);
-            this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(50, 13);
-            this.lblPrezime.TabIndex = 2;
-            this.lblPrezime.Text = "Prezime: ";
+            lblPrezime.AutoSize = true;
+            lblPrezime.Location = new System.Drawing.Point(20, 65);
+            lblPrezime.Name = "lblPrezime";
+            lblPrezime.Size = new System.Drawing.Size(47, 13);
+            lblPrezime.TabIndex = 5;
+            lblPrezime.Text = "Prezime:";
             // 
-            // txtIme
+            // lblOIB
             // 
-            this.txtIme.Location = new System.Drawing.Point(85, 32);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(127, 20);
-            this.txtIme.TabIndex = 1;
+            lblOIB.AutoSize = true;
+            lblOIB.Location = new System.Drawing.Point(21, 96);
+            lblOIB.Name = "lblOIB";
+            lblOIB.Size = new System.Drawing.Size(28, 13);
+            lblOIB.TabIndex = 5;
+            lblOIB.Text = "OIB:";
             // 
-            // lblIme
+            // lblAdresa
             // 
-            this.lblIme.AutoSize = true;
-            this.lblIme.Location = new System.Drawing.Point(21, 32);
-            this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(30, 13);
-            this.lblIme.TabIndex = 0;
-            this.lblIme.Text = "Ime: ";
+            lblAdresa.AutoSize = true;
+            lblAdresa.Location = new System.Drawing.Point(20, 132);
+            lblAdresa.Name = "lblAdresa";
+            lblAdresa.Size = new System.Drawing.Size(43, 13);
+            lblAdresa.TabIndex = 5;
+            lblAdresa.Text = "Adresa:";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(35, 27);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(35, 13);
+            lblEmail.TabIndex = 5;
+            lblEmail.Text = "Email:";
+            // 
+            // lblTelefon
+            // 
+            lblTelefon.AutoSize = true;
+            lblTelefon.Location = new System.Drawing.Point(35, 63);
+            lblTelefon.Name = "lblTelefon";
+            lblTelefon.Size = new System.Drawing.Size(46, 13);
+            lblTelefon.TabIndex = 5;
+            lblTelefon.Text = "Telefon:";
+            // 
+            // lblKorisnickoIme
+            // 
+            lblKorisnickoIme.AutoSize = true;
+            lblKorisnickoIme.Location = new System.Drawing.Point(21, 25);
+            lblKorisnickoIme.Name = "lblKorisnickoIme";
+            lblKorisnickoIme.Size = new System.Drawing.Size(78, 13);
+            lblKorisnickoIme.TabIndex = 5;
+            lblKorisnickoIme.Text = "Korisnicko ime:";
+            // 
+            // lblLozinka
+            // 
+            lblLozinka.AutoSize = true;
+            lblLozinka.Location = new System.Drawing.Point(21, 56);
+            lblLozinka.Name = "lblLozinka";
+            lblLozinka.Size = new System.Drawing.Size(47, 13);
+            lblLozinka.TabIndex = 5;
+            lblLozinka.Text = "Lozinka:";
+            // 
+            // grpbxOsobneInformacije
+            // 
+            this.grpbxOsobneInformacije.Controls.Add(this.txtbxAdresa);
+            this.grpbxOsobneInformacije.Controls.Add(lblAdresa);
+            this.grpbxOsobneInformacije.Controls.Add(this.txtOIB);
+            this.grpbxOsobneInformacije.Controls.Add(lblOIB);
+            this.grpbxOsobneInformacije.Controls.Add(this.txtbxPrezime);
+            this.grpbxOsobneInformacije.Controls.Add(lblPrezime);
+            this.grpbxOsobneInformacije.Controls.Add(this.txtbxIme);
+            this.grpbxOsobneInformacije.Controls.Add(lblIme);
+            this.grpbxOsobneInformacije.Location = new System.Drawing.Point(22, 59);
+            this.grpbxOsobneInformacije.Name = "grpbxOsobneInformacije";
+            this.grpbxOsobneInformacije.Size = new System.Drawing.Size(307, 165);
+            this.grpbxOsobneInformacije.TabIndex = 0;
+            this.grpbxOsobneInformacije.TabStop = false;
+            this.grpbxOsobneInformacije.Text = "Osobne informacije";
+            // 
+            // txtbxAdresa
+            // 
+            this.txtbxAdresa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Adresa", true));
+            this.txtbxAdresa.Location = new System.Drawing.Point(85, 129);
+            this.txtbxAdresa.Name = "txtbxAdresa";
+            this.txtbxAdresa.Size = new System.Drawing.Size(216, 20);
+            this.txtbxAdresa.TabIndex = 6;
+            // 
+            // zaposlenikBindingSource
+            // 
+            this.zaposlenikBindingSource.DataMember = "Zaposlenik";
+            this.zaposlenikBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // gizmoDBDataSet
+            // 
+            this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
+            this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtOIB
+            // 
+            this.txtOIB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "OIB", true));
+            this.txtOIB.Location = new System.Drawing.Point(85, 93);
+            this.txtOIB.Name = "txtOIB";
+            this.txtOIB.Size = new System.Drawing.Size(100, 20);
+            this.txtOIB.TabIndex = 6;
+            // 
+            // txtbxPrezime
+            // 
+            this.txtbxPrezime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Prezime", true));
+            this.txtbxPrezime.Location = new System.Drawing.Point(85, 62);
+            this.txtbxPrezime.Name = "txtbxPrezime";
+            this.txtbxPrezime.Size = new System.Drawing.Size(127, 20);
+            this.txtbxPrezime.TabIndex = 6;
+            // 
+            // txtbxIme
+            // 
+            this.txtbxIme.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Ime", true));
+            this.txtbxIme.Location = new System.Drawing.Point(85, 32);
+            this.txtbxIme.Name = "txtbxIme";
+            this.txtbxIme.Size = new System.Drawing.Size(127, 20);
+            this.txtbxIme.TabIndex = 7;
             // 
             // gpxKontakt
             // 
-            this.gpxKontakt.Controls.Add(this.textBox2);
-            this.gpxKontakt.Controls.Add(this.lblEmail);
-            this.gpxKontakt.Controls.Add(this.lblTelefon);
-            this.gpxKontakt.Controls.Add(this.txtEmail);
+            this.gpxKontakt.Controls.Add(this.telefonTextBox);
+            this.gpxKontakt.Controls.Add(lblTelefon);
+            this.gpxKontakt.Controls.Add(this.txtbxEmail);
+            this.gpxKontakt.Controls.Add(lblEmail);
             this.gpxKontakt.Location = new System.Drawing.Point(335, 23);
             this.gpxKontakt.Name = "gpxKontakt";
             this.gpxKontakt.Size = new System.Drawing.Size(250, 100);
@@ -153,104 +218,52 @@
             this.gpxKontakt.TabStop = false;
             this.gpxKontakt.Text = "Kontakt";
             // 
-            // textBox2
+            // telefonTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 60);
-            this.textBox2.MaxLength = 11;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.telefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Telefon", true));
+            this.telefonTextBox.Location = new System.Drawing.Point(87, 60);
+            this.telefonTextBox.Name = "telefonTextBox";
+            this.telefonTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefonTextBox.TabIndex = 6;
             // 
-            // lblEmail
+            // txtbxEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(21, 27);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 13);
-            this.lblEmail.TabIndex = 8;
-            this.lblEmail.Text = "E-mail: ";
-            // 
-            // lblTelefon
-            // 
-            this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(21, 63);
-            this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(49, 13);
-            this.lblTelefon.TabIndex = 10;
-            this.lblTelefon.Text = "Telefon: ";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(85, 24);
-            this.txtEmail.MaxLength = 11;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(159, 20);
-            this.txtEmail.TabIndex = 9;
+            this.txtbxEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Email", true));
+            this.txtbxEmail.Location = new System.Drawing.Point(85, 24);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(159, 20);
+            this.txtbxEmail.TabIndex = 6;
             // 
             // gpxPoslovneInformacije
             // 
-            this.gpxPoslovneInformacije.Controls.Add(this.cbxOdjel);
-            this.gpxPoslovneInformacije.Controls.Add(this.lblOdjel);
-            this.gpxPoslovneInformacije.Controls.Add(this.txtLozinka);
-            this.gpxPoslovneInformacije.Controls.Add(this.lblLozinka);
-            this.gpxPoslovneInformacije.Controls.Add(this.txtKorisnickoIme);
-            this.gpxPoslovneInformacije.Controls.Add(this.lblKorisnickoIme);
+            this.gpxPoslovneInformacije.Controls.Add(odjel_idOdjelLabel);
+            this.gpxPoslovneInformacije.Controls.Add(this.odjel_idOdjelTextBox);
+            this.gpxPoslovneInformacije.Controls.Add(this.txtbxLozinka);
+            this.gpxPoslovneInformacije.Controls.Add(lblLozinka);
+            this.gpxPoslovneInformacije.Controls.Add(this.txtbxKorisnickoIme);
+            this.gpxPoslovneInformacije.Controls.Add(lblKorisnickoIme);
             this.gpxPoslovneInformacije.Location = new System.Drawing.Point(335, 129);
             this.gpxPoslovneInformacije.Name = "gpxPoslovneInformacije";
-            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(250, 132);
+            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(265, 147);
             this.gpxPoslovneInformacije.TabIndex = 2;
             this.gpxPoslovneInformacije.TabStop = false;
             this.gpxPoslovneInformacije.Text = "Poslovne informacije";
             // 
-            // cbxOdjel
+            // txtbxLozinka
             // 
-            this.cbxOdjel.FormattingEnabled = true;
-            this.cbxOdjel.Location = new System.Drawing.Point(108, 89);
-            this.cbxOdjel.Name = "cbxOdjel";
-            this.cbxOdjel.Size = new System.Drawing.Size(100, 21);
-            this.cbxOdjel.TabIndex = 13;
+            this.txtbxLozinka.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Lozinka", true));
+            this.txtbxLozinka.Location = new System.Drawing.Point(108, 53);
+            this.txtbxLozinka.Name = "txtbxLozinka";
+            this.txtbxLozinka.Size = new System.Drawing.Size(100, 20);
+            this.txtbxLozinka.TabIndex = 6;
             // 
-            // lblOdjel
+            // txtbxKorisnickoIme
             // 
-            this.lblOdjel.AutoSize = true;
-            this.lblOdjel.Location = new System.Drawing.Point(21, 92);
-            this.lblOdjel.Name = "lblOdjel";
-            this.lblOdjel.Size = new System.Drawing.Size(37, 13);
-            this.lblOdjel.TabIndex = 12;
-            this.lblOdjel.Text = "Odjel: ";
-            // 
-            // txtLozinka
-            // 
-            this.txtLozinka.Location = new System.Drawing.Point(108, 53);
-            this.txtLozinka.MaxLength = 11;
-            this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(100, 20);
-            this.txtLozinka.TabIndex = 11;
-            // 
-            // lblLozinka
-            // 
-            this.lblLozinka.AutoSize = true;
-            this.lblLozinka.Location = new System.Drawing.Point(21, 56);
-            this.lblLozinka.Name = "lblLozinka";
-            this.lblLozinka.Size = new System.Drawing.Size(50, 13);
-            this.lblLozinka.TabIndex = 10;
-            this.lblLozinka.Text = "Lozinka: ";
-            // 
-            // txtKorisnickoIme
-            // 
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(108, 22);
-            this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(100, 20);
-            this.txtKorisnickoIme.TabIndex = 9;
-            // 
-            // lblKorisnickoIme
-            // 
-            this.lblKorisnickoIme.AutoSize = true;
-            this.lblKorisnickoIme.Location = new System.Drawing.Point(21, 25);
-            this.lblKorisnickoIme.Name = "lblKorisnickoIme";
-            this.lblKorisnickoIme.Size = new System.Drawing.Size(81, 13);
-            this.lblKorisnickoIme.TabIndex = 8;
-            this.lblKorisnickoIme.Text = "Korisničko ime: ";
+            this.txtbxKorisnickoIme.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Korisnicko_ime", true));
+            this.txtbxKorisnickoIme.Location = new System.Drawing.Point(108, 23);
+            this.txtbxKorisnickoIme.Name = "txtbxKorisnickoIme";
+            this.txtbxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
+            this.txtbxKorisnickoIme.TabIndex = 6;
             // 
             // btnSpremi
             // 
@@ -260,6 +273,7 @@
             this.btnSpremi.TabIndex = 3;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSpremi_MouseUp);
             // 
             // btnOdustani
             // 
@@ -271,22 +285,68 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // zaposlenikTableAdapter
+            // 
+            this.zaposlenikTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Kategorija_has_KnjigaTableAdapter = null;
+            this.tableAdapterManager.KategorijaTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_KupciTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.KnjigaTableAdapter = null;
+            this.tableAdapterManager.KupciTableAdapter = null;
+            this.tableAdapterManager.Odjel_has_PogledTableAdapter = null;
+            this.tableAdapterManager.OdjelTableAdapter = this.odjelTableAdapter;
+            this.tableAdapterManager.PogledTableAdapter = null;
+            this.tableAdapterManager.Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ZaposlenikTableAdapter = this.zaposlenikTableAdapter;
+            // 
+            // odjelTableAdapter
+            // 
+            this.odjelTableAdapter.ClearBeforeFill = true;
+            // 
+            // odjel_idOdjelLabel
+            // 
+            odjel_idOdjelLabel.AutoSize = true;
+            odjel_idOdjelLabel.Location = new System.Drawing.Point(21, 93);
+            odjel_idOdjelLabel.Name = "odjel_idOdjelLabel";
+            odjel_idOdjelLabel.Size = new System.Drawing.Size(72, 13);
+            odjel_idOdjelLabel.TabIndex = 6;
+            odjel_idOdjelLabel.Text = "Odjel id Odjel:";
+            // 
+            // odjel_idOdjelTextBox
+            // 
+            this.odjel_idOdjelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Odjel_idOdjel", true));
+            this.odjel_idOdjelTextBox.Location = new System.Drawing.Point(108, 90);
+            this.odjel_idOdjelTextBox.Name = "odjel_idOdjelTextBox";
+            this.odjel_idOdjelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.odjel_idOdjelTextBox.TabIndex = 7;
+            // 
             // frmAdministracijaDodajZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 354);
+            this.ClientSize = new System.Drawing.Size(605, 354);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.gpxPoslovneInformacije);
             this.Controls.Add(this.gpxKontakt);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpbxOsobneInformacije);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministracijaDodajZaposlenika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj zaposlenika";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmAdministracijaDodajZaposlenika_Load);
+            this.grpbxOsobneInformacije.ResumeLayout(false);
+            this.grpbxOsobneInformacije.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             this.gpxKontakt.ResumeLayout(false);
             this.gpxKontakt.PerformLayout();
             this.gpxPoslovneInformacije.ResumeLayout(false);
@@ -297,29 +357,25 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblAdresa;
-        private System.Windows.Forms.TextBox txtOIB;
-        private System.Windows.Forms.Label lblOIB;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.Label lblPrezime;
-        private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.Label lblIme;
+        private System.Windows.Forms.GroupBox grpbxOsobneInformacije;
         private System.Windows.Forms.GroupBox gpxKontakt;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblTelefon;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.GroupBox gpxPoslovneInformacije;
-        private System.Windows.Forms.ComboBox cbxOdjel;
-        private System.Windows.Forms.Label lblOdjel;
-        private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.Label lblLozinka;
-        private System.Windows.Forms.TextBox txtKorisnickoIme;
-        private System.Windows.Forms.Label lblKorisnickoIme;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;
+        private GizmoDBDataSet gizmoDBDataSet;
+        private System.Windows.Forms.BindingSource zaposlenikBindingSource;
+        private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter;
+        private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox txtbxPrezime;
+        private System.Windows.Forms.TextBox txtbxIme;
+        private System.Windows.Forms.TextBox txtbxAdresa;
+        private System.Windows.Forms.TextBox txtOIB;
+        private System.Windows.Forms.TextBox telefonTextBox;
+        private System.Windows.Forms.TextBox txtbxEmail;
+        private System.Windows.Forms.TextBox txtbxLozinka;
+        private System.Windows.Forms.TextBox txtbxKorisnickoIme;
+        private GizmoDBDataSetTableAdapters.OdjelTableAdapter odjelTableAdapter;
+        private System.Windows.Forms.TextBox odjel_idOdjelTextBox;
 
     }
 }

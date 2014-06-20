@@ -34,16 +34,13 @@
             this.miAplikacija = new System.Windows.Forms.ToolStripMenuItem();
             this.miAplikacijaIzlaz = new System.Windows.Forms.ToolStripMenuItem();
             this.miSkladiste = new System.Windows.Forms.ToolStripMenuItem();
-            this.miSkladisteUredi = new System.Windows.Forms.ToolStripMenuItem();
             this.miSkladistePretrazi = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdaja = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdajaDodajKupca = new System.Windows.Forms.ToolStripMenuItem();
-            this.miProdajaUrediKupca = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdajaPretraziKupce = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdajaKreirajOtpremnicu = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabava = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabavaDodajDobavljaca = new System.Windows.Forms.ToolStripMenuItem();
-            this.miNabavaUrediDobavljaca = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabavaPretraziDobavljace = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabavaKreirajNarudzbenicu = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministracija = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,23 +102,15 @@
             // miSkladiste
             // 
             this.miSkladiste.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miSkladisteUredi,
             this.miSkladistePretrazi});
             this.miSkladiste.Name = "miSkladiste";
             this.miSkladiste.Size = new System.Drawing.Size(65, 20);
             this.miSkladiste.Text = "Skladište";
             // 
-            // miSkladisteUredi
-            // 
-            this.miSkladisteUredi.Name = "miSkladisteUredi";
-            this.miSkladisteUredi.Size = new System.Drawing.Size(113, 22);
-            this.miSkladisteUredi.Text = "Uredi";
-            this.miSkladisteUredi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSkladisteUredi_MouseUp);
-            // 
             // miSkladistePretrazi
             // 
             this.miSkladistePretrazi.Name = "miSkladistePretrazi";
-            this.miSkladistePretrazi.Size = new System.Drawing.Size(113, 22);
+            this.miSkladistePretrazi.Size = new System.Drawing.Size(152, 22);
             this.miSkladistePretrazi.Text = "Pretraži";
             this.miSkladistePretrazi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSkladistePretrazi_MouseUp);
             // 
@@ -129,7 +118,6 @@
             // 
             this.miProdaja.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miProdajaDodajKupca,
-            this.miProdajaUrediKupca,
             this.miProdajaPretraziKupce,
             this.miProdajaKreirajOtpremnicu});
             this.miProdaja.Name = "miProdaja";
@@ -142,13 +130,6 @@
             this.miProdajaDodajKupca.Size = new System.Drawing.Size(172, 22);
             this.miProdajaDodajKupca.Text = "Dodaj kupca";
             this.miProdajaDodajKupca.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miProdajaDodajKupca_MouseUp);
-            // 
-            // miProdajaUrediKupca
-            // 
-            this.miProdajaUrediKupca.Name = "miProdajaUrediKupca";
-            this.miProdajaUrediKupca.Size = new System.Drawing.Size(172, 22);
-            this.miProdajaUrediKupca.Text = "Uredi kupca";
-            this.miProdajaUrediKupca.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miProdajaUrediKupca_MouseUp);
             // 
             // miProdajaPretraziKupce
             // 
@@ -168,7 +149,6 @@
             // 
             this.miNabava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miNabavaDodajDobavljaca,
-            this.miNabavaUrediDobavljaca,
             this.miNabavaPretraziDobavljace,
             this.miNabavaKreirajNarudzbenicu});
             this.miNabava.Name = "miNabava";
@@ -181,13 +161,6 @@
             this.miNabavaDodajDobavljaca.Size = new System.Drawing.Size(182, 22);
             this.miNabavaDodajDobavljaca.Text = "Dodaj dobavljača";
             this.miNabavaDodajDobavljaca.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miNabavaDodajDobavljaca_MouseUp);
-            // 
-            // miNabavaUrediDobavljaca
-            // 
-            this.miNabavaUrediDobavljaca.Name = "miNabavaUrediDobavljaca";
-            this.miNabavaUrediDobavljaca.Size = new System.Drawing.Size(182, 22);
-            this.miNabavaUrediDobavljaca.Text = "Uredi dobavljača";
-            this.miNabavaUrediDobavljaca.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miNabavaUrediDobavljaca_MouseUp);
             // 
             // miNabavaPretraziDobavljace
             // 
@@ -295,7 +268,6 @@
         private System.Windows.Forms.ToolStripMenuItem miAplikacija;
         private System.Windows.Forms.ToolStripMenuItem miAplikacijaIzlaz;
         private System.Windows.Forms.ToolStripMenuItem miSkladiste;
-        private System.Windows.Forms.ToolStripMenuItem miSkladisteUredi;
         private System.Windows.Forms.ToolStripMenuItem miSkladistePretrazi;
         private System.Windows.Forms.ToolStripMenuItem miProdaja;
         private System.Windows.Forms.ToolStripMenuItem miNabava;
@@ -303,11 +275,9 @@
         private System.Windows.Forms.ToolStripMenuItem miIzvjesca;
         private System.Windows.Forms.ToolStripMenuItem miPomoc;
         private System.Windows.Forms.ToolStripMenuItem miProdajaDodajKupca;
-        private System.Windows.Forms.ToolStripMenuItem miProdajaUrediKupca;
         private System.Windows.Forms.ToolStripMenuItem miProdajaPretraziKupce;
         private System.Windows.Forms.ToolStripMenuItem miProdajaKreirajOtpremnicu;
         private System.Windows.Forms.ToolStripMenuItem miNabavaDodajDobavljaca;
-        private System.Windows.Forms.ToolStripMenuItem miNabavaUrediDobavljaca;
         private System.Windows.Forms.ToolStripMenuItem miNabavaPretraziDobavljace;
         private System.Windows.Forms.ToolStripMenuItem miNabavaKreirajNarudzbenicu;
         private System.Windows.Forms.ToolStripMenuItem miAdministracijaDodajZaposlenika;
