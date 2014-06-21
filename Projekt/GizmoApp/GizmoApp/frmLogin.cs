@@ -19,16 +19,24 @@ namespace GizmoApp
 
         private void Prijava()
         {
-            string korime = txtboxKorisnickoIme.Text.ToString();
+            Program.korime = txtboxKorisnickoIme.Text.ToString();
             string lozinka = txtboxLozinka.Text.ToString();
 
-            MessageBox.Show("Korime: " + korime + "\n" + "Lozinka: " + lozinka);
+            //MessageBox.Show("Korime: " + korime + "\n" + "Lozinka: " + lozinka);
 
             //provjera login podataka, zatim close
 
-            GizmoApp.Program.prijava = true;
+            string result = this.zaposlenikTableAdapter1.Login(Program.korime, lozinka).ToString();
 
-            this.Close();
+            if (result == "")
+            {
+                MessageBox.Show("Neispravno korisničko ime / lozinka!");
+            }
+            else
+            {
+                Program.prijava = true;
+                this.Close();
+            }
         }
 
         private void btnPrijaviSe_MouseUp(object sender, MouseEventArgs e)

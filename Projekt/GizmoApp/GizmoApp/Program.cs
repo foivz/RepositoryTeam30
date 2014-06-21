@@ -9,6 +9,7 @@ namespace GizmoApp
     static class Program
     {
         public static bool prijava;
+        public static string korime;
 
         /// <summary>
         /// The main entry point for the application.

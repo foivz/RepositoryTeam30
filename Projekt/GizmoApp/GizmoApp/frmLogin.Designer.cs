@@ -34,6 +34,7 @@
             this.txtboxKorisnickoIme = new System.Windows.Forms.TextBox();
             this.txtboxLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijaviSe = new System.Windows.Forms.Button();
+            this.zaposlenikTableAdapter1 = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
             this.SuspendLayout();
             // 
             // lblKorisnickoIme
@@ -84,6 +85,10 @@
             this.btnPrijaviSe.UseVisualStyleBackColor = true;
             this.btnPrijaviSe.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnPrijaviSe_MouseUp);
             // 
+            // zaposlenikTableAdapter1
+            // 
+            this.zaposlenikTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +117,7 @@
         private System.Windows.Forms.TextBox txtboxKorisnickoIme;
         private System.Windows.Forms.TextBox txtboxLozinka;
         private System.Windows.Forms.Button btnPrijaviSe;
+        private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter1;
     }
 }
 

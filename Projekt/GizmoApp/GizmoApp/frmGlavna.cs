@@ -19,7 +19,14 @@ namespace GizmoApp
 
         private void frmGlavna_Load(object sender, EventArgs e)
         {
-            lblKorisnickoIme.Text = "KorisnickoIme";
+            lblKorisnickoIme.Text = Program.korime;
+
+
+            //IEnumerable<DataRow> pogledi = this.zaposlenikTableAdapter1.GetDataByKorimeHasPogled(Program.korime).AsEnumerable();
+            //for (int i = 0; i < pogledi.Count(); i++)
+            //{
+            //    MessageBox.Show(pogledi.ElementAt(i).ToString());
+            //}
         }
 
         private void miAplikacijaIzlaz_MouseUp(object sender, MouseEventArgs e)

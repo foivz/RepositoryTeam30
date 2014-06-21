@@ -110,7 +110,7 @@
             // miSkladistePretrazi
             // 
             this.miSkladistePretrazi.Name = "miSkladistePretrazi";
-            this.miSkladistePretrazi.Size = new System.Drawing.Size(152, 22);
+            this.miSkladistePretrazi.Size = new System.Drawing.Size(113, 22);
             this.miSkladistePretrazi.Text = "Pretraži";
             this.miSkladistePretrazi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSkladistePretrazi_MouseUp);
             // 
