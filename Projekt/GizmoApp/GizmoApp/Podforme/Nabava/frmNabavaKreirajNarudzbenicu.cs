@@ -16,5 +16,19 @@ namespace GizmoApp.Podforme.Nabava
         {
             InitializeComponent();
         }
+
+        private void btnKreirajNarudzbenicu_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult odg = MessageBox.Show("Jeste li sigurni da želite kreirati novu narudžbenicu?","Obavijest",MessageBoxButtons.YesNo);
+            if (odg == DialogResult.Yes)
+            {
+                //Ažurirati bazu (inače se baza ne treba ažurirati) i kreirati pdf (izvješće)  i spremit ga negdi
+            }
+            else
+            {
+                //Ne napravi ništ nego vrati u formu za kreiranje.
+            }
+
+        }
     }
 }
