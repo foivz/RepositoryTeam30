@@ -13,6 +13,7 @@ namespace GizmoApp.Podforme.Administracija
 
     public partial class frmAdministracijaUrediZaposlenika : Form
     {
+        private int idZaposlenik { get; set; }
         public frmAdministracijaUrediZaposlenika()
         {
             InitializeComponent();
@@ -45,7 +46,7 @@ namespace GizmoApp.Podforme.Administracija
             if (dgvZaposlenik.RowCount > 0)
             {
                 int IDodjel = int.Parse(dgvZaposlenik.CurrentRow.Cells[0].Value.ToString());
-
+                this.idZaposlenik = int.Parse(dgvZaposlenik.CurrentRow.Cells[1].Value.ToString());
                 this.odjel_has_PogledTableAdapter.FillByZaposlenikHasPogled(this.gizmoDBDataSet.Odjel_has_Pogled, IDodjel);
             }
         }
@@ -57,9 +58,10 @@ namespace GizmoApp.Podforme.Administracija
         /// <param name="e"></param>
         private void dgvZaposlenik_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmAdministracijaUrediZaposlenikaDetalji forma = new frmAdministracijaUrediZaposlenikaDetalji();
+            frmAdministracijaUrediZaposlenikaDetalji forma = new frmAdministracijaUrediZaposlenikaDetalji(this.idZaposlenik);
             forma.WindowState = FormWindowState.Normal;
             forma.ShowDialog();
+            frmAdministracijaUrediZaposlenika_Load(sender, e);
         }
 
 

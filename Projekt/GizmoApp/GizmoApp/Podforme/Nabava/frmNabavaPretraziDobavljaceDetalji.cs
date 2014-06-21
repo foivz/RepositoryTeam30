@@ -13,14 +13,34 @@ namespace GizmoApp.Podforme.Nabava
 
     public partial class frmNabavaPretraziDobavljaceDetalji : Form
     {
-        public frmNabavaPretraziDobavljaceDetalji()
+        private int idDobavljaca { get; set; }
+        public frmNabavaPretraziDobavljaceDetalji(int id)
         {
             InitializeComponent();
+            this.idDobavljaca = id;
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void frmNabavaPretraziDobavljaceDetalji_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Dobavljaci' table. You can move, or remove it, as needed.
+            this.dobavljaciTableAdapter.FillByDobavljacId(this.gizmoDBDataSet.Dobavljaci,this.idDobavljaca);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.dobavljaciBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
+            this.Close();
+        }
+
+
+
     }
 }

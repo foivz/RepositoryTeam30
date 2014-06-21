@@ -12,11 +12,15 @@ namespace GizmoApp.Podforme.Prodaja
 {
     public partial class frmProdajaPretraziKupce : Form
     {
+        private int idKupca{get; set;}
+
         public frmProdajaPretraziKupce()
         {
             InitializeComponent();
 
         }
+
+
 
         private void frmProdajaPretraziKupce_Load(object sender, EventArgs e)
         {
@@ -36,8 +40,8 @@ namespace GizmoApp.Podforme.Prodaja
         {
             if (dgvKupci.RowCount > 0)
             {
-                int IDkupci = int.Parse(dgvKupci.CurrentRow.Cells[0].Value.ToString());
-                this.knjiga_has_KupciTableAdapter.FillByKnjigaHasKupac(this.gizmoDBDataSet.Knjiga_has_Kupci, IDkupci);
+               this.idKupca = int.Parse(dgvKupci.CurrentRow.Cells[0].Value.ToString());
+               this.knjiga_has_KupciTableAdapter.FillByKnjigaHasKupac(this.gizmoDBDataSet.Knjiga_has_Kupci, this.idKupca);
             }
         }
 
@@ -49,11 +53,11 @@ namespace GizmoApp.Podforme.Prodaja
         /// <param name="e"></param>
         private void dgvKupci_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmProdajaPretraziKupceDetalji form = new frmProdajaPretraziKupceDetalji();
+            frmProdajaPretraziKupceDetalji form = new frmProdajaPretraziKupceDetalji(this.idKupca);
             form.WindowState = FormWindowState.Normal;
             form.ShowDialog();
+            frmProdajaPretraziKupce_Load(sender, e);
         }
-
     
     }
 }

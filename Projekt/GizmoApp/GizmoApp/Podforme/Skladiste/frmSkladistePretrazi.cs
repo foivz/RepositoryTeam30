@@ -12,6 +12,7 @@ namespace GizmoApp.Podforme.Skladiste
 {
     public partial class frmSkladistePretrazi : Form
     {
+        private int idSkladista { get; set; }
         public frmSkladistePretrazi()
         {
             InitializeComponent();
@@ -34,9 +35,9 @@ namespace GizmoApp.Podforme.Skladiste
         {
             if (dgvSektorSkladista.RowCount > 0)
             {
-                int SkladisteID = int.Parse(dgvSektorSkladista.CurrentRow.Cells[0].Value.ToString());
+                this.idSkladista = int.Parse(dgvSektorSkladista.CurrentRow.Cells[0].Value.ToString());
 
-                this.knjiga_has_Sektor_skladistaTableAdapter.FillBySektor_skladista_idSektor_skladista(this.gizmoDBDataSet.Knjiga_has_Sektor_skladista,SkladisteID);
+                this.knjiga_has_Sektor_skladistaTableAdapter.FillBySektor_skladista_idSektor_skladista(this.gizmoDBDataSet.Knjiga_has_Sektor_skladista,this.idSkladista);
 
                 txtbxKapacitetSektora.Text = dgvSektorSkladista.CurrentRow.Cells[1].Value.ToString();
 
@@ -78,9 +79,10 @@ namespace GizmoApp.Podforme.Skladiste
         /// <param name="e"></param>
         private void dgvSektorSkladista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmSkladistePretraziDetalji forma = new frmSkladistePretraziDetalji();
+            frmSkladistePretraziDetalji forma = new frmSkladistePretraziDetalji(this.idSkladista);
             forma.WindowState = FormWindowState.Normal;
             forma.ShowDialog();
+            frmSkladistePretrazi_Load(sender, e);
         }
 
         private void txtbxPretrazi_TextChanged(object sender, EventArgs e)

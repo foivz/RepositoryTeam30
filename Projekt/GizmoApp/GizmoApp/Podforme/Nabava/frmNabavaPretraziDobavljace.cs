@@ -13,6 +13,7 @@ namespace GizmoApp.Podforme.Nabava
 
     public partial class frmNabavaPretraziDobavljace : Form
     {
+        private int idDobavljac { get; set; }
         public frmNabavaPretraziDobavljace()
         {
             InitializeComponent();
@@ -37,8 +38,8 @@ namespace GizmoApp.Podforme.Nabava
         {
             if (dgvDobavljaci.RowCount > 0)
             {
-                int IDdobavljaci = int.Parse(dgvDobavljaci.CurrentRow.Cells[0].Value.ToString());
-                this.knjiga_has_DobavljaciTableAdapter.FillByKnjigaHasDobavljaci(this.gizmoDBDataSet.Knjiga_has_Dobavljaci, IDdobavljaci);
+                this.idDobavljac = int.Parse(dgvDobavljaci.CurrentRow.Cells[0].Value.ToString());
+                this.knjiga_has_DobavljaciTableAdapter.FillByKnjigaHasDobavljaci(this.gizmoDBDataSet.Knjiga_has_Dobavljaci, this.idDobavljac);
             }
         }
 
@@ -49,9 +50,10 @@ namespace GizmoApp.Podforme.Nabava
         /// <param name="e"></param>
         private void dgvDobavljaci_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmNabavaPretraziDobavljaceDetalji forma = new frmNabavaPretraziDobavljaceDetalji();
+            frmNabavaPretraziDobavljaceDetalji forma = new frmNabavaPretraziDobavljaceDetalji(this.idDobavljac);
             forma.WindowState = FormWindowState.Normal;
             forma.ShowDialog();
+            frmNabavaPretraziDobavljace_Load(sender, e);
         }
     }
 }
