@@ -29,23 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdajaKreirajOtpremnicu));
-            this.btnKreirajNarudzbenicu = new System.Windows.Forms.Button();
+            this.btnKreirajOtpremnicu = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmbNarucitelj = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgOtpremnica = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOtpremnica)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnKreirajNarudzbenicu
+            // btnKreirajOtpremnicu
             // 
-            this.btnKreirajNarudzbenicu.Location = new System.Drawing.Point(179, 361);
-            this.btnKreirajNarudzbenicu.Name = "btnKreirajNarudzbenicu";
-            this.btnKreirajNarudzbenicu.Size = new System.Drawing.Size(146, 23);
-            this.btnKreirajNarudzbenicu.TabIndex = 15;
-            this.btnKreirajNarudzbenicu.Text = "Kreiraj otpremnicu";
-            this.btnKreirajNarudzbenicu.UseVisualStyleBackColor = true;
+            this.btnKreirajOtpremnicu.Location = new System.Drawing.Point(347, 321);
+            this.btnKreirajOtpremnicu.Name = "btnKreirajOtpremnicu";
+            this.btnKreirajOtpremnicu.Size = new System.Drawing.Size(146, 23);
+            this.btnKreirajOtpremnicu.TabIndex = 15;
+            this.btnKreirajOtpremnicu.Text = "Kreiraj otpremnicu";
+            this.btnKreirajOtpremnicu.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -56,56 +55,46 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Naručitelj: ";
             // 
-            // comboBox1
+            // cmbNarucitelj
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(100, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(395, 257);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Pregled ispisa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cmbNarucitelj.FormattingEnabled = true;
+            this.cmbNarucitelj.Location = new System.Drawing.Point(100, 55);
+            this.cmbNarucitelj.Name = "cmbNarucitelj";
+            this.cmbNarucitelj.Size = new System.Drawing.Size(121, 21);
+            this.cmbNarucitelj.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(139, 11);
+            this.label1.Location = new System.Drawing.Point(299, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Otpremnica za <datum>";
             // 
-            // dataGridView1
+            // dgOtpremnica
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(471, 151);
-            this.dataGridView1.TabIndex = 8;
+            this.dgOtpremnica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgOtpremnica.Location = new System.Drawing.Point(27, 91);
+            this.dgOtpremnica.Name = "dgOtpremnica";
+            this.dgOtpremnica.Size = new System.Drawing.Size(781, 151);
+            this.dgOtpremnica.TabIndex = 8;
             // 
             // frmProdajaKreirajOtpremnicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 396);
-            this.Controls.Add(this.btnKreirajNarudzbenicu);
+            this.ClientSize = new System.Drawing.Size(832, 396);
+            this.Controls.Add(this.btnKreirajOtpremnicu);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cmbNarucitelj);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgOtpremnica);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProdajaKreirajOtpremnicu";
-            this.Text = "frmProdajaKreirajOtpremnicu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Kreiraj otpremnicu";
+            ((System.ComponentModel.ISupportInitialize)(this.dgOtpremnica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,12 +102,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnKreirajNarudzbenicu;
+        private System.Windows.Forms.Button btnKreirajOtpremnicu;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cmbNarucitelj;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgOtpremnica;
 
     }
 }
