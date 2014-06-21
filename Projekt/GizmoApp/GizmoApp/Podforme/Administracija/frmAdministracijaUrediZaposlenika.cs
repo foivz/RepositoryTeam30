@@ -64,6 +64,13 @@ namespace GizmoApp.Podforme.Administracija
             frmAdministracijaUrediZaposlenika_Load(sender, e);
         }
 
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Jest li sigurni da želite obrisati odabranog zaposlenika?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                this.zaposlenikTableAdapter.DeleteZaposlenikId(this.idZaposlenik);
+            frmAdministracijaUrediZaposlenika_Load(sender, e);
+        }
+
 
     }
 }

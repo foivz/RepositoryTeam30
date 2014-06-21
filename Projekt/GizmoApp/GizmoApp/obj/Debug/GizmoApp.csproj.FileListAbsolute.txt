@@ -100,3 +100,30 @@ C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Properties
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.exe.config
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.exe
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.pdb
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.exe
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.pdb
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csprojResolveAssemblyReference.cache
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.frmGlavna.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.frmLogin.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Properties.Resources.resources
+C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
