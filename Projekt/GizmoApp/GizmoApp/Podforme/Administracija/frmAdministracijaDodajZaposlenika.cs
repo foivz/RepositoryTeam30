@@ -26,6 +26,7 @@ namespace GizmoApp.Podforme.Administracija
 
         private void frmAdministracijaDodajZaposlenika_Load(object sender, EventArgs e)
         {
+            
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
             this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
             zaposlenikBindingSource.AddNew();

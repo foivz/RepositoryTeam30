@@ -98,3 +98,5 @@ C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.S
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.resources
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Properties.Resources.resources
 C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
+C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
+C:\Users\Supercrap\Desktop\sokac\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources

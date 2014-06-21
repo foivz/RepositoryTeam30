@@ -36,9 +36,7 @@
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.odjel_has_PogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter();
             this.zaposlenikBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -47,7 +45,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.zaposlenikBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dgvZaposlenik = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.odjelBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -116,10 +113,10 @@
             // 
             // zaposlenikBindingNavigator
             // 
-            this.zaposlenikBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.zaposlenikBindingNavigator.AddNewItem = null;
             this.zaposlenikBindingNavigator.BindingSource = this.zaposlenikBindingSource;
             this.zaposlenikBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.zaposlenikBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.zaposlenikBindingNavigator.DeleteItem = null;
             this.zaposlenikBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -129,10 +126,7 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.zaposlenikBindingNavigatorSaveItem});
+            this.bindingNavigatorSeparator2});
             this.zaposlenikBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.zaposlenikBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.zaposlenikBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -144,30 +138,12 @@
             this.zaposlenikBindingNavigator.TabIndex = 0;
             this.zaposlenikBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -228,15 +204,6 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // zaposlenikBindingNavigatorSaveItem
-            // 
-            this.zaposlenikBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.zaposlenikBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("zaposlenikBindingNavigatorSaveItem.Image")));
-            this.zaposlenikBindingNavigatorSaveItem.Name = "zaposlenikBindingNavigatorSaveItem";
-            this.zaposlenikBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.zaposlenikBindingNavigatorSaveItem.Text = "Save Data";
-            this.zaposlenikBindingNavigatorSaveItem.Click += new System.EventHandler(this.zaposlenikBindingNavigatorSaveItem_Click);
             // 
             // dgvZaposlenik
             // 
@@ -428,9 +395,7 @@
         private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter;
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator zaposlenikBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -439,7 +404,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton zaposlenikBindingNavigatorSaveItem;
         private GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter odjel_has_PogledTableAdapter;
         private System.Windows.Forms.DataGridView dgvZaposlenik;
         private System.Windows.Forms.BindingSource odjel_has_PogledBindingSource;

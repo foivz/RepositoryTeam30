@@ -120,6 +120,12 @@
     <Compile Include="Podforme\Nabava\frmNabavaDodajDobavljaca.Designer.cs">
       <DependentUpon>frmNabavaDodajDobavljaca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaDodajKnjigu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Nabava\frmNabavaDodajKnjigu.Designer.cs">
+      <DependentUpon>frmNabavaDodajKnjigu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Nabava\frmNabavaKreirajNarudzbenicu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,12 @@
     <Compile Include="Podforme\Prodaja\frmProdajaPretraziKupceDetalji.Designer.cs">
       <DependentUpon>frmProdajaPretraziKupceDetalji.cs</DependentUpon>
     </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladisteDodajSektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podforme\Skladiste\frmSkladisteDodajSektor.Designer.cs">
+      <DependentUpon>frmSkladisteDodajSektor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Podforme\Skladiste\frmSkladistePretrazi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,9 @@
     <EmbeddedResource Include="Podforme\Nabava\frmNabavaDodajDobavljaca.resx">
       <DependentUpon>frmNabavaDodajDobavljaca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Nabava\frmNabavaDodajKnjigu.resx">
+      <DependentUpon>frmNabavaDodajKnjigu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Nabava\frmNabavaKreirajNarudzbenicu.resx">
       <DependentUpon>frmNabavaKreirajNarudzbenicu.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Prodaja\frmProdajaPretraziKupceDetalji.resx">
       <DependentUpon>frmProdajaPretraziKupceDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Skladiste\frmSkladisteDodajSektor.resx">
+      <DependentUpon>frmSkladisteDodajSektor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Podforme\Skladiste\frmSkladistePretrazi.resx">
       <DependentUpon>frmSkladistePretrazi.cs</DependentUpon>

@@ -100,6 +100,7 @@
             this.txtbxKolicinaNaSektoru.ReadOnly = true;
             this.txtbxKolicinaNaSektoru.Size = new System.Drawing.Size(99, 20);
             this.txtbxKolicinaNaSektoru.TabIndex = 7;
+            this.txtbxKolicinaNaSektoru.TabStop = false;
             // 
             // sektor_skladistaBindingNavigator
             // 
@@ -124,7 +125,7 @@
             this.sektor_skladistaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.sektor_skladistaBindingNavigator.Name = "sektor_skladistaBindingNavigator";
             this.sektor_skladistaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sektor_skladistaBindingNavigator.Size = new System.Drawing.Size(500, 25);
+            this.sektor_skladistaBindingNavigator.Size = new System.Drawing.Size(503, 25);
             this.sektor_skladistaBindingNavigator.TabIndex = 12;
             this.sektor_skladistaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -220,7 +221,7 @@
             this.dgvSektorSkladista.Location = new System.Drawing.Point(27, 90);
             this.dgvSektorSkladista.MultiSelect = false;
             this.dgvSektorSkladista.Name = "dgvSektorSkladista";
-            this.dgvSektorSkladista.Size = new System.Drawing.Size(303, 220);
+            this.dgvSektorSkladista.Size = new System.Drawing.Size(306, 220);
             this.dgvSektorSkladista.TabIndex = 12;
             this.dgvSektorSkladista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSektorSkladista_CellDoubleClick);
             this.dgvSektorSkladista.SelectionChanged += new System.EventHandler(this.dgvSektorSkladista_SelectionChanged);
@@ -258,7 +259,7 @@
             this.dgvKnjigaHasSektorSkladista.Location = new System.Drawing.Point(84, 331);
             this.dgvKnjigaHasSektorSkladista.MultiSelect = false;
             this.dgvKnjigaHasSektorSkladista.Name = "dgvKnjigaHasSektorSkladista";
-            this.dgvKnjigaHasSektorSkladista.Size = new System.Drawing.Size(357, 220);
+            this.dgvKnjigaHasSektorSkladista.Size = new System.Drawing.Size(360, 220);
             this.dgvKnjigaHasSektorSkladista.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn4
@@ -342,6 +343,7 @@
             this.txtbxKapacitetSektora.ReadOnly = true;
             this.txtbxKapacitetSektora.Size = new System.Drawing.Size(100, 20);
             this.txtbxKapacitetSektora.TabIndex = 13;
+            this.txtbxKapacitetSektora.TabStop = false;
             // 
             // lblSlobodno
             // 
@@ -362,6 +364,7 @@
             this.txtbxSlobodno.ReadOnly = true;
             this.txtbxSlobodno.Size = new System.Drawing.Size(72, 20);
             this.txtbxSlobodno.TabIndex = 15;
+            this.txtbxSlobodno.TabStop = false;
             // 
             // knjigaTableAdapter
             // 
@@ -381,14 +384,14 @@
             this.txtbxPretrazi.Location = new System.Drawing.Point(84, 49);
             this.txtbxPretrazi.Name = "txtbxPretrazi";
             this.txtbxPretrazi.Size = new System.Drawing.Size(100, 20);
-            this.txtbxPretrazi.TabIndex = 17;
+            this.txtbxPretrazi.TabIndex = 0;
             this.txtbxPretrazi.TextChanged += new System.EventHandler(this.txtbxPretrazi_TextChanged);
             // 
             // frmSkladistePretrazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 567);
+            this.ClientSize = new System.Drawing.Size(503, 493);
             this.Controls.Add(this.txtbxPretrazi);
             this.Controls.Add(this.lblPretrazi);
             this.Controls.Add(this.txtbxSlobodno);

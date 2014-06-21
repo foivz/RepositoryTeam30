@@ -34,6 +34,7 @@
             this.miAplikacija = new System.Windows.Forms.ToolStripMenuItem();
             this.miAplikacijaIzlaz = new System.Windows.Forms.ToolStripMenuItem();
             this.miSkladiste = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSkladisteDodajSektor = new System.Windows.Forms.ToolStripMenuItem();
             this.miSkladistePretrazi = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdaja = new System.Windows.Forms.ToolStripMenuItem();
             this.miProdajaDodajKupca = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.miNabavaDodajDobavljaca = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabavaPretraziDobavljace = new System.Windows.Forms.ToolStripMenuItem();
             this.miNabavaKreirajNarudzbenicu = new System.Windows.Forms.ToolStripMenuItem();
+            this.miNabavaDodajKnjigu = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministracija = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministracijaDodajZaposlenika = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministracijaUrediZaposlenika = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +52,8 @@
             this.miIzvjescaKreirajIzvjesce = new System.Windows.Forms.ToolStripMenuItem();
             this.miIzvjescaPregledIzvjesca = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPomocFAQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPomocKontakt = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocOGizmoApp = new System.Windows.Forms.ToolStripMenuItem();
             this.msIzbornik.SuspendLayout();
             this.SuspendLayout();
@@ -102,15 +106,23 @@
             // miSkladiste
             // 
             this.miSkladiste.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miSkladisteDodajSektor,
             this.miSkladistePretrazi});
             this.miSkladiste.Name = "miSkladiste";
             this.miSkladiste.Size = new System.Drawing.Size(65, 20);
             this.miSkladiste.Text = "Skladište";
             // 
+            // miSkladisteDodajSektor
+            // 
+            this.miSkladisteDodajSektor.Name = "miSkladisteDodajSektor";
+            this.miSkladisteDodajSektor.Size = new System.Drawing.Size(140, 22);
+            this.miSkladisteDodajSektor.Text = "Dodaj sektor";
+            this.miSkladisteDodajSektor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSkladisteDodajSektor_MouseUp);
+            // 
             // miSkladistePretrazi
             // 
             this.miSkladistePretrazi.Name = "miSkladistePretrazi";
-            this.miSkladistePretrazi.Size = new System.Drawing.Size(113, 22);
+            this.miSkladistePretrazi.Size = new System.Drawing.Size(140, 22);
             this.miSkladistePretrazi.Text = "Pretraži";
             this.miSkladistePretrazi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miSkladistePretrazi_MouseUp);
             // 
@@ -150,7 +162,8 @@
             this.miNabava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miNabavaDodajDobavljaca,
             this.miNabavaPretraziDobavljace,
-            this.miNabavaKreirajNarudzbenicu});
+            this.miNabavaKreirajNarudzbenicu,
+            this.miNabavaDodajKnjigu});
             this.miNabava.Name = "miNabava";
             this.miNabava.Size = new System.Drawing.Size(59, 20);
             this.miNabava.Text = "Nabava";
@@ -175,6 +188,13 @@
             this.miNabavaKreirajNarudzbenicu.Size = new System.Drawing.Size(182, 22);
             this.miNabavaKreirajNarudzbenicu.Text = "Kreiraj narudžbenicu";
             this.miNabavaKreirajNarudzbenicu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miNabavaKreirajNarudzbenicu_MouseUp);
+            // 
+            // miNabavaDodajKnjigu
+            // 
+            this.miNabavaDodajKnjigu.Name = "miNabavaDodajKnjigu";
+            this.miNabavaDodajKnjigu.Size = new System.Drawing.Size(182, 22);
+            this.miNabavaDodajKnjigu.Text = "Dodaj knjigu";
+            this.miNabavaDodajKnjigu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miNabavaDodajKnjigu_MouseUp);
             // 
             // miAdministracija
             // 
@@ -225,15 +245,31 @@
             // miPomoc
             // 
             this.miPomoc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miPomocFAQ,
+            this.miPomocKontakt,
             this.miPomocOGizmoApp});
             this.miPomoc.Name = "miPomoc";
             this.miPomoc.Size = new System.Drawing.Size(57, 20);
             this.miPomoc.Text = "Pomoć";
             // 
+            // miPomocFAQ
+            // 
+            this.miPomocFAQ.Name = "miPomocFAQ";
+            this.miPomocFAQ.Size = new System.Drawing.Size(152, 22);
+            this.miPomocFAQ.Text = "FAQ";
+            this.miPomocFAQ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocFAQ_MouseUp);
+            // 
+            // miPomocKontakt
+            // 
+            this.miPomocKontakt.Name = "miPomocKontakt";
+            this.miPomocKontakt.Size = new System.Drawing.Size(152, 22);
+            this.miPomocKontakt.Text = "Kontakt";
+            this.miPomocKontakt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocKontakt_MouseUp);
+            // 
             // miPomocOGizmoApp
             // 
             this.miPomocOGizmoApp.Name = "miPomocOGizmoApp";
-            this.miPomocOGizmoApp.Size = new System.Drawing.Size(145, 22);
+            this.miPomocOGizmoApp.Size = new System.Drawing.Size(152, 22);
             this.miPomocOGizmoApp.Text = "O Gizmo App";
             this.miPomocOGizmoApp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocOGizmoApp_MouseUp);
             // 
@@ -242,6 +278,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::GizmoApp.Properties.Resources.gizmo_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(739, 396);
             this.Controls.Add(this.lblKorisnickoIme);
@@ -285,5 +322,9 @@
         private System.Windows.Forms.ToolStripMenuItem miIzvjescaKreirajIzvjesce;
         private System.Windows.Forms.ToolStripMenuItem miIzvjescaPregledIzvjesca;
         private System.Windows.Forms.ToolStripMenuItem miPomocOGizmoApp;
+        private System.Windows.Forms.ToolStripMenuItem miSkladisteDodajSektor;
+        private System.Windows.Forms.ToolStripMenuItem miNabavaDodajKnjigu;
+        private System.Windows.Forms.ToolStripMenuItem miPomocFAQ;
+        private System.Windows.Forms.ToolStripMenuItem miPomocKontakt;
     }
 }

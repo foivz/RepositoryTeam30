@@ -121,11 +121,6 @@ namespace GizmoApp
             frmIzvjescaPregledIzvjesca.Show();
         }
 
-        private void miPomocOGizmoApp_MouseUp(object sender, MouseEventArgs e)
-        {
-            string info = "Gizmo App version 1.0\n Služi za evidenciju bla bla bla\n Katarina Zrisnki d.o.o.";
-            MessageBox.Show(info);
-        }
 
         private void frmGlavna_MdiChildActivate(object sender, EventArgs e)
         {
@@ -134,6 +129,42 @@ namespace GizmoApp
                 MdiChildren.ElementAt(0).Close();
             }
         }
+
+        private void miSkladisteDodajSektor_MouseUp(object sender, MouseEventArgs e)
+        {
+            Podforme.Skladiste.frmSkladisteDodajSektor frmSkladisteDodajSektor = new Podforme.Skladiste.frmSkladisteDodajSektor();
+            frmSkladisteDodajSektor.WindowState = FormWindowState.Normal;
+            frmSkladisteDodajSektor.ShowDialog();
+
+        }
+
+        private void miNabavaDodajKnjigu_MouseUp(object sender, MouseEventArgs e)
+        {
+            Podforme.Nabava.frmNabavaDodajKnjigu frmDodajKnjigu = new Podforme.Nabava.frmNabavaDodajKnjigu();
+            frmDodajKnjigu.WindowState = FormWindowState.Normal;
+            frmDodajKnjigu.ShowDialog();
+
+        }
+
+        //Pomoć
+        private void miPomocOGizmoApp_MouseUp(object sender, MouseEventArgs e)
+        {
+            string info = "Gizmo App version 1.0\n Služi za poslovnu evidenciju poduzeća Katarina Zrinski d.o.o.\n Copyright: Gizmo Corporation";
+            MessageBox.Show(info);
+        }
+
+        private void miPomocFAQ_MouseUp(object sender, MouseEventArgs e)
+        {
+            string FAQ = "Q: Kako urediti neki zapis? \nA: Dvostrukim klikom na ćeliju koja sadrži taj zapis. \n\nQ: Kako da se odjavim? \nA: Odjava se radi odabirom izbornika Aplikacija zatim Izlaz. \n\nQ: Mogu li aplikaciju koristiti od kuće? \nA: Aplikacija se može koristiti samo u radnom okruženju poduzeća.";
+            MessageBox.Show(FAQ);
+        }
+
+        private void miPomocKontakt_MouseUp(object sender, MouseEventArgs e)
+        {
+            string Kontakt = "Saznajte više o našoj tvrtci na www.GizmoCorp.com.hr";
+            MessageBox.Show(Kontakt);
+        }
+
 
     }
 }
