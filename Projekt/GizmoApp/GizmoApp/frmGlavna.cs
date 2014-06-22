@@ -12,6 +12,57 @@ namespace GizmoApp
 {
     public partial class frmGlavna : Form
     {
+        /// <summary>
+        /// Dodjeljuje pogled određenom zaposleniku ovisno kojem odjelu pripada pomoću njegovog korisničkog imena.
+        /// </summary>
+        private void dodjelaPogleda()
+        {
+            lblKorisnickoIme.Text = Program.korime;
+
+            DataTable tablica_pogledi = this.odjel_has_PogledTableAdapter1.GetDataByKorimeHasPogled(Program.korime);
+
+            string pogledi = "";
+
+            for (int i = 0; i < tablica_pogledi.Rows.Count; i++)
+            {
+                pogledi += tablica_pogledi.Rows[i].ItemArray[1].ToString();
+            }
+
+            miSkladiste.Visible = false;
+            miNabava.Visible = false;
+            miProdaja.Visible = false;
+            miAdministracija.Visible = false;
+            miIzvjesca.Visible = false;
+
+            //MessageBox.Show(pogledi);
+
+            for (int i = 0; i < pogledi.Length; i++)
+            {
+                switch (pogledi[i])
+                {
+                    case '1':
+                        miSkladiste.Visible = true;
+                        break;
+
+                    case '2':
+                        miNabava.Visible = true;
+                        break;
+
+                    case '3':
+                        miProdaja.Visible = true;
+                        break;
+
+                    case '4':
+                        miAdministracija.Visible = true;
+                        break;
+
+                    default:
+                        MessageBox.Show("Greska!");
+                        break;
+                }
+            }
+        }
+
         public frmGlavna()
         {
             InitializeComponent();
@@ -19,14 +70,7 @@ namespace GizmoApp
 
         private void frmGlavna_Load(object sender, EventArgs e)
         {
-            lblKorisnickoIme.Text = Program.korime;
-
-
-            //IEnumerable<DataRow> pogledi = this.zaposlenikTableAdapter1.GetDataByKorimeHasPogled(Program.korime).AsEnumerable();
-            //for (int i = 0; i < pogledi.Count(); i++)
-            //{
-            //    MessageBox.Show(pogledi.ElementAt(i).ToString());
-            //}
+            dodjelaPogleda();
         }
 
         private void miAplikacijaIzlaz_MouseUp(object sender, MouseEventArgs e)

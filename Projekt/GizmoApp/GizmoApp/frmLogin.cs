@@ -17,6 +17,10 @@ namespace GizmoApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Provjerava da li uneseno korisničko ime i lozinka, postoje unutar baze podataka zaposlenika.
+        /// Uspješnom prijavom otvara glavnu formu.
+        /// </summary>
         private void Prijava()
         {
             Program.korime = txtboxKorisnickoIme.Text.ToString();

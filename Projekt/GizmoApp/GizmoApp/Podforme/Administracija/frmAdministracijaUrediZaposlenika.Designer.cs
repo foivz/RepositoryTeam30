@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracijaUrediZaposlenika));
             this.zaposlenikBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -41,14 +43,18 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvZaposlenik = new System.Windows.Forms.DataGridView();
-            this.dgvOdjelHasPogled = new System.Windows.Forms.DataGridView();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.odjelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
+            this.dgvOdjelHasPogled = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.pogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.odjel_has_PogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
+            this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
+            this.odjel_has_PogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter();
+            this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
+            this.pogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.PogledTableAdapter();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,21 +65,15 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
-            this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
-            this.odjel_has_PogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter();
-            this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
-            this.pogledTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.PogledTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingNavigator)).BeginInit();
             this.zaposlenikBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pogledBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odjel_has_PogledBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // zaposlenikBindingNavigator
@@ -102,6 +102,16 @@
             this.zaposlenikBindingNavigator.Size = new System.Drawing.Size(983, 25);
             this.zaposlenikBindingNavigator.TabIndex = 0;
             this.zaposlenikBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // zaposlenikBindingSource
+            // 
+            this.zaposlenikBindingSource.DataMember = "Zaposlenik";
+            this.zaposlenikBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // gizmoDBDataSet
+            // 
+            this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
+            this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -195,6 +205,11 @@
             this.dgvZaposlenik.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZaposlenik_CellDoubleClick);
             this.dgvZaposlenik.SelectionChanged += new System.EventHandler(this.dgvZaposlenik_SelectionChanged);
             // 
+            // odjelBindingSource
+            // 
+            this.odjelBindingSource.DataMember = "Odjel";
+            this.odjelBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
             // dgvOdjelHasPogled
             // 
             this.dgvOdjelHasPogled.AllowUserToAddRows = false;
@@ -210,16 +225,6 @@
             this.dgvOdjelHasPogled.Size = new System.Drawing.Size(160, 202);
             this.dgvOdjelHasPogled.TabIndex = 2;
             // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(245, 284);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(109, 42);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Odjel_idOdjel";
@@ -232,16 +237,6 @@
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn11.ValueMember = "idOdjel";
             this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // odjelBindingSource
-            // 
-            this.odjelBindingSource.DataMember = "Odjel";
-            this.odjelBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // gizmoDBDataSet
-            // 
-            this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
-            this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -265,6 +260,50 @@
             this.odjel_has_PogledBindingSource.DataMember = "Odjel_has_Pogled";
             this.odjel_has_PogledBindingSource.DataSource = this.gizmoDBDataSet;
             // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(245, 284);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(109, 42);
+            this.btnObrisi.TabIndex = 3;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // zaposlenikTableAdapter
+            // 
+            this.zaposlenikTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Kategorija_has_KnjigaTableAdapter = null;
+            this.tableAdapterManager.KategorijaTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_KupciTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.KnjigaTableAdapter = null;
+            this.tableAdapterManager.KupciTableAdapter = null;
+            this.tableAdapterManager.Odjel_has_PogledTableAdapter = this.odjel_has_PogledTableAdapter;
+            this.tableAdapterManager.OdjelTableAdapter = null;
+            this.tableAdapterManager.PogledTableAdapter = null;
+            this.tableAdapterManager.Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ZaposlenikTableAdapter = this.zaposlenikTableAdapter;
+            // 
+            // odjel_has_PogledTableAdapter
+            // 
+            this.odjel_has_PogledTableAdapter.ClearBeforeFill = true;
+            // 
+            // odjelTableAdapter
+            // 
+            this.odjelTableAdapter.ClearBeforeFill = true;
+            // 
+            // pogledTableAdapter
+            // 
+            this.pogledTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Odjel_idOdjel";
@@ -273,6 +312,7 @@
             this.dataGridViewTextBoxColumn10.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn10.HeaderText = "Odjel";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn10.ValueMember = "idOdjel";
@@ -333,45 +373,6 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Lozinka";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // zaposlenikBindingSource
-            // 
-            this.zaposlenikBindingSource.DataMember = "Zaposlenik";
-            this.zaposlenikBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // zaposlenikTableAdapter
-            // 
-            this.zaposlenikTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DobavljaciTableAdapter = null;
-            this.tableAdapterManager.Kategorija_has_KnjigaTableAdapter = null;
-            this.tableAdapterManager.KategorijaTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_KupciTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = null;
-            this.tableAdapterManager.KnjigaTableAdapter = null;
-            this.tableAdapterManager.KupciTableAdapter = null;
-            this.tableAdapterManager.Odjel_has_PogledTableAdapter = this.odjel_has_PogledTableAdapter;
-            this.tableAdapterManager.OdjelTableAdapter = null;
-            this.tableAdapterManager.PogledTableAdapter = null;
-            this.tableAdapterManager.Sektor_skladistaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ZaposlenikTableAdapter = this.zaposlenikTableAdapter;
-            // 
-            // odjel_has_PogledTableAdapter
-            // 
-            this.odjel_has_PogledTableAdapter.ClearBeforeFill = true;
-            // 
-            // odjelTableAdapter
-            // 
-            this.odjelTableAdapter.ClearBeforeFill = true;
-            // 
-            // pogledTableAdapter
-            // 
-            this.pogledTableAdapter.ClearBeforeFill = true;
-            // 
             // frmAdministracijaUrediZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,13 +389,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingNavigator)).EndInit();
             this.zaposlenikBindingNavigator.ResumeLayout(false);
             this.zaposlenikBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdjelHasPogled)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pogledBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.odjel_has_PogledBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,6 +427,7 @@
         private GizmoDBDataSetTableAdapters.PogledTableAdapter pogledTableAdapter;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -436,7 +438,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.Button btnObrisi;
 
 
     }
