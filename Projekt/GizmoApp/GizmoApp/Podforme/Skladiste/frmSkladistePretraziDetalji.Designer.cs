@@ -32,14 +32,14 @@
             System.Windows.Forms.Label kapacitetLabel;
             System.Windows.Forms.Label idSektor_skladistaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSkladistePretraziDetalji));
-            this.btnZatvori = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
             this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.sektor_skladistaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter();
             this.sektor_skladistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtKapacitet = new System.Windows.Forms.TextBox();
+            this.txtbxKapacitet = new System.Windows.Forms.TextBox();
             this.idSektor_skladistaLabel1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             kapacitetLabel = new System.Windows.Forms.Label();
@@ -67,15 +67,15 @@
             idSektor_skladistaLabel.TabIndex = 24;
             idSektor_skladistaLabel.Text = "Sektor: ";
             // 
-            // btnZatvori
+            // btnOdustani
             // 
-            this.btnZatvori.Location = new System.Drawing.Point(133, 99);
-            this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(75, 23);
-            this.btnZatvori.TabIndex = 22;
-            this.btnZatvori.Text = "Zatvori";
-            this.btnZatvori.UseVisualStyleBackColor = true;
-            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            this.btnOdustani.Location = new System.Drawing.Point(133, 99);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.TabIndex = 22;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // gizmoDBDataSet
             // 
@@ -118,13 +118,13 @@
             this.sektor_skladistaBindingSource.DataMember = "Sektor_skladista";
             this.sektor_skladistaBindingSource.DataSource = this.gizmoDBDataSet;
             // 
-            // txtKapacitet
+            // txtbxKapacitet
             // 
-            this.txtKapacitet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sektor_skladistaBindingSource, "Kapacitet", true));
-            this.txtKapacitet.Location = new System.Drawing.Point(91, 55);
-            this.txtKapacitet.Name = "txtKapacitet";
-            this.txtKapacitet.Size = new System.Drawing.Size(100, 20);
-            this.txtKapacitet.TabIndex = 24;
+            this.txtbxKapacitet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sektor_skladistaBindingSource, "Kapacitet", true));
+            this.txtbxKapacitet.Location = new System.Drawing.Point(91, 55);
+            this.txtbxKapacitet.Name = "txtbxKapacitet";
+            this.txtbxKapacitet.Size = new System.Drawing.Size(100, 20);
+            this.txtbxKapacitet.TabIndex = 24;
             // 
             // idSektor_skladistaLabel1
             // 
@@ -154,12 +154,12 @@
             this.Controls.Add(idSektor_skladistaLabel);
             this.Controls.Add(this.idSektor_skladistaLabel1);
             this.Controls.Add(kapacitetLabel);
-            this.Controls.Add(this.txtKapacitet);
-            this.Controls.Add(this.btnZatvori);
+            this.Controls.Add(this.txtbxKapacitet);
+            this.Controls.Add(this.btnOdustani);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSkladistePretraziDetalji";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Podaci o knjizi";
+            this.Text = "Podaci o sektoru";
             this.Load += new System.EventHandler(this.frmSkladistePretraziDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).EndInit();
@@ -171,14 +171,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnZatvori;
+        private System.Windows.Forms.Button btnOdustani;
         private GizmoDBDataSet gizmoDBDataSet;
         private System.Windows.Forms.BindingSource knjigaBindingSource;
         private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter sektor_skladistaTableAdapter;
         private System.Windows.Forms.BindingSource sektor_skladistaBindingSource;
-        private System.Windows.Forms.TextBox txtKapacitet;
+        private System.Windows.Forms.TextBox txtbxKapacitet;
         private System.Windows.Forms.Label idSektor_skladistaLabel1;
         private System.Windows.Forms.Button btnSpremi;
     }

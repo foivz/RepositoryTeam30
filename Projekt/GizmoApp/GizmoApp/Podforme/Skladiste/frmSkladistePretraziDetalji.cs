@@ -19,7 +19,7 @@ namespace GizmoApp.Podforme.Skladiste
             this.idSkladista = id;
         }
 
-        private void btnZatvori_Click(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -40,5 +40,7 @@ namespace GizmoApp.Podforme.Skladiste
             this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
             this.Close();
         }
+
+        
     }
 }

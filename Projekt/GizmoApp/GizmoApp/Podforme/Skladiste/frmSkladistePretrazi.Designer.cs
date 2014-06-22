@@ -62,8 +62,6 @@
             this.lblSlobodno = new System.Windows.Forms.Label();
             this.txtbxSlobodno = new System.Windows.Forms.TextBox();
             this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
-            this.lblPretrazi = new System.Windows.Forms.Label();
-            this.txtbxPretrazi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingNavigator)).BeginInit();
             this.sektor_skladistaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingSource)).BeginInit();
@@ -370,30 +368,11 @@
             // 
             this.knjigaTableAdapter.ClearBeforeFill = true;
             // 
-            // lblPretrazi
-            // 
-            this.lblPretrazi.AutoSize = true;
-            this.lblPretrazi.Location = new System.Drawing.Point(24, 52);
-            this.lblPretrazi.Name = "lblPretrazi";
-            this.lblPretrazi.Size = new System.Drawing.Size(45, 13);
-            this.lblPretrazi.TabIndex = 16;
-            this.lblPretrazi.Text = "Pretraži:";
-            // 
-            // txtbxPretrazi
-            // 
-            this.txtbxPretrazi.Location = new System.Drawing.Point(84, 49);
-            this.txtbxPretrazi.Name = "txtbxPretrazi";
-            this.txtbxPretrazi.Size = new System.Drawing.Size(100, 20);
-            this.txtbxPretrazi.TabIndex = 0;
-            this.txtbxPretrazi.TextChanged += new System.EventHandler(this.txtbxPretrazi_TextChanged);
-            // 
             // frmSkladistePretrazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 493);
-            this.Controls.Add(this.txtbxPretrazi);
-            this.Controls.Add(this.lblPretrazi);
+            this.ClientSize = new System.Drawing.Size(503, 564);
             this.Controls.Add(this.txtbxSlobodno);
             this.Controls.Add(this.lblSlobodno);
             this.Controls.Add(this.txtbxKapacitetSektora);
@@ -405,6 +384,7 @@
             this.Controls.Add(this.txtbxKolicinaNaSektoru);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSkladistePretrazi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pretraži skladište";
             this.Load += new System.EventHandler(this.frmSkladistePretrazi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingNavigator)).EndInit();
@@ -455,8 +435,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label lblPretrazi;
-        private System.Windows.Forms.TextBox txtbxPretrazi;
 
     }
 }

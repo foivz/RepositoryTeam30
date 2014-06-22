@@ -28,25 +28,25 @@ namespace GizmoApp.Podforme.Prodaja
             this.idKupca = id;
         }
 
-        private void btnZatvori_Click(object sender, EventArgs e)
-        {
-            /*bool stanje = isChanged();
-            if (stanje) MessageBox.Show("Promijenili ste neke podatke. Želite li ");
-            else */this.Close();
-
-        }
-
         private void frmProdajaPretraziKupceDetalji_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Kupci' table. You can move, or remove it, as needed.
             this.kupciTableAdapter.FillByKupacId(this.gizmoDBDataSet.Kupci, idKupca);
 
-            this.naziv = this.txtNaziv.Text;
-            this.adresa = this.txtAdresa.Text;
-            this.oib = this.txtOIB.Text;
-            this.telefon = this.txtTelefon.Text;
-            this.email = this.txtEmail.Text;
+            this.naziv = this.txtbxNaziv.Text;
+            this.adresa = this.txtbxAdresa.Text;
+            this.oib = this.txtbxOIB.Text;
+            this.telefon = this.txtbxTelefon.Text;
+            this.email = this.txtbxEmail.Text;
 
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            /*bool stanje = isChanged();
+            if (stanje) MessageBox.Show("Promijenili ste neke podatke. Želite li ");
+            else */
+            this.Close();
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)
@@ -59,11 +59,13 @@ namespace GizmoApp.Podforme.Prodaja
 
         private bool isChanged()
         {
-            if (this.naziv == this.txtNaziv.Text && this.adresa == this.txtAdresa.Text && this.oib == this.txtOIB.Text && this.telefon == this.txtTelefon.Text && this.email == this.txtEmail.Text)
+            if (this.naziv == this.txtbxNaziv.Text && this.adresa == this.txtbxAdresa.Text && this.oib == this.txtbxOIB.Text && this.telefon == this.txtbxTelefon.Text && this.email == this.txtbxEmail.Text)
             {
                return false;
             }
             else return true;
         }
+
+       
     }
 }

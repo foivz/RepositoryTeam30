@@ -350,6 +350,7 @@
             this.Controls.Add(this.dobavljaciBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNabavaPretraziDobavljace";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pretraga dobavljača";
             this.Load += new System.EventHandler(this.frmNabavaPretraziDobavljace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();

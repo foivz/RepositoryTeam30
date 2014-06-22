@@ -85,9 +85,5 @@ namespace GizmoApp.Podforme.Skladiste
             frmSkladistePretrazi_Load(sender, e);
         }
 
-        private void txtbxPretrazi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

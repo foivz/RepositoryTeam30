@@ -23,8 +23,8 @@ namespace GizmoApp
         /// </summary>
         private void Prijava()
         {
-            Program.korime = txtboxKorisnickoIme.Text.ToString();
-            string lozinka = txtboxLozinka.Text.ToString();
+            Program.korime = txtbxKorisnickoIme.Text.ToString();
+            string lozinka = txtbxLozinka.Text.ToString();
 
             //MessageBox.Show("Korime: " + korime + "\n" + "Lozinka: " + lozinka);
 

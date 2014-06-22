@@ -17,22 +17,12 @@ namespace GizmoApp.Podforme.Skladiste
             InitializeComponent();
         }
 
-        private void sektor_skladistaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.sektor_skladistaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
-
-        }
-
         private void frmSkladisteDodajSektor_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Sektor_skladista' table. You can move, or remove it, as needed.
             this.sektor_skladistaTableAdapter.Fill(this.gizmoDBDataSet.Sektor_skladista);
             sektor_skladistaBindingSource.AddNew();
-        }
-
-        
+        }     
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {

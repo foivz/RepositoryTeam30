@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label nazivLabel;
+            System.Windows.Forms.Label lblNaziv;
             System.Windows.Forms.Label jedinicna_cijenaLabel;
-            System.Windows.Forms.Label kategorija_idKategorijaLabel;
+            System.Windows.Forms.Label lblKategorija;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNabavaDodajKnjigu));
             this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
             this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -39,30 +39,30 @@
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.kategorija_has_KnjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Kategorija_has_KnjigaTableAdapter();
             this.kategorijaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KategorijaTableAdapter();
-            this.nazivTextBox = new System.Windows.Forms.TextBox();
-            this.jedinicna_cijenaTextBox = new System.Windows.Forms.TextBox();
+            this.txtbxNaziv = new System.Windows.Forms.TextBox();
+            this.txbxJedinicnaCijena = new System.Windows.Forms.TextBox();
             this.kategorija_has_KnjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kategorija_idKategorijaComboBox = new System.Windows.Forms.ComboBox();
+            this.cmbxKategorija = new System.Windows.Forms.ComboBox();
             this.kategorijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
-            nazivLabel = new System.Windows.Forms.Label();
+            lblNaziv = new System.Windows.Forms.Label();
             jedinicna_cijenaLabel = new System.Windows.Forms.Label();
-            kategorija_idKategorijaLabel = new System.Windows.Forms.Label();
+            lblKategorija = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategorija_has_KnjigaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategorijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // nazivLabel
+            // lblNaziv
             // 
-            nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(23, 67);
-            nazivLabel.Name = "nazivLabel";
-            nazivLabel.Size = new System.Drawing.Size(37, 13);
-            nazivLabel.TabIndex = 1;
-            nazivLabel.Text = "Naziv:";
+            lblNaziv.AutoSize = true;
+            lblNaziv.Location = new System.Drawing.Point(23, 67);
+            lblNaziv.Name = "lblNaziv";
+            lblNaziv.Size = new System.Drawing.Size(37, 13);
+            lblNaziv.TabIndex = 1;
+            lblNaziv.Text = "Naziv:";
             // 
             // jedinicna_cijenaLabel
             // 
@@ -73,14 +73,14 @@
             jedinicna_cijenaLabel.TabIndex = 2;
             jedinicna_cijenaLabel.Text = "Jedinicna cijena:";
             // 
-            // kategorija_idKategorijaLabel
+            // lblKategorija
             // 
-            kategorija_idKategorijaLabel.AutoSize = true;
-            kategorija_idKategorijaLabel.Location = new System.Drawing.Point(12, 147);
-            kategorija_idKategorijaLabel.Name = "kategorija_idKategorijaLabel";
-            kategorija_idKategorijaLabel.Size = new System.Drawing.Size(118, 13);
-            kategorija_idKategorijaLabel.TabIndex = 4;
-            kategorija_idKategorijaLabel.Text = "Kategorija id Kategorija:";
+            lblKategorija.AutoSize = true;
+            lblKategorija.Location = new System.Drawing.Point(12, 147);
+            lblKategorija.Name = "lblKategorija";
+            lblKategorija.Size = new System.Drawing.Size(118, 13);
+            lblKategorija.TabIndex = 4;
+            lblKategorija.Text = "Kategorija id Kategorija:";
             // 
             // gizmoDBDataSet
             // 
@@ -122,39 +122,39 @@
             // 
             this.kategorijaTableAdapter.ClearBeforeFill = true;
             // 
-            // nazivTextBox
+            // txtbxNaziv
             // 
-            this.nazivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Naziv", true));
-            this.nazivTextBox.Location = new System.Drawing.Point(133, 60);
-            this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nazivTextBox.TabIndex = 2;
+            this.txtbxNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Naziv", true));
+            this.txtbxNaziv.Location = new System.Drawing.Point(133, 60);
+            this.txtbxNaziv.Name = "txtbxNaziv";
+            this.txtbxNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtbxNaziv.TabIndex = 2;
             // 
-            // jedinicna_cijenaTextBox
+            // txbxJedinicnaCijena
             // 
-            this.jedinicna_cijenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Jedinicna_cijena", true));
-            this.jedinicna_cijenaTextBox.Location = new System.Drawing.Point(133, 98);
-            this.jedinicna_cijenaTextBox.Name = "jedinicna_cijenaTextBox";
-            this.jedinicna_cijenaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jedinicna_cijenaTextBox.TabIndex = 3;
+            this.txbxJedinicnaCijena.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Jedinicna_cijena", true));
+            this.txbxJedinicnaCijena.Location = new System.Drawing.Point(133, 98);
+            this.txbxJedinicnaCijena.Name = "txbxJedinicnaCijena";
+            this.txbxJedinicnaCijena.Size = new System.Drawing.Size(100, 20);
+            this.txbxJedinicnaCijena.TabIndex = 3;
             // 
             // kategorija_has_KnjigaBindingSource
             // 
             this.kategorija_has_KnjigaBindingSource.DataMember = "FK_Kategorija_has_Knjiga_Knjiga";
             this.kategorija_has_KnjigaBindingSource.DataSource = this.knjigaBindingSource;
             // 
-            // kategorija_idKategorijaComboBox
+            // cmbxKategorija
             // 
-            this.kategorija_idKategorijaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kategorija_has_KnjigaBindingSource, "Kategorija_idKategorija", true));
-            this.kategorija_idKategorijaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.kategorijaBindingSource, "idKategorija", true));
-            this.kategorija_idKategorijaComboBox.DataSource = this.kategorijaBindingSource;
-            this.kategorija_idKategorijaComboBox.DisplayMember = "Naziv";
-            this.kategorija_idKategorijaComboBox.FormattingEnabled = true;
-            this.kategorija_idKategorijaComboBox.Location = new System.Drawing.Point(136, 144);
-            this.kategorija_idKategorijaComboBox.Name = "kategorija_idKategorijaComboBox";
-            this.kategorija_idKategorijaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.kategorija_idKategorijaComboBox.TabIndex = 5;
-            this.kategorija_idKategorijaComboBox.ValueMember = "idKategorija";
+            this.cmbxKategorija.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kategorija_has_KnjigaBindingSource, "Kategorija_idKategorija", true));
+            this.cmbxKategorija.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.kategorijaBindingSource, "idKategorija", true));
+            this.cmbxKategorija.DataSource = this.kategorijaBindingSource;
+            this.cmbxKategorija.DisplayMember = "Naziv";
+            this.cmbxKategorija.FormattingEnabled = true;
+            this.cmbxKategorija.Location = new System.Drawing.Point(136, 144);
+            this.cmbxKategorija.Name = "cmbxKategorija";
+            this.cmbxKategorija.Size = new System.Drawing.Size(121, 21);
+            this.cmbxKategorija.TabIndex = 5;
+            this.cmbxKategorija.ValueMember = "idKategorija";
             // 
             // kategorijaBindingSource
             // 
@@ -188,15 +188,16 @@
             this.ClientSize = new System.Drawing.Size(307, 262);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
-            this.Controls.Add(kategorija_idKategorijaLabel);
-            this.Controls.Add(this.kategorija_idKategorijaComboBox);
+            this.Controls.Add(lblKategorija);
+            this.Controls.Add(this.cmbxKategorija);
             this.Controls.Add(jedinicna_cijenaLabel);
-            this.Controls.Add(this.jedinicna_cijenaTextBox);
-            this.Controls.Add(nazivLabel);
-            this.Controls.Add(this.nazivTextBox);
+            this.Controls.Add(this.txbxJedinicnaCijena);
+            this.Controls.Add(lblNaziv);
+            this.Controls.Add(this.txtbxNaziv);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNabavaDodajKnjigu";
-            this.Text = "frmNabavaDodajKnjigu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj knjigu";
             this.Load += new System.EventHandler(this.frmNabavaDodajKnjigu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).EndInit();
@@ -213,12 +214,12 @@
         private System.Windows.Forms.BindingSource knjigaBindingSource;
         private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox nazivTextBox;
+        private System.Windows.Forms.TextBox txtbxNaziv;
         private GizmoDBDataSetTableAdapters.Kategorija_has_KnjigaTableAdapter kategorija_has_KnjigaTableAdapter;
-        private System.Windows.Forms.TextBox jedinicna_cijenaTextBox;
+        private System.Windows.Forms.TextBox txbxJedinicnaCijena;
         private System.Windows.Forms.BindingSource kategorija_has_KnjigaBindingSource;
         private GizmoDBDataSetTableAdapters.KategorijaTableAdapter kategorijaTableAdapter;
-        private System.Windows.Forms.ComboBox kategorija_idKategorijaComboBox;
+        private System.Windows.Forms.ComboBox cmbxKategorija;
         private System.Windows.Forms.BindingSource kategorijaBindingSource;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;

@@ -96,7 +96,7 @@
             this.kupciBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.kupciBindingNavigator.Name = "kupciBindingNavigator";
             this.kupciBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.kupciBindingNavigator.Size = new System.Drawing.Size(682, 25);
+            this.kupciBindingNavigator.Size = new System.Drawing.Size(704, 25);
             this.kupciBindingNavigator.TabIndex = 0;
             this.kupciBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -181,6 +181,8 @@
             // 
             this.dgvKupci.AllowUserToAddRows = false;
             this.dgvKupci.AllowUserToDeleteRows = false;
+            this.dgvKupci.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKupci.AutoGenerateColumns = false;
             this.dgvKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -193,10 +195,10 @@
             this.dgvKupci.DataSource = this.kupciBindingSource;
             this.dgvKupci.Location = new System.Drawing.Point(12, 41);
             this.dgvKupci.Name = "dgvKupci";
-            this.dgvKupci.Size = new System.Drawing.Size(649, 212);
+            this.dgvKupci.Size = new System.Drawing.Size(680, 212);
             this.dgvKupci.TabIndex = 1;
             this.dgvKupci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKupci_CellDoubleClick);
-            this.dgvKupci.SelectionChanged += new System.EventHandler(this.kupciDataGridView_SelectionChanged);
+            this.dgvKupci.SelectionChanged += new System.EventHandler(this.dvgKupci_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -239,6 +241,7 @@
             // 
             this.dgvKnjigaHasKupci.AllowUserToAddRows = false;
             this.dgvKnjigaHasKupci.AllowUserToDeleteRows = false;
+            this.dgvKnjigaHasKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKnjigaHasKupci.AutoGenerateColumns = false;
             this.dgvKnjigaHasKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKnjigaHasKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -247,7 +250,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
-            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(304, 273);
+            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(335, 279);
             this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
             this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(357, 220);
             this.dgvKnjigaHasKupci.TabIndex = 2;
@@ -338,12 +341,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(682, 511);
+            this.ClientSize = new System.Drawing.Size(704, 511);
             this.Controls.Add(this.dgvKnjigaHasKupci);
             this.Controls.Add(this.dgvKupci);
             this.Controls.Add(this.kupciBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProdajaPretraziKupce";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pretraga kupaca";
             this.Load += new System.EventHandler(this.frmProdajaPretraziKupce_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kupciBindingNavigator)).EndInit();

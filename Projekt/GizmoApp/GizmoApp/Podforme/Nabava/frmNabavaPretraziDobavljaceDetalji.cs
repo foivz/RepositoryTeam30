@@ -20,11 +20,6 @@ namespace GizmoApp.Podforme.Nabava
             this.idDobavljaca = id;
         }
 
-        private void btnZatvori_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void frmNabavaPretraziDobavljaceDetalji_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Dobavljaci' table. You can move, or remove it, as needed.
@@ -32,15 +27,18 @@ namespace GizmoApp.Podforme.Nabava
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.dobavljaciBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
             this.Close();
         }
-
-
 
     }
 }

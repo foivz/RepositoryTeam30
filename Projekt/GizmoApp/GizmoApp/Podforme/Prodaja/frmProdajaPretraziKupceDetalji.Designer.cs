@@ -36,15 +36,15 @@
             System.Windows.Forms.Label telefonLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdajaPretraziKupceDetalji));
             this.gbxKontakt = new System.Windows.Forms.GroupBox();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtbxTelefon = new System.Windows.Forms.TextBox();
             this.kupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtbxEmail = new System.Windows.Forms.TextBox();
             this.gbxOsobneinformacije = new System.Windows.Forms.GroupBox();
-            this.txtOIB = new System.Windows.Forms.TextBox();
-            this.txtAdresa = new System.Windows.Forms.TextBox();
-            this.txtNaziv = new System.Windows.Forms.TextBox();
-            this.btnZatvori = new System.Windows.Forms.Button();
+            this.txtbxOIB = new System.Windows.Forms.TextBox();
+            this.txtbxAdresa = new System.Windows.Forms.TextBox();
+            this.txtbxNaziv = new System.Windows.Forms.TextBox();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.kupciBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -125,9 +125,9 @@
             // gbxKontakt
             // 
             this.gbxKontakt.Controls.Add(telefonLabel);
-            this.gbxKontakt.Controls.Add(this.txtTelefon);
+            this.gbxKontakt.Controls.Add(this.txtbxTelefon);
             this.gbxKontakt.Controls.Add(emailLabel);
-            this.gbxKontakt.Controls.Add(this.txtEmail);
+            this.gbxKontakt.Controls.Add(this.txtbxEmail);
             this.gbxKontakt.Location = new System.Drawing.Point(25, 163);
             this.gbxKontakt.Name = "gbxKontakt";
             this.gbxKontakt.Size = new System.Drawing.Size(294, 106);
@@ -135,13 +135,13 @@
             this.gbxKontakt.TabStop = false;
             this.gbxKontakt.Text = "Kontakt";
             // 
-            // txtTelefon
+            // txtbxTelefon
             // 
-            this.txtTelefon.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Telefon", true));
-            this.txtTelefon.Location = new System.Drawing.Point(68, 52);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(156, 20);
-            this.txtTelefon.TabIndex = 37;
+            this.txtbxTelefon.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Telefon", true));
+            this.txtbxTelefon.Location = new System.Drawing.Point(68, 52);
+            this.txtbxTelefon.Name = "txtbxTelefon";
+            this.txtbxTelefon.Size = new System.Drawing.Size(156, 20);
+            this.txtbxTelefon.TabIndex = 37;
             // 
             // kupciBindingSource
             // 
@@ -153,22 +153,22 @@
             this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
             this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtEmail
+            // txtbxEmail
             // 
-            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Email", true));
-            this.txtEmail.Location = new System.Drawing.Point(68, 26);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(156, 20);
-            this.txtEmail.TabIndex = 36;
+            this.txtbxEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Email", true));
+            this.txtbxEmail.Location = new System.Drawing.Point(68, 26);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(156, 20);
+            this.txtbxEmail.TabIndex = 36;
             // 
             // gbxOsobneinformacije
             // 
             this.gbxOsobneinformacije.Controls.Add(oIBLabel);
-            this.gbxOsobneinformacije.Controls.Add(this.txtOIB);
+            this.gbxOsobneinformacije.Controls.Add(this.txtbxOIB);
             this.gbxOsobneinformacije.Controls.Add(adresaLabel);
-            this.gbxOsobneinformacije.Controls.Add(this.txtAdresa);
+            this.gbxOsobneinformacije.Controls.Add(this.txtbxAdresa);
             this.gbxOsobneinformacije.Controls.Add(nazivLabel);
-            this.gbxOsobneinformacije.Controls.Add(this.txtNaziv);
+            this.gbxOsobneinformacije.Controls.Add(this.txtbxNaziv);
             this.gbxOsobneinformacije.Location = new System.Drawing.Point(25, 28);
             this.gbxOsobneinformacije.Name = "gbxOsobneinformacije";
             this.gbxOsobneinformacije.Size = new System.Drawing.Size(294, 130);
@@ -176,40 +176,39 @@
             this.gbxOsobneinformacije.TabStop = false;
             this.gbxOsobneinformacije.Text = "Osobne informacije";
             // 
-            // txtOIB
+            // txtbxOIB
             // 
-            this.txtOIB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "OIB", true));
-            this.txtOIB.Location = new System.Drawing.Point(68, 80);
-            this.txtOIB.Name = "txtOIB";
-            this.txtOIB.Size = new System.Drawing.Size(156, 20);
-            this.txtOIB.TabIndex = 36;
+            this.txtbxOIB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "OIB", true));
+            this.txtbxOIB.Location = new System.Drawing.Point(68, 80);
+            this.txtbxOIB.Name = "txtbxOIB";
+            this.txtbxOIB.Size = new System.Drawing.Size(156, 20);
+            this.txtbxOIB.TabIndex = 36;
             // 
-            // txtAdresa
+            // txtbxAdresa
             // 
-            this.txtAdresa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Adresa", true));
-            this.txtAdresa.Location = new System.Drawing.Point(68, 54);
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(156, 20);
-            this.txtAdresa.TabIndex = 35;
+            this.txtbxAdresa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Adresa", true));
+            this.txtbxAdresa.Location = new System.Drawing.Point(68, 54);
+            this.txtbxAdresa.Name = "txtbxAdresa";
+            this.txtbxAdresa.Size = new System.Drawing.Size(156, 20);
+            this.txtbxAdresa.TabIndex = 35;
             // 
-            // txtNaziv
+            // txtbxNaziv
             // 
-            this.txtNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Naziv", true));
-            this.txtNaziv.Location = new System.Drawing.Point(68, 28);
-            this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(156, 20);
-            this.txtNaziv.TabIndex = 34;
-//            this.txtNaziv.TextChanged += new System.EventHandler(this.txtNaziv_TextChanged);
+            this.txtbxNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kupciBindingSource, "Naziv", true));
+            this.txtbxNaziv.Location = new System.Drawing.Point(68, 28);
+            this.txtbxNaziv.Name = "txtbxNaziv";
+            this.txtbxNaziv.Size = new System.Drawing.Size(156, 20);
+            this.txtbxNaziv.TabIndex = 34;
             // 
-            // btnZatvori
+            // btnOdustani
             // 
-            this.btnZatvori.Location = new System.Drawing.Point(236, 287);
-            this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(83, 24);
-            this.btnZatvori.TabIndex = 48;
-            this.btnZatvori.Text = "Zatvori";
-            this.btnZatvori.UseVisualStyleBackColor = true;
-            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            this.btnOdustani.Location = new System.Drawing.Point(236, 287);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(83, 24);
+            this.btnOdustani.TabIndex = 48;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // kupciBindingNavigator
             // 
@@ -334,7 +333,6 @@
             this.kupciBindingNavigatorSaveItem.Name = "kupciBindingNavigatorSaveItem";
             this.kupciBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 20);
             this.kupciBindingNavigatorSaveItem.Text = "Save Data";
-//            this.kupciBindingNavigatorSaveItem.Click += new System.EventHandler(this.kupciBindingNavigatorSaveItem_Click);
             // 
             // kupciTableAdapter
             // 
@@ -395,7 +393,7 @@
             this.ClientSize = new System.Drawing.Size(341, 323);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.toolStripContainer1);
-            this.Controls.Add(this.btnZatvori);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.gbxKontakt);
             this.Controls.Add(this.gbxOsobneinformacije);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -424,7 +422,7 @@
 
         private System.Windows.Forms.GroupBox gbxKontakt;
         private System.Windows.Forms.GroupBox gbxOsobneinformacije;
-        private System.Windows.Forms.Button btnZatvori;
+        private System.Windows.Forms.Button btnOdustani;
         private GizmoDBDataSet gizmoDBDataSet;
         private System.Windows.Forms.BindingSource kupciBindingSource;
         private GizmoDBDataSetTableAdapters.KupciTableAdapter kupciTableAdapter;
@@ -442,11 +440,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton kupciBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtOIB;
-        private System.Windows.Forms.TextBox txtAdresa;
-        private System.Windows.Forms.TextBox txtNaziv;
+        private System.Windows.Forms.TextBox txtbxTelefon;
+        private System.Windows.Forms.TextBox txtbxEmail;
+        private System.Windows.Forms.TextBox txtbxOIB;
+        private System.Windows.Forms.TextBox txtbxAdresa;
+        private System.Windows.Forms.TextBox txtbxNaziv;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Button btnSpremi;
     }

@@ -31,20 +31,21 @@ namespace GizmoApp.Podforme.Prodaja
             this.kupciTableAdapter.Fill(this.gizmoDBDataSet.Kupci);
         }
 
+
         /// <summary>
         /// Dohvaća podatke o kupljenim knjigama od strane kupca pomoću ID-a kupca.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void kupciDataGridView_SelectionChanged(object sender, EventArgs e)
+        /// 
+        private void dvgKupci_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvKupci.RowCount > 0)
             {
-               this.idKupca = int.Parse(dgvKupci.CurrentRow.Cells[0].Value.ToString());
-               this.knjiga_has_KupciTableAdapter.FillByKnjigaHasKupac(this.gizmoDBDataSet.Knjiga_has_Kupci, this.idKupca);
+                this.idKupca = int.Parse(dgvKupci.CurrentRow.Cells[0].Value.ToString());
+                this.knjiga_has_KupciTableAdapter.FillByKnjigaHasKupac(this.gizmoDBDataSet.Knjiga_has_Kupci, this.idKupca);
             }
         }
-
 
         /// <summary>
         /// Dvoklikom na kupca otvara formu za uređivanje podataka o kupcu.
@@ -58,6 +59,8 @@ namespace GizmoApp.Podforme.Prodaja
             form.ShowDialog();
             frmProdajaPretraziKupce_Load(sender, e);
         }
+
+        
     
     }
 }

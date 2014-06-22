@@ -34,6 +34,9 @@ namespace GizmoApp
             miAdministracija.Visible = false;
             miIzvjesca.Visible = false;
 
+            miProdajaKreirajOtpremnicu.Visible = false;
+            miNabavaKreirajNarudzbenicu.Visible = false;
+
             //MessageBox.Show(pogledi);
 
             for (int i = 0; i < pogledi.Length; i++)

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblKorisnickoIme = new System.Windows.Forms.Label();
             this.lblLozinka = new System.Windows.Forms.Label();
-            this.txtboxKorisnickoIme = new System.Windows.Forms.TextBox();
-            this.txtboxLozinka = new System.Windows.Forms.TextBox();
+            this.txtbxKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.txtbxLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijaviSe = new System.Windows.Forms.Button();
             this.zaposlenikTableAdapter1 = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
             this.SuspendLayout();
@@ -57,22 +57,22 @@
             this.lblLozinka.TabIndex = 1;
             this.lblLozinka.Text = "Lozinka:";
             // 
-            // txtboxKorisnickoIme
+            // txtbxKorisnickoIme
             // 
-            this.txtboxKorisnickoIme.Location = new System.Drawing.Point(183, 94);
-            this.txtboxKorisnickoIme.Name = "txtboxKorisnickoIme";
-            this.txtboxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
-            this.txtboxKorisnickoIme.TabIndex = 3;
-            this.txtboxKorisnickoIme.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtboxKorisnickoIme_KeyUp);
+            this.txtbxKorisnickoIme.Location = new System.Drawing.Point(183, 94);
+            this.txtbxKorisnickoIme.Name = "txtbxKorisnickoIme";
+            this.txtbxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
+            this.txtbxKorisnickoIme.TabIndex = 3;
+            this.txtbxKorisnickoIme.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtboxKorisnickoIme_KeyUp);
             // 
-            // txtboxLozinka
+            // txtbxLozinka
             // 
-            this.txtboxLozinka.Location = new System.Drawing.Point(183, 125);
-            this.txtboxLozinka.Name = "txtboxLozinka";
-            this.txtboxLozinka.PasswordChar = '*';
-            this.txtboxLozinka.Size = new System.Drawing.Size(100, 20);
-            this.txtboxLozinka.TabIndex = 4;
-            this.txtboxLozinka.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtboxLozinka_KeyUp);
+            this.txtbxLozinka.Location = new System.Drawing.Point(183, 125);
+            this.txtbxLozinka.Name = "txtbxLozinka";
+            this.txtbxLozinka.PasswordChar = '*';
+            this.txtbxLozinka.Size = new System.Drawing.Size(100, 20);
+            this.txtbxLozinka.TabIndex = 4;
+            this.txtbxLozinka.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtboxLozinka_KeyUp);
             // 
             // btnPrijaviSe
             // 
@@ -96,8 +96,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(407, 300);
             this.Controls.Add(this.btnPrijaviSe);
-            this.Controls.Add(this.txtboxLozinka);
-            this.Controls.Add(this.txtboxKorisnickoIme);
+            this.Controls.Add(this.txtbxLozinka);
+            this.Controls.Add(this.txtbxKorisnickoIme);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorisnickoIme);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -114,8 +114,8 @@
 
         private System.Windows.Forms.Label lblKorisnickoIme;
         private System.Windows.Forms.Label lblLozinka;
-        private System.Windows.Forms.TextBox txtboxKorisnickoIme;
-        private System.Windows.Forms.TextBox txtboxLozinka;
+        private System.Windows.Forms.TextBox txtbxKorisnickoIme;
+        private System.Windows.Forms.TextBox txtbxLozinka;
         private System.Windows.Forms.Button btnPrijaviSe;
         private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter1;
     }

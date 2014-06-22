@@ -35,7 +35,7 @@
             this.sektor_skladistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sektor_skladistaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter();
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
-            this.kapacitetTextBox = new System.Windows.Forms.TextBox();
+            this.txtbxKapacitet = new System.Windows.Forms.TextBox();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
@@ -85,13 +85,13 @@
             this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ZaposlenikTableAdapter = null;
             // 
-            // kapacitetTextBox
+            // txtbxKapacitet
             // 
-            this.kapacitetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sektor_skladistaBindingSource, "Kapacitet", true));
-            this.kapacitetTextBox.Location = new System.Drawing.Point(121, 66);
-            this.kapacitetTextBox.Name = "kapacitetTextBox";
-            this.kapacitetTextBox.Size = new System.Drawing.Size(100, 20);
-            this.kapacitetTextBox.TabIndex = 2;
+            this.txtbxKapacitet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sektor_skladistaBindingSource, "Kapacitet", true));
+            this.txtbxKapacitet.Location = new System.Drawing.Point(121, 66);
+            this.txtbxKapacitet.Name = "txtbxKapacitet";
+            this.txtbxKapacitet.Size = new System.Drawing.Size(100, 20);
+            this.txtbxKapacitet.TabIndex = 2;
             // 
             // lblNaslov
             // 
@@ -131,10 +131,11 @@
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(kapacitetLabel);
-            this.Controls.Add(this.kapacitetTextBox);
+            this.Controls.Add(this.txtbxKapacitet);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSkladisteDodajSektor";
-            this.Text = "frmSkladisteDodajSektor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj sektor";
             this.Load += new System.EventHandler(this.frmSkladisteDodajSektor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingSource)).EndInit();
@@ -149,7 +150,7 @@
         private System.Windows.Forms.BindingSource sektor_skladistaBindingSource;
         private GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter sektor_skladistaTableAdapter;
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox kapacitetTextBox;
+        private System.Windows.Forms.TextBox txtbxKapacitet;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnOdustani;
