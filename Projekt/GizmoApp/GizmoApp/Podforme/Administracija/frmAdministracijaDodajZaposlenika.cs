@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Administracija
 {
-
-
+    /// <summary>
+    /// Forma za dodavanje novog zaposlenika.
+    /// </summary>
     public partial class frmAdministracijaDodajZaposlenika : Form
     {
         public frmAdministracijaDodajZaposlenika()

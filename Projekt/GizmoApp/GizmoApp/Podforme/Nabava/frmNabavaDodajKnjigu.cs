@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Nabava
 {
+    /// <summary>
+    /// Forma za dodavanje nove knjige u bazu podataka o knjigama.
+    /// </summary>
     public partial class frmNabavaDodajKnjigu : Form
     {
         public frmNabavaDodajKnjigu()

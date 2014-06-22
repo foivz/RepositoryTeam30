@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Prodaja
 {
-    
+    /// <summary>
+    /// Forma za dodavanje novog kupca.
+    /// </summary>
     public partial class frmProdajaDodajKupca : Form
     {
         public frmProdajaDodajKupca()

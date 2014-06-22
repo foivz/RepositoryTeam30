@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Izvjesca
 {
+    /// <summary>
+    /// Forma za kreiranje izvješća.
+    /// </summary>
     public partial class frmIzvjescaKreirajIzvjesce : Form
     {
         public frmIzvjescaKreirajIzvjesce()

@@ -131,3 +131,4 @@ D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
+D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.XML

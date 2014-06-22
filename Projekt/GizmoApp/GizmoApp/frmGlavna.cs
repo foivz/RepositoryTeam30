@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace GizmoApp
 {
+    /// <summary>
+    /// Glavna forma koja se prikazuje nakon uspješne prijave zaposlenika, sadrži izbornik za odabir ostalih mogućnosti aplikacije.
+    /// Ovisno o pravima zaposlenika mijenja vidljivost određenih izbornika.
+    /// </summary>
     public partial class frmGlavna : Form
     {
         /// <summary>

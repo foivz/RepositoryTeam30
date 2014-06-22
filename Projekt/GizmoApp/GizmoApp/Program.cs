@@ -6,6 +6,13 @@ using System.Windows.Forms;
 
 namespace GizmoApp
 {
+    /// <summary>
+    /// GizmoApp predstavlja aplikaciju za evidenciju i upravljanje poslovanjem poduzeća Katarina Zrinski d.o.o.
+    /// </summary>
+    public static class NamespaceDoc
+    {
+    }
+
     static class Program
     {
         public static bool prijava;

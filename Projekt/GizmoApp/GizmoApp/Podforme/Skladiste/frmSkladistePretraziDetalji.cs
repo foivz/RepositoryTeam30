@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Skladiste
 {
+    /// <summary>
+    /// Forma za uređivanje sektora skladišta koji je odabran dvoklikom na formi Skladište pretraži.
+    /// </summary>
     public partial class frmSkladistePretraziDetalji : Form
     {
         private int idSkladista { get; set; }

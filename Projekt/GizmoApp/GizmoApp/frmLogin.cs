@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp
 {
+    /// <summary>
+    /// Forma za prijavu zaposlenika.
+    /// </summary>
     public partial class frmLogin : Form
     {
         public frmLogin()

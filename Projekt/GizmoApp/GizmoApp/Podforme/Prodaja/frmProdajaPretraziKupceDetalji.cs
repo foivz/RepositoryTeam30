@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Prodaja
 {
+    /// <summary>
+    /// Forma za izmjenu podataka o kupcu odabranom dvoklikom sa forme Pretrazi Kupce.
+    /// </summary>
     public partial class frmProdajaPretraziKupceDetalji : Form
     {
-        public bool promjena { get; set; }
-        private int idKupca { get; set; }
-        public bool uredi { get; set; }
 
+        private int idKupca { get; set; }
         private string naziv;
         private string oib;
         private string adresa;

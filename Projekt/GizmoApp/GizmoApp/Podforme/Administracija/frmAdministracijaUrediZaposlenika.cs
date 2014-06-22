@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Administracija
 {
-
+    /// <summary>
+    /// Forma za prikaz, pretraživanje i mogućnost brisanja zaposlenika.
+    /// </summary>
     public partial class frmAdministracijaUrediZaposlenika : Form
     {
         private int idZaposlenik { get; set; }

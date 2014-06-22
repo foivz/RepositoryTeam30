@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Administracija
 {
-
+    /// <summary>
+    /// Forma za uređivanje podataka o zaposleniku, odabranom dvoklikom sa forme Uredi zaposlenika.
+    /// </summary>
     public partial class frmAdministracijaUrediZaposlenikaDetalji : Form
     {
         private int idZaposlenika { get; set; }
@@ -28,9 +30,7 @@ namespace GizmoApp.Podforme.Administracija
         public frmAdministracijaUrediZaposlenikaDetalji(int id)
         {
             InitializeComponent();
-            this.idZaposlenika = id;
-
-            
+            this.idZaposlenika = id;  
 
         }
 

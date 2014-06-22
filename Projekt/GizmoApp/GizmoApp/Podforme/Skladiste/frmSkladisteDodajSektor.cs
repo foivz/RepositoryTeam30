@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Skladiste
 {
+    /// <summary>
+    /// Forma za dodavanje novog sektora skladišta određenog kapaciteta.
+    /// </summary>
     public partial class frmSkladisteDodajSektor : Form
     {
         public frmSkladisteDodajSektor()

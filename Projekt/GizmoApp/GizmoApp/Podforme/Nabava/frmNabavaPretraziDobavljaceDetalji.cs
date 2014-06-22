@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Nabava
 {
-
+    /// <summary>
+    /// Forma za uređivanje podataka o dobavljaču, odabranom dvoklikom sa forme Pretraži dobavljače.
+    /// </summary>
     public partial class frmNabavaPretraziDobavljaceDetalji : Form
     {
         private int idDobavljaca { get; set; }

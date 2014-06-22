@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Skladiste
 {
+    /// <summary>
+    /// Forma za pretraživanje i prikaz skladišta i stanja unutar sektora.
+    /// </summary>
     public partial class frmSkladistePretrazi : Form
     {
         private int idSkladista { get; set; }

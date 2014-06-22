@@ -1,0 +1,882 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GizmoApp</name>
+    </assembly>
+    <members>
+        <member name="T:GizmoApp.frmLogin">
+            <summary>
+            Forma za prijavu zaposlenika.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.frmLogin.Prijava">
+            <summary>
+            Provjerava da li uneseno korisničko ime i lozinka, postoje unutar baze podataka zaposlenika.
+            Uspješnom prijavom otvara glavnu formu.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.frmLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.frmLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.frmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.frmGlavna">
+            <summary>
+            Glavna forma koja se prikazuje nakon uspješne prijave zaposlenika, sadrži izbornik za odabir ostalih mogućnosti aplikacije.
+            Ovisno o pravima zaposlenika mijenja vidljivost određenih izbornika.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.frmGlavna.dodjelaPogleda">
+            <summary>
+            Dodjeljuje pogled određenom zaposleniku ovisno kojem odjelu pripada pomoću njegovog korisničkog imena.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.frmGlavna.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.frmGlavna.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.frmGlavna.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.DobavljaciDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KategorijaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Kategorija_has_KnjigaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KnjigaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_DobavljaciDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_KupciDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_Sektor_skladistaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KupciDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.OdjelDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Odjel_has_PogledDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.PogledDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Sektor_skladistaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.ZaposlenikDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.DobavljaciRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KategorijaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Kategorija_has_KnjigaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KnjigaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_DobavljaciRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_KupciRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_Sektor_skladistaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KupciRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.OdjelRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Odjel_has_PogledRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.PogledRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Sektor_skladistaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.ZaposlenikRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.DobavljaciRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KategorijaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Kategorija_has_KnjigaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KnjigaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_DobavljaciRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_KupciRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Knjiga_has_Sektor_skladistaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.KupciRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.OdjelRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Odjel_has_PogledRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.PogledRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.Sektor_skladistaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSet.ZaposlenikRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.DobavljaciTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.KategorijaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Kategorija_has_KnjigaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_DobavljaciTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_Sektor_skladistaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.KupciTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.PogledTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(GizmoApp.GizmoDBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(GizmoApp.GizmoDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(GizmoApp.GizmoDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateAll(GizmoApp.GizmoDBDataSet)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika">
+            <summary>
+            Forma za dodavanje novog zaposlenika.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.createNewZaposlenik">
+            <summary>
+            Provjerava unos podataka i kreira novog zaposlenika.
+            Uspjesan unos otvora uredivanje zaposlenika.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika">
+            <summary>
+            Forma za prikaz, pretraživanje i mogućnost brisanja zaposlenika.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.dgvZaposlenik_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Na selekciju zaposlenika dohvaća podatke o njegovom odjelu preko ID-a odjela.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.dgvZaposlenik_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Na dvoklik pojedinog zaposlenika otvara novu formu za uredivanje tog zaposlenika.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji">
+            <summary>
+            Forma za uređivanje podataka o zaposleniku, odabranom dvoklikom sa forme Uredi zaposlenika.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.isChanged">
+            <summary>
+            Funkcija provjerava jesu li podaci promijenjeni.
+            </summary>
+            <returns>true - ako su promijenjeni, false - ako nisu promijenjeni</returns>
+        </member>
+        <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce">
+            <summary>
+            Forma za kreiranje izvješća.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca">
+            <summary>
+            Forma za pregled izvešća.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca">
+            <summary>
+            Forma za dodavanje novog dobavljača.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.createNewDobavljac">
+            <summary>
+            Provjerava unos podataka i kreira novog dobavljaca.
+            Uspjesan unos otvora pretrazivanje dobavljaca.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu">
+            <summary>
+            Forma za dodavanje nove knjige u bazu podataka o knjigama.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.createNewKnjiga">
+            <summary>
+            Provjerava unos podataka i služi za unos nove knjige.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu">
+            <summary>
+            Forma za kreiranje nove narudžbenice.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace">
+            <summary>
+            Forma za pretraživanje i prikaz dobavljača i informacija o nabavljenim knjigama od strane istog.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.dgvDobavljaci_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Na selekciju dobavljaca dohvaća podatke o isporučenim knjigama pomoću ID-a dobavljaća.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.dgvDobavljaci_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Dvoklikom na dobavljaća otvara se forma koja omogućuje uređivanje istog.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji">
+            <summary>
+            Forma za uređivanje podataka o dobavljaču, odabranom dvoklikom sa forme Pretraži dobavljače.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.isChanged">
+            <summary>
+            Funkcija provjerava jesu li podaci promijenjeni.
+            </summary>
+            <returns>true - ako su promijenjeni, false - ako nisu promijenjeni</returns>
+        </member>
+        <member name="F:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca">
+            <summary>
+            Forma za dodavanje novog kupca.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.createNewKupac">
+            <summary>
+            Provjerava unos podataka i služi za unos novog kupca.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu">
+            <summary>
+            Forma za kreiranje nove otpremnice.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce">
+            <summary>
+            Forma za pretraživanje i prikaz podataka o kupci i pripadnih kupljenih knjiga od strane istog.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.dvgKupci_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Dohvaća podatke o kupljenim knjigama od strane kupca pomoću ID-a kupca.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.dgvKupci_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Dvoklikom na kupca otvara formu za uređivanje podataka o kupcu.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji">
+            <summary>
+            Forma za izmjenu podataka o kupcu odabranom dvoklikom sa forme Pretrazi Kupce.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor">
+            <summary>
+            Forma za dodavanje novog sektora skladišta određenog kapaciteta.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.createNewSektor">
+            <summary>
+            Provjerava unos podataka i služi za unos novog sektora skladišta.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi">
+            <summary>
+            Forma za pretraživanje i prikaz skladišta i stanja unutar sektora.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.dgvSektorSkladista_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Dohvaća podatke o uskladištenim knjigama u određenom sektoru pomoću ID-a skladišta
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.upozerenjeSkladiste(System.Int32)">
+            <summary>
+            Provjerava popunjenost skladišta, bojom signalizira  stanje skladišta.
+            </summary>
+            <param name="kolicina"></param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.dgvSektorSkladista_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Dovklikom na sektor otvara mogućnost uređivanja podataka o sektoru.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji">
+            <summary>
+            Forma za uređivanje sektora skladišta koji je odabran dvoklikom na formi Skladište pretraži.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.isChanged">
+            <summary>
+            Funkcija provjerava jesu li podaci promijenjeni.
+            </summary>
+            <returns>true - ako su promijenjeni, false - ako nisu promijenjeni</returns>
+        </member>
+        <member name="F:GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.NamespaceDoc">
+            <summary>
+            GizmoApp predstavlja aplikaciju za evidenciju i upravljanje poslovanjem poduzeća Katarina Zrinski d.o.o.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:GizmoApp.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GizmoApp.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GizmoApp.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GizmoApp.Properties.Resources.gizmo_bg">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

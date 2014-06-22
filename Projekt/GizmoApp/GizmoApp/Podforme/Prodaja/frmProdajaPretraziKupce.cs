@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Prodaja
 {
+    /// <summary>
+    /// Forma za pretraživanje i prikaz podataka o kupci i pripadnih kupljenih knjiga od strane istog.
+    /// </summary>
     public partial class frmProdajaPretraziKupce : Form
     {
         private int idKupca{get; set;}
@@ -19,8 +22,6 @@ namespace GizmoApp.Podforme.Prodaja
             InitializeComponent();
 
         }
-
-
 
         private void frmProdajaPretraziKupce_Load(object sender, EventArgs e)
         {

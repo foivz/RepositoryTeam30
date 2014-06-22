@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Nabava
 {
-
+    /// <summary>
+    /// Forma za dodavanje novog dobavljača.
+    /// </summary>
     public partial class frmNabavaDodajDobavljaca : Form
     {
         public frmNabavaDodajDobavljaca()

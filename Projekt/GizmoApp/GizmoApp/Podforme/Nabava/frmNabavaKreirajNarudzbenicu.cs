@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace GizmoApp.Podforme.Nabava
 {
+    /// <summary>
+    /// Forma za kreiranje nove narudžbenice.
+    /// </summary>
     public partial class frmNabavaKreirajNarudzbenicu : Form
     {
         public frmNabavaKreirajNarudzbenicu()
