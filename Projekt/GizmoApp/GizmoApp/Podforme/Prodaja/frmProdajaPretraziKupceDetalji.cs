@@ -43,9 +43,12 @@ namespace GizmoApp.Podforme.Prodaja
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
-            /*bool stanje = isChanged();
-            if (stanje) MessageBox.Show("Promijenili ste neke podatke. Želite li ");
-            else */
+            if (isChanged())
+            {
+                DialogResult odg = MessageBox.Show("Promjenjeni su podaci. Želite li ih spremiti", "Upozorenje", MessageBoxButtons.YesNo);
+                if (odg == DialogResult.Yes) btnSpremi_Click(sender, e);
+                else this.Close();
+            }
             this.Close();
         }
 
@@ -54,6 +57,7 @@ namespace GizmoApp.Podforme.Prodaja
             this.Validate();
             this.kupciBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
+            MessageBox.Show("Promjene su uspješno spremljene.", "Obavijest");
             this.Close();
         }
 

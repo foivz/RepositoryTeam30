@@ -46,6 +46,7 @@
             this.kategorijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.lblKn = new System.Windows.Forms.Label();
             lblNaziv = new System.Windows.Forms.Label();
             jedinicna_cijenaLabel = new System.Windows.Forms.Label();
             lblKategorija = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             // lblNaziv
             // 
             lblNaziv.AutoSize = true;
-            lblNaziv.Location = new System.Drawing.Point(23, 67);
+            lblNaziv.Location = new System.Drawing.Point(23, 24);
             lblNaziv.Name = "lblNaziv";
             lblNaziv.Size = new System.Drawing.Size(37, 13);
             lblNaziv.TabIndex = 1;
@@ -67,20 +68,20 @@
             // jedinicna_cijenaLabel
             // 
             jedinicna_cijenaLabel.AutoSize = true;
-            jedinicna_cijenaLabel.Location = new System.Drawing.Point(23, 101);
+            jedinicna_cijenaLabel.Location = new System.Drawing.Point(23, 58);
             jedinicna_cijenaLabel.Name = "jedinicna_cijenaLabel";
             jedinicna_cijenaLabel.Size = new System.Drawing.Size(86, 13);
             jedinicna_cijenaLabel.TabIndex = 2;
-            jedinicna_cijenaLabel.Text = "Jedinicna cijena:";
+            jedinicna_cijenaLabel.Text = "Jedinična cijena:";
             // 
             // lblKategorija
             // 
             lblKategorija.AutoSize = true;
-            lblKategorija.Location = new System.Drawing.Point(12, 147);
+            lblKategorija.Location = new System.Drawing.Point(23, 101);
             lblKategorija.Name = "lblKategorija";
-            lblKategorija.Size = new System.Drawing.Size(118, 13);
+            lblKategorija.Size = new System.Drawing.Size(60, 13);
             lblKategorija.TabIndex = 4;
-            lblKategorija.Text = "Kategorija id Kategorija:";
+            lblKategorija.Text = "Kategorija: ";
             // 
             // gizmoDBDataSet
             // 
@@ -125,17 +126,17 @@
             // txtbxNaziv
             // 
             this.txtbxNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Naziv", true));
-            this.txtbxNaziv.Location = new System.Drawing.Point(133, 60);
+            this.txtbxNaziv.Location = new System.Drawing.Point(115, 17);
             this.txtbxNaziv.Name = "txtbxNaziv";
-            this.txtbxNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtbxNaziv.Size = new System.Drawing.Size(162, 20);
             this.txtbxNaziv.TabIndex = 2;
             // 
             // txbxJedinicnaCijena
             // 
             this.txbxJedinicnaCijena.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.knjigaBindingSource, "Jedinicna_cijena", true));
-            this.txbxJedinicnaCijena.Location = new System.Drawing.Point(133, 98);
+            this.txbxJedinicnaCijena.Location = new System.Drawing.Point(115, 55);
             this.txbxJedinicnaCijena.Name = "txbxJedinicnaCijena";
-            this.txbxJedinicnaCijena.Size = new System.Drawing.Size(100, 20);
+            this.txbxJedinicnaCijena.Size = new System.Drawing.Size(87, 20);
             this.txbxJedinicnaCijena.TabIndex = 3;
             // 
             // kategorija_has_KnjigaBindingSource
@@ -150,7 +151,7 @@
             this.cmbxKategorija.DataSource = this.kategorijaBindingSource;
             this.cmbxKategorija.DisplayMember = "Naziv";
             this.cmbxKategorija.FormattingEnabled = true;
-            this.cmbxKategorija.Location = new System.Drawing.Point(136, 144);
+            this.cmbxKategorija.Location = new System.Drawing.Point(115, 98);
             this.cmbxKategorija.Name = "cmbxKategorija";
             this.cmbxKategorija.Size = new System.Drawing.Size(121, 21);
             this.cmbxKategorija.TabIndex = 5;
@@ -163,7 +164,7 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(26, 201);
+            this.btnSpremi.Location = new System.Drawing.Point(37, 153);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnSpremi.TabIndex = 6;
@@ -173,7 +174,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(182, 201);
+            this.btnOdustani.Location = new System.Drawing.Point(193, 153);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(75, 23);
             this.btnOdustani.TabIndex = 7;
@@ -181,11 +182,21 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // lblKn
+            // 
+            this.lblKn.AutoSize = true;
+            this.lblKn.Location = new System.Drawing.Point(208, 58);
+            this.lblKn.Name = "lblKn";
+            this.lblKn.Size = new System.Drawing.Size(20, 13);
+            this.lblKn.TabIndex = 8;
+            this.lblKn.Text = "Kn";
+            // 
             // frmNabavaDodajKnjigu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 262);
+            this.ClientSize = new System.Drawing.Size(307, 199);
+            this.Controls.Add(this.lblKn);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(lblKategorija);
@@ -223,5 +234,6 @@
         private System.Windows.Forms.BindingSource kategorijaBindingSource;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Label lblKn;
     }
 }

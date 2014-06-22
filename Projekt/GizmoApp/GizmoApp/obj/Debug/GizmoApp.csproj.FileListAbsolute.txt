@@ -129,3 +129,5 @@ C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoA
 C:\Users\Filip Ptiček\Documents\GitHub\RepositoryTeam30\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
 D:\FOI\6. semestar\Programsko inženjerstvo\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
