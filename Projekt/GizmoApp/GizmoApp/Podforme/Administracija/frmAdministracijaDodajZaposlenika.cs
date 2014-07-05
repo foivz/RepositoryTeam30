@@ -27,24 +27,36 @@ namespace GizmoApp.Podforme.Administracija
 
         private void frmAdministracijaDodajZaposlenika_Load(object sender, EventArgs e)
         {
-            
-            // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
-            this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
-            zaposlenikBindingSource.AddNew();
 
+            slojBaze.osvjeziNovo(this.gizmoDBDataSet.Zaposlenik, zaposlenikTableAdapter, zaposlenikBindingSource);
         }
 
         private void btnSpremi_MouseUp(object sender, MouseEventArgs e)
         {
-            createNewZaposlenik();
+            slojBaze.insert(this, zaposlenikBindingSource, tableAdapterManager, gizmoDBDataSet);
             
+        }
+
+        private void txtbxIme_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxIme);
+        }
+
+        private void txtbxPrezime_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxPrezime);
+        }
+
+        private void txtbxOIB_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxOIB);
         }
 
         /// <summary>
         /// Provjerava unos podataka i kreira novog zaposlenika.
         /// Uspjesan unos otvora uredivanje zaposlenika.
         /// </summary>
-        private void createNewZaposlenik()
+      /*  private void createNewZaposlenik()
         {
             this.Validate();
             try
@@ -63,6 +75,6 @@ namespace GizmoApp.Podforme.Administracija
                 MessageBox.Show("Nepravilan unos podatka!");
                 //MessageBox.Show(error.ToString());
             }
-        }
+        }*/
     }
 }

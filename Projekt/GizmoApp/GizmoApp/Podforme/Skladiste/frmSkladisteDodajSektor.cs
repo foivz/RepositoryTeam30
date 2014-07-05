@@ -34,7 +34,14 @@ namespace GizmoApp.Podforme.Skladiste
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            createNewSektor();
+            if (int.Parse(txtbxKapacitet.Text) > 0)
+            {
+                createNewSektor();
+            }
+            else
+            {
+                MessageBox.Show("Kapacitet ne može biti negativan");
+            }
         }
 
         /// <summary>

@@ -370,12 +370,6 @@
             Forma za dodavanje novog zaposlenika.
             </summary>
         </member>
-        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.createNewZaposlenik">
-            <summary>
-            Provjerava unos podataka i kreira novog zaposlenika.
-            Uspjesan unos otvora uredivanje zaposlenika.
-            </summary>
-        </member>
         <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.components">
             <summary>
             Required designer variable.
