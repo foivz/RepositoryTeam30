@@ -50,11 +50,19 @@ namespace GizmoApp.Podforme.Skladiste
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.sektor_skladistaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
-            MessageBox.Show("Promjene su uspješno spremljene.", "Obavijest");
-            this.Close();
+            if (int.Parse(txtbxKapacitet.Text) > 0)
+            {
+                this.Validate();
+                this.sektor_skladistaBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
+                MessageBox.Show("Promjene su uspješno spremljene.", "Obavijest");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Kapacitet ne može biti negativan");
+            } 
+            
         }
         /// <summary>
         /// Funkcija provjerava jesu li podaci promijenjeni.

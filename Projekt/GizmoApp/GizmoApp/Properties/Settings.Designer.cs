@@ -26,8 +26,9 @@ namespace GizmoApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Supercrap\\Desktop\\GizmoDB\\G" +
-            "izmoDB.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\User\\Desktop\\PI\\novo šta m" +
+            "oram da promenim\\Projekt\\GizmoDB\\GizmoDB.mdf\";Integrated Security=True;Connect T" +
+            "imeout=30")]
         public string GizmoDBConnectionString {
             get {
                 return ((string)(this["GizmoDBConnectionString"]));
