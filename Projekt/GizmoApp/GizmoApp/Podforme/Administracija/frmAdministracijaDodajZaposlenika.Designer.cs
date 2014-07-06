@@ -47,7 +47,7 @@
             this.txtbxPrezime = new System.Windows.Forms.TextBox();
             this.txtbxIme = new System.Windows.Forms.TextBox();
             this.gpxKontakt = new System.Windows.Forms.GroupBox();
-            this.telefonTextBox = new System.Windows.Forms.TextBox();
+            this.txtbxTelefon = new System.Windows.Forms.TextBox();
             this.txtbxEmail = new System.Windows.Forms.TextBox();
             this.gpxPoslovneInformacije = new System.Windows.Forms.GroupBox();
             this.txtbxOdjel = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
+            this.odjelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             lblIme = new System.Windows.Forms.Label();
             lblPrezime = new System.Windows.Forms.Label();
             lblOIB = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             this.gpxKontakt.SuspendLayout();
             this.gpxPoslovneInformacije.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIme
@@ -220,7 +222,7 @@
             // 
             // gpxKontakt
             // 
-            this.gpxKontakt.Controls.Add(this.telefonTextBox);
+            this.gpxKontakt.Controls.Add(this.txtbxTelefon);
             this.gpxKontakt.Controls.Add(lblTelefon);
             this.gpxKontakt.Controls.Add(this.txtbxEmail);
             this.gpxKontakt.Controls.Add(lblEmail);
@@ -231,13 +233,15 @@
             this.gpxKontakt.TabStop = false;
             this.gpxKontakt.Text = "Kontakt";
             // 
-            // telefonTextBox
+            // txtbxTelefon
             // 
-            this.telefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Telefon", true));
-            this.telefonTextBox.Location = new System.Drawing.Point(87, 60);
-            this.telefonTextBox.Name = "telefonTextBox";
-            this.telefonTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefonTextBox.TabIndex = 5;
+            this.txtbxTelefon.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Telefon", true));
+            this.txtbxTelefon.Location = new System.Drawing.Point(87, 60);
+            this.txtbxTelefon.MaxLength = 7;
+            this.txtbxTelefon.Name = "txtbxTelefon";
+            this.txtbxTelefon.Size = new System.Drawing.Size(100, 20);
+            this.txtbxTelefon.TabIndex = 5;
+            this.txtbxTelefon.Leave += new System.EventHandler(this.txtbxTelefon_Leave);
             // 
             // txtbxEmail
             // 
@@ -246,6 +250,7 @@
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(159, 20);
             this.txtbxEmail.TabIndex = 4;
+            this.txtbxEmail.Leave += new System.EventHandler(this.txtbxEmail_Leave);
             // 
             // gpxPoslovneInformacije
             // 
@@ -257,7 +262,7 @@
             this.gpxPoslovneInformacije.Controls.Add(lblKorisnickoIme);
             this.gpxPoslovneInformacije.Location = new System.Drawing.Point(335, 129);
             this.gpxPoslovneInformacije.Name = "gpxPoslovneInformacije";
-            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(267, 147);
+            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(250, 169);
             this.gpxPoslovneInformacije.TabIndex = 2;
             this.gpxPoslovneInformacije.TabStop = false;
             this.gpxPoslovneInformacije.Text = "Poslovne informacije";
@@ -285,6 +290,7 @@
             this.txtbxKorisnickoIme.Name = "txtbxKorisnickoIme";
             this.txtbxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
             this.txtbxKorisnickoIme.TabIndex = 6;
+            this.txtbxKorisnickoIme.Leave += new System.EventHandler(this.txtbxKorisnickoIme_Leave);
             // 
             // btnSpremi
             // 
@@ -332,11 +338,16 @@
             // 
             this.odjelTableAdapter.ClearBeforeFill = true;
             // 
+            // odjelBindingSource
+            // 
+            this.odjelBindingSource.DataMember = "Odjel";
+            this.odjelBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
             // frmAdministracijaDodajZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 354);
+            this.ClientSize = new System.Drawing.Size(667, 354);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.gpxPoslovneInformacije);
@@ -355,6 +366,7 @@
             this.gpxKontakt.PerformLayout();
             this.gpxPoslovneInformacije.ResumeLayout(false);
             this.gpxPoslovneInformacije.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.odjelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,12 +386,13 @@
         private System.Windows.Forms.TextBox txtbxIme;
         private System.Windows.Forms.TextBox txtbxAdresa;
         private System.Windows.Forms.TextBox txtbxOIB;
-        private System.Windows.Forms.TextBox telefonTextBox;
+        private System.Windows.Forms.TextBox txtbxTelefon;
         private System.Windows.Forms.TextBox txtbxEmail;
         private System.Windows.Forms.TextBox txtbxLozinka;
         private System.Windows.Forms.TextBox txtbxKorisnickoIme;
         private GizmoDBDataSetTableAdapters.OdjelTableAdapter odjelTableAdapter;
         private System.Windows.Forms.TextBox txtbxOdjel;
+        private System.Windows.Forms.BindingSource odjelBindingSource;
 
     }
 }

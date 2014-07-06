@@ -23,6 +23,9 @@ namespace GizmoApp
                     case "txtbxIme":
                     case "txtbxPrezime": imePrezime(txt); break;
                     case "txtbxOIB": oib(txt); break;
+                    case "txtbxEmail": email(txt); break;
+                    case "txtbxTelefon": telefon(txt); break;
+                    case "txtbxKorisnickoIme": korisnicko(txt); break;
                 }
             }
         }
@@ -72,11 +75,90 @@ namespace GizmoApp
                 }
                 fokusiraj(txt);
             }
+            
+        }
+        public static void email(TextBox txt)
+        {
+            ispravno = true;
+            if (ispravanMail(txt) == false) postaviKrivo(1);
+
+            if (ispravno == false)
+            {
+                zacrveni(txt);
+                switch (zastavica)
+                {
+                    case 1: MessageBox.Show("Email nije ispravan! Mora sadržavati barem jedan znak '@' i jednu točku.", "Upozorenje"); break;
+
+                }
+                fokusiraj(txt);
+            }
         }
 
+        public static void telefon(TextBox txt)
+        {
+            ispravno = true;
+            if (txt.TextLength != 7) ispravno = false;
+            if (imaSlovo(txt) == false && ispravno == true)
+            {
+                for (int i = 0; i < txt.TextLength; i++)
+                {
+                    if(txt.Text[i] == '-') continue;
+                    if(txt.Text[i] < '0' || txt.Text[i] >'9')
+                    {
+                        ispravno = false;
+                        break;
+                    }
+                }
+                if (txt.Text[3] != '-' && ispravno == true) ispravno = false;
+            }
+            else ispravno = false;
 
+            if (ispravno == false)
+            {
+                zacrveni(txt);
+                MessageBox.Show("Format telefonskog broja je 000-000 gdje 0 predstavlja broj od 0 do 9","Upozorenje");
+                fokusiraj(txt);
+            }
+        }
 
+        public static void korisnicko(TextBox txt)
+        {
+            ispravno = true;
+            for (int i = 0; i < txt.TextLength; i++)
+            {
+                if (txt.Text[i] == ' ')
+                {
+                    ispravno = false;
+                    break;
+                }
+            }
 
+            if (ispravno == false)
+            {
+                zacrveni(txt);
+                MessageBox.Show("Korisničko ime ne smije imati razmak.", "Upozorenje");
+                fokusiraj(txt);
+            }
+        }
+
+        public static bool ispravanMail(TextBox txt)
+        {
+            bool status = false;
+
+            for (int i = 0; i < txt.TextLength; i++)
+            {
+                if( i > 0  && txt.Text[i-1] == '@' && status == true) status = false;
+     
+                if (txt.Text[i] == '@' || txt.Text[i] == '.')
+                {
+                    status = true;
+                    if (txt.Text[i] == '.') break;
+                }
+                if (txt.Text[i] == '@' && i == txt.TextLength - 1) status = false;
+            }
+
+            return status;
+        }
         public static void zacrveni(TextBox txt)
         {
             txt.ForeColor = Color.Red;

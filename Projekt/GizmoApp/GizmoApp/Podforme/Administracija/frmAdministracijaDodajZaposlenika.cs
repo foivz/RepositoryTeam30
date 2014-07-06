@@ -52,6 +52,36 @@ namespace GizmoApp.Podforme.Administracija
             slojKontrole.dodjeliKontrolu(txtbxOIB);
         }
 
+        private void txtbxEmail_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxEmail);
+        }
+
+        private void txtbxTelefon_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxTelefon);
+        }
+
+        private void txtbxKorisnickoIme_Leave(object sender, EventArgs e)
+        {
+            slojKontrole.dodjeliKontrolu(txtbxKorisnickoIme);
+        }
+
+        private void fillByOdjelToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.zaposlenikTableAdapter.FillByOdjel(this.gizmoDBDataSet.Zaposlenik);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+       
+
         /// <summary>
         /// Provjerava unos podataka i kreira novog zaposlenika.
         /// Uspjesan unos otvora uredivanje zaposlenika.
