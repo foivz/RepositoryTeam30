@@ -260,11 +260,6 @@
             Row event argument class
             </summary>
         </member>
-        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter">
-             <summary>
-            Represents the connection and commands used to retrieve and save data.
-            </summary>
-        </member>
         <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.DobavljaciTableAdapter">
              <summary>
             Represents the connection and commands used to retrieve and save data.
@@ -325,6 +320,11 @@
             Represents the connection and commands used to retrieve and save data.
             </summary>
         </member>
+        <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
         <member name="T:GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager">
              <summary>
             TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
@@ -368,6 +368,22 @@
         <member name="T:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika">
             <summary>
             Forma za dodavanje novog zaposlenika.
+            </summary>
+            
+        </member>
+        <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.upisivanje">
+            <summary>
+            Varijabla za kontrolu jel se radi o upisivanju ili brisanju, za telefonski broj.
+            </summary>
+        </member>
+        <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.duljina">
+            <summary>
+            Vaarijabla za kontorlu broja znakova telefonskog broja.
+            </summary>
+        </member>
+        <member name="M:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.#ctor">
+            <summary>
+            Forma za dodavanje zaposlenika
             </summary>
         </member>
         <member name="F:GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.components">

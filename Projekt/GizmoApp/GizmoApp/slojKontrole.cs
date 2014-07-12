@@ -6,211 +6,152 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GizmoApp
 {
-    class slojKontrole
+   class slojKontrole
     {
 
-        public static bool ispravno;
-        public static int zastavica;
+        public static bool ispravno = true;
 
-        public static void dodjeliKontrolu(TextBox txt)
+        public static void dodjeliKontrolu(string ime, string vrijednost)
         {
-            if (txt.TextLength > 0)
+            if (vrijednost.Length > 0)
             {
-                switch (txt.Name)
+                switch (ime)
                 {
                     case "txtbxIme":
-                    case "txtbxPrezime": imePrezime(txt); break;
-                    case "txtbxOIB": oib(txt); break;
-                    case "txtbxEmail": email(txt); break;
-                    case "txtbxTelefon": telefon(txt); break;
-                    case "txtbxKorisnickoIme": korisnicko(txt); break;
+                    case "txtbxPrezime": imePrezime(vrijednost); break;
+                    case "txtbxOIB": oib(vrijednost); break;
+                    case "txtbxEmail": email(vrijednost); break;
+                    case "txtbxTelefon": telefon(vrijednost); break;
+                    case "txtbxKorisnickoIme": korisnicko(vrijednost); break;
                 }
             }
         }
-        public static void imePrezime(TextBox txt)
+        public static void imePrezime(string vrijednost)
         {
             ispravno = true;
-            if (imaBroj(txt)) postaviKrivo(1);
+            if (imaBroj(vrijednost)) postaviKrivo(Greske.ErrorCodes.greska1);
 
-            if (ispravno == true)
+            if (prvoVelikoSlovo(vrijednost) == false)
             {
-                if (prvoVelikoSlovo(txt) == false)
-                {
-                    postaviKrivo(2);
-                }
-            }
-
-            if (ispravno == false)
-            {
-                zacrveni(txt);
-
-                switch (zastavica)
-                {
-                    case 1: MessageBox.Show("Ime i prezime mora imati samo slova.", "Upozorenje"); break;
-                    case 2: MessageBox.Show("Ime i prezime mora imati prvo slovo veliko.", "Upozorenje"); break;
-                }
-
-                fokusiraj(txt);
-            }
-        }
-
-        public static void oib(TextBox txt)
-        {
-            ispravno = true;
-            if (nijeBroj(txt)) postaviKrivo(1);
-            if (ispravno == true)
-            {
-                if (txt.TextLength < 11) postaviKrivo(2);
-            }
-
-            if (ispravno == false)
-            {
-                zacrveni(txt);
-                switch (zastavica)
-                {
-                    case 1: MessageBox.Show("OIB sadrži samo brojeve.", "Upozorenje"); break;
-                    case 2: MessageBox.Show("OIB sadrži točno 11 brojeva.", "Upozorenje"); break;
-                }
-                fokusiraj(txt);
+                postaviKrivo(Greske.ErrorCodes.greska2);
             }
             
         }
-        public static void email(TextBox txt)
+
+        public static void oib(string vrijednost)
         {
             ispravno = true;
-            if (ispravanMail(txt) == false) postaviKrivo(1);
-
-            if (ispravno == false)
+            if (nijeBroj(vrijednost)) postaviKrivo(Greske.ErrorCodes.greska3);
+            if (vrijednost.Length < 11) postaviKrivo(Greske.ErrorCodes.greska4);
+            
+        }
+        public static void email(string vrijednost)
+        {
+            ispravno = true;
+            int pronadjenEt = -1;
+            int pronadjenaTocka = -1;
+            for (int i = 0; i < vrijednost.Length; i++)
             {
-                zacrveni(txt);
-                switch (zastavica)
-                {
-                    case 1: MessageBox.Show("Email nije ispravan! Mora sadržavati barem jedan znak '@' i jednu točku.", "Upozorenje"); break;
+                if (vrijednost[i] == '@') pronadjenEt = i;
+                if (vrijednost[i] == '.') pronadjenaTocka = i;
 
-                }
-                fokusiraj(txt);
             }
+            if (pronadjenEt == -1) postaviKrivo(Greske.ErrorCodes.greska5);
+            if (pronadjenaTocka == -1) postaviKrivo(Greske.ErrorCodes.greska6);
+            if (pronadjenaTocka < pronadjenEt) postaviKrivo(Greske.ErrorCodes.greska7);
+            if (pronadjenEt + 1 == pronadjenaTocka || pronadjenaTocka + 1 == pronadjenEt) postaviKrivo(Greske.ErrorCodes.greska8);
+
         }
 
-        public static void telefon(TextBox txt)
+        public static void telefon(string vrijednost)
         {
             ispravno = true;
-            if (txt.TextLength != 7) ispravno = false;
-            if (imaSlovo(txt) == false && ispravno == true)
+            if (vrijednost.Length != 7) postaviKrivo(Greske.ErrorCodes.greska9);
+            if (imaSlovo(vrijednost) == false)
             {
-                for (int i = 0; i < txt.TextLength; i++)
+                for (int i = 0; i < vrijednost.Length; i++)
                 {
-                    if(txt.Text[i] == '-') continue;
-                    if(txt.Text[i] < '0' || txt.Text[i] >'9')
+                    if (vrijednost[i] == '-') continue;
+                    if (vrijednost[i] < '0' || vrijednost[i] > '9')
                     {
-                        ispravno = false;
+                        postaviKrivo(Greske.ErrorCodes.greska10);
                         break;
                     }
                 }
-                if (txt.Text[3] != '-' && ispravno == true) ispravno = false;
             }
-            else ispravno = false;
+            else postaviKrivo(Greske.ErrorCodes.greska11);
 
-            if (ispravno == false)
-            {
-                zacrveni(txt);
-                MessageBox.Show("Format telefonskog broja je 000-000 gdje 0 predstavlja broj od 0 do 9","Upozorenje");
-                fokusiraj(txt);
-            }
+
         }
 
-        public static void korisnicko(TextBox txt)
+        public static string poruka(bool status)
+        {
+            if (status)
+            {
+                return "Unos je uspješan.";
+            }
+            else return "Unos nije uspješan.";
+        }
+
+        public static void korisnicko(string vrijednost)
         {
             ispravno = true;
-            for (int i = 0; i < txt.TextLength; i++)
+            for (int i = 0; i < vrijednost.Length; i++)
             {
-                if (txt.Text[i] == ' ')
+                if (vrijednost[i] >= '0' && vrijednost[i] <= '9' && i == 0) postaviKrivo(Greske.ErrorCodes.greska13);
+                if (vrijednost[i] == ' ')
                 {
-                    ispravno = false;
+                    postaviKrivo(Greske.ErrorCodes.greska12);
                     break;
                 }
             }
-
-            if (ispravno == false)
+        }
+       
+        public static bool imaBroj(string txt)
+        {
+            for (int i = 0; i < txt.Length; i++)
             {
-                zacrveni(txt);
-                MessageBox.Show("Korisničko ime ne smije imati razmak.", "Upozorenje");
-                fokusiraj(txt);
-            }
-        }
-
-        public static bool ispravanMail(TextBox txt)
-        {
-            bool status = false;
-
-            for (int i = 0; i < txt.TextLength; i++)
-            {
-                if( i > 0  && txt.Text[i-1] == '@' && status == true) status = false;
-     
-                if (txt.Text[i] == '@' || txt.Text[i] == '.')
-                {
-                    status = true;
-                    if (txt.Text[i] == '.') break;
-                }
-                if (txt.Text[i] == '@' && i == txt.TextLength - 1) status = false;
-            }
-
-            return status;
-        }
-        public static void zacrveni(TextBox txt)
-        {
-            txt.ForeColor = Color.Red;
-        }
-        public static void fokusiraj(TextBox txt)
-        {
-            txt.Focus();
-            txt.SelectAll();
-            txt.ForeColor = Color.Black;
-        }
-        public static bool imaBroj(TextBox txt)
-        {
-            for (int i = 0; i < txt.TextLength; i++)
-            {
-                if (txt.Text[i] >= '0' && txt.Text[i] <= '9')
+                if (txt[i] >= '0' && txt[i] <= '9')
                 {
                     return true;
                 }
             }
             return false;
         }
-        public static bool nijeBroj(TextBox txt)
+        public static bool nijeBroj(string txt)
         {
-            for (int i = 0; i < txt.TextLength; i++)
+            for (int i = 0; i < txt.Length; i++)
             {
-                if (txt.Text[i] < '0' || txt.Text[i] > '9')
+                if (txt[i] < '0' || txt[i] > '9')
                 {
                     return true;
                 }
             }
             return false;
         }
-        public static bool imaSlovo(TextBox txt)
+        public static bool imaSlovo(string txt)
         {
-            for (int i = 0; i < txt.TextLength; i++)
+            for (int i = 0; i < txt.Length; i++)
             {
-                if ((txt.Text[i] >= 'A' && txt.Text[i] <= 'Z') || (txt.Text[i] >= 'a' && txt.Text[i] <= 'z'))
+                if ((txt[i] >= 'A' && txt[i] <= 'Z') || (txt[i] >= 'a' && txt[i] <= 'z'))
                 {
                     return true;
                 }
             }
             return false;
         }
-        public static bool prvoVelikoSlovo(TextBox txt)
+        public static bool prvoVelikoSlovo(string txt)
         {
-            if (txt.Text[0] >= 'A' && txt.Text[0] <= 'Z') return true;
+            if (txt[0] >= 'A' && txt[0] <= 'Z') return true;
             else return false;
         }
-        public static void postaviKrivo(int broj)
+        public static void postaviKrivo(Greske.ErrorCodes greska)
         {
             ispravno = false;
-            zastavica = broj;
+            Greske.kod = Greske.kod | greska;
         }
     }
 }

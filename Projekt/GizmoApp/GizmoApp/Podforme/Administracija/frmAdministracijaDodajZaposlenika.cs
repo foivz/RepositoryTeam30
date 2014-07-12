@@ -13,11 +13,26 @@ namespace GizmoApp.Podforme.Administracija
     /// <summary>
     /// Forma za dodavanje novog zaposlenika.
     /// </summary>
+    /// 
+
     public partial class frmAdministracijaDodajZaposlenika : Form
     {
+        /// <summary>
+        /// Varijabla za kontrolu jel se radi o upisivanju ili brisanju, za telefonski broj.
+        /// </summary>
+        public bool upisivanje;
+        /// <summary>
+        /// Vaarijabla za kontorlu broja znakova telefonskog broja.
+        /// </summary>
+        public int duljina = 0;
+
+        /// <summary>
+        /// Forma za dodavanje zaposlenika
+        /// </summary>
         public frmAdministracijaDodajZaposlenika()
         {
             InitializeComponent();
+            
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -28,83 +43,60 @@ namespace GizmoApp.Podforme.Administracija
         private void frmAdministracijaDodajZaposlenika_Load(object sender, EventArgs e)
         {
 
-            slojBaze.osvjeziNovo(this.gizmoDBDataSet.Zaposlenik, zaposlenikTableAdapter, zaposlenikBindingSource);
+            slojBaze.osvjezi(this.gizmoDBDataSet.Zaposlenik, zaposlenikTableAdapter, zaposlenikBindingSource);
+            slojBaze.osvjezi(this.gizmoDBDataSet.Odjel, odjelTableAdapter);
         }
 
         private void btnSpremi_MouseUp(object sender, MouseEventArgs e)
         {
-            slojBaze.insert(this, zaposlenikBindingSource, tableAdapterManager, gizmoDBDataSet);
-            
+            slojBaze.insert(zaposlenikBindingSource, tableAdapterManager, gizmoDBDataSet);
+            MessageBox.Show(slojKontrole.poruka(slojBaze.uspjesno));
+            if (slojBaze.uspjesno) this.Close();
         }
 
         private void txtbxIme_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxIme);
+            Generalno.izvrsiKontrolu(txtbxIme);
         }
 
         private void txtbxPrezime_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxPrezime);
+            Generalno.izvrsiKontrolu(txtbxPrezime);
         }
 
         private void txtbxOIB_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxOIB);
+            Generalno.izvrsiKontrolu(txtbxOIB);
         }
 
         private void txtbxEmail_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxEmail);
+            Generalno.izvrsiKontrolu(txtbxEmail);
         }
 
         private void txtbxTelefon_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxTelefon);
+            Generalno.izvrsiKontrolu(txtbxTelefon);
         }
 
         private void txtbxKorisnickoIme_Leave(object sender, EventArgs e)
         {
-            slojKontrole.dodjeliKontrolu(txtbxKorisnickoIme);
+            Generalno.izvrsiKontrolu(txtbxKorisnickoIme);
+        }
+        private void txtbxTelefon_TextChanged(object sender, EventArgs e)
+        {
+            if (duljina < txtbxTelefon.TextLength)
+            {
+                upisivanje = true;
+            }
+            else upisivanje = false;
+            if (txtbxTelefon.TextLength == 3 && upisivanje)
+            {
+                txtbxTelefon.Text += "-";
+                txtbxTelefon.Select(txtbxTelefon.TextLength, 0);
+            }
+            duljina = txtbxTelefon.TextLength;
         }
 
-        private void fillByOdjelToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.zaposlenikTableAdapter.FillByOdjel(this.gizmoDBDataSet.Zaposlenik);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-       
-
-        /// <summary>
-        /// Provjerava unos podataka i kreira novog zaposlenika.
-        /// Uspjesan unos otvora uredivanje zaposlenika.
-        /// </summary>
-      /*  private void createNewZaposlenik()
-        {
-            this.Validate();
-            try
-            {
-                this.zaposlenikBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
-                MessageBox.Show("Uspjesan unos zaposlenika.");
-                this.Close();
-
-                Podforme.Administracija.frmAdministracijaUrediZaposlenika frmAdministracijaUrediZaposlenika = new Podforme.Administracija.frmAdministracijaUrediZaposlenika();
-                frmAdministracijaUrediZaposlenika.WindowState = FormWindowState.Normal;
-                frmAdministracijaUrediZaposlenika.ShowDialog();
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Nepravilan unos podatka!");
-                //MessageBox.Show(error.ToString());
-            }
-        }*/
     }
 }

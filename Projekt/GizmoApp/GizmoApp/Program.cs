@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Common;
+using System.Drawing;
 
 namespace GizmoApp
 {
@@ -33,9 +35,11 @@ namespace GizmoApp
 
             if (prijava)
             {
+                
                 Application.Run(new frmGlavna());
             }
 
         }
+      
     }
 }

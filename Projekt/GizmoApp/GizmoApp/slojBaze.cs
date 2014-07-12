@@ -13,32 +13,31 @@ namespace GizmoApp
 {
     class slojBaze
     {
+        public static bool uspjesno;
         public static void osvjezi(GizmoDBDataSet.ZaposlenikDataTable tablica, ZaposlenikTableAdapter adapter)
         {
             adapter.Fill(tablica);
         }
-        public static void osvjeziNovo(GizmoDBDataSet.ZaposlenikDataTable tablica, ZaposlenikTableAdapter adapter, BindingSource bs)
+        public static void osvjezi(GizmoDBDataSet.OdjelDataTable tablica, OdjelTableAdapter adapter)
+        {
+            adapter.Fill(tablica);
+        }
+        public static void osvjezi(GizmoDBDataSet.ZaposlenikDataTable tablica, ZaposlenikTableAdapter adapter, BindingSource bs)
         {
             adapter.Fill(tablica);
             bs.AddNew();
         }
-        public static void insert(Podforme.Administracija.frmAdministracijaDodajZaposlenika frm, BindingSource bs, TableAdapterManager adapter, GizmoDBDataSet ds)
+        public static void insert(BindingSource bs, TableAdapterManager adapter, GizmoDBDataSet ds)
         {
-            frm.Validate();
             try
             {
                 bs.EndEdit();
                 adapter.UpdateAll(ds);
-                MessageBox.Show("Uspjesan unos zaposlenika.");
-                frm.Close();
-
-                Podforme.Administracija.frmAdministracijaUrediZaposlenika frmAdministracijaUrediZaposlenika = new Podforme.Administracija.frmAdministracijaUrediZaposlenika();
-                frmAdministracijaUrediZaposlenika.WindowState = FormWindowState.Normal;
-                frmAdministracijaUrediZaposlenika.ShowDialog();
+                uspjesno = true;
             }
             catch (Exception error)
             {
-                MessageBox.Show("Nepravilan unos podatka!");
+                uspjesno = false;
             }
         }
     }

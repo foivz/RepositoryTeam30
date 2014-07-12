@@ -4,10 +4,9 @@
     public partial class GizmoDBDataSet {
     }
 }
-
-namespace GizmoApp.GizmoDBDataSetTableAdapters {
+namespace GizmoApp {
     
     
-    public partial class ZaposlenikTableAdapter {
+    public partial class GizmoDBDataSet {
     }
 }

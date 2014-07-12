@@ -76,6 +76,7 @@
     <Compile Include="frmGlavna.Designer.cs">
       <DependentUpon>frmGlavna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generalno.cs" />
     <Compile Include="GizmoDBDataSet3.cs">
       <DependentUpon>GizmoDBDataSet3.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -85,6 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GizmoDBDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Greske.cs" />
     <Compile Include="Podforme\Administracija\frmAdministracijaDodajZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>

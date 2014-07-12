@@ -189,3 +189,31 @@ C:\Users\User\Desktop\PI\novo šta moram da promenim\Projekt\GizmoApp\GizmoApp\o
 C:\Users\User\Desktop\PI\novo šta moram da promenim\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.resources
 C:\Users\User\Desktop\PI\novo šta moram da promenim\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Properties.Resources.resources
 C:\Users\User\Desktop\PI\novo šta moram da promenim\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.exe.config
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.XML
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.exe
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.pdb
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.exe
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\bin\Debug\GizmoApp.pdb
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csprojResolveAssemblyReference.cache
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.frmGlavna.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.frmLogin.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajKnjigu.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljaceDetalji.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaDodajKupca.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaKreirajOtpremnicu.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupce.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Prodaja.frmProdajaPretraziKupceDetalji.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretrazi.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Skladiste.frmSkladistePretraziDetalji.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Properties.Resources.resources
+C:\Users\Danijel\Desktop\za pokazati\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.csproj.GenerateResource.Cache
