@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GizmoApp
 {
     /// <summary>
@@ -36,12 +37,9 @@ namespace GizmoApp
             miNabava.Visible = false;
             miProdaja.Visible = false;
             miAdministracija.Visible = false;
-            //miIzvjesca.Visible = false;
 
             miProdajaKreirajOtpremnicu.Visible = false;
             miNabavaKreirajNarudzbenicu.Visible = false;
-
-            //MessageBox.Show(pogledi);
 
             for (int i = 0; i < pogledi.Length; i++)
             {
@@ -156,13 +154,7 @@ namespace GizmoApp
             frmAdministracijaUrediZaposlenika.ShowDialog();
         }
 
-        private void miIzvjescaKreirajIzvjesce_MouseUp(object sender, MouseEventArgs e)
-        {
-            Podforme.Izvjesca.frmIzvjescaPopisZaposlenika frmIzvjescaKreirajIzvjesce = new Podforme.Izvjesca.frmIzvjescaPopisZaposlenika();
-            frmIzvjescaKreirajIzvjesce.MdiParent = this;
-            frmIzvjescaKreirajIzvjesce.WindowState = FormWindowState.Maximized;
-            frmIzvjescaKreirajIzvjesce.Show();
-        }
+
 
         
 
@@ -208,6 +200,15 @@ namespace GizmoApp
         {
             string Kontakt = "Saznajte više o našoj tvrtci na www.GizmoCorp.com.hr";
             MessageBox.Show(Kontakt);
+        }
+
+        private void miIzvjescaPopisZaposlenika_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce frm = new Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
 
 

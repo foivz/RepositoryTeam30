@@ -59,8 +59,6 @@ C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.frmLogin.r
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaDodajZaposlenika.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenika.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Administracija.frmAdministracijaUrediZaposlenikaDetalji.resources
-C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
-C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaPregledIzvjesca.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaDodajDobavljaca.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaKreirajNarudzbenicu.resources
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Nabava.frmNabavaPretraziDobavljace.resources
@@ -246,3 +244,8 @@ C:\Users\User\Desktop\PI\Izvještaji\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoAp
 C:\Users\User\Desktop\PI\Izvještaji\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.cache
 C:\Users\User\Desktop\PI\Izvještaji\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.compiled
 C:\Users\User\Desktop\PI\Izvještaji\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaPopisZaposlenika.resources
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.cache
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.compiled
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\bin\Debug\itextsharp.dll
+C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\bin\Debug\itextsharp.xml

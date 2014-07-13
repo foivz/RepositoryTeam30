@@ -467,23 +467,23 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:GizmoApp.Podforme.Izvjesca.frmIzvjescaPopisZaposlenika">
+        <member name="T:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce">
             <summary>
             Forma za kreiranje izvješća.
             </summary>
         </member>
-        <member name="F:GizmoApp.Podforme.Izvjesca.frmIzvjescaPopisZaposlenika.components">
+        <member name="F:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.components">
             <summary>
             Required designer variable.
             </summary>
         </member>
-        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaPopisZaposlenika.Dispose(System.Boolean)">
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.Dispose(System.Boolean)">
             <summary>
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaPopisZaposlenika.InitializeComponent">
+        <member name="M:GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
