@@ -63,7 +63,6 @@ namespace GizmoApp.Podforme.Skladiste
             catch (Exception error)
             {
                 MessageBox.Show("Nepravilan unos podatka!");
-                //MessageBox.Show(error.ToString());
             }
         }
     }

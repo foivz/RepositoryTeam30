@@ -52,8 +52,6 @@ namespace GizmoApp.Podforme.Administracija
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
             this.zaposlenikTableAdapter.FillByZaposlenikId(this.gizmoDBDataSet.Zaposlenik, this.idZaposlenika);
 
-            //this.cbxOdjel.SelectedValue = this.idOdjela;
-
             this.ime = txtbxIme.Text;
             this.prezime = txtbxPrezime.Text;
             this.OIB = txtbxOIB.Text;

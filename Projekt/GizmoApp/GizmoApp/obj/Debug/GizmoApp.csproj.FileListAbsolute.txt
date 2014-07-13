@@ -247,5 +247,7 @@ C:\Users\User\Desktop\PI\Izvještaji\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoAp
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.cache
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\RdlCompile.compiled
 C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\obj\Debug\GizmoApp.Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce.resources
-C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\bin\Debug\itextsharp.dll
-C:\Users\Danijel\Desktop\Projekt\GizmoApp\GizmoApp\bin\Debug\itextsharp.xml
+C:\Users\Danijel\Desktop\Projekt - zaPredati\GizmoApp\GizmoApp\bin\Debug\GizmoApp.exe.config
+C:\Users\Danijel\Desktop\Projekt - zaPredati\GizmoApp\GizmoApp\bin\Debug\GizmoApp.XML
+C:\Users\Danijel\Desktop\Projekt - zaPredati\GizmoApp\GizmoApp\obj\Debug\GizmoApp.exe
+C:\Users\Danijel\Desktop\Projekt - zaPredati\GizmoApp\GizmoApp\obj\Debug\GizmoApp.pdb

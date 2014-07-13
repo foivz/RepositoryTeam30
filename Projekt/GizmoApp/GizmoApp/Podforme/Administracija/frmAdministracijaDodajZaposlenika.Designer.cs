@@ -93,7 +93,7 @@
             lblKorisnickoIme.Name = "lblKorisnickoIme";
             lblKorisnickoIme.Size = new System.Drawing.Size(78, 13);
             lblKorisnickoIme.TabIndex = 5;
-            lblKorisnickoIme.Text = "Korisnicko ime:";
+            lblKorisnickoIme.Text = "Korisničko ime:";
             // 
             // lblLozinka
             // 
@@ -139,6 +139,15 @@
             lblAdresa.Size = new System.Drawing.Size(43, 13);
             lblAdresa.TabIndex = 5;
             lblAdresa.Text = "Adresa:";
+            // 
+            // odjel_idOdjelLabel
+            // 
+            odjel_idOdjelLabel.AutoSize = true;
+            odjel_idOdjelLabel.Location = new System.Drawing.Point(354, 190);
+            odjel_idOdjelLabel.Name = "odjel_idOdjelLabel";
+            odjel_idOdjelLabel.Size = new System.Drawing.Size(37, 13);
+            odjel_idOdjelLabel.TabIndex = 18;
+            odjel_idOdjelLabel.Text = "Odjel: ";
             // 
             // txtbxTelefon
             // 
@@ -268,15 +277,6 @@
             // odjelTableAdapter
             // 
             this.odjelTableAdapter.ClearBeforeFill = true;
-            // 
-            // odjel_idOdjelLabel
-            // 
-            odjel_idOdjelLabel.AutoSize = true;
-            odjel_idOdjelLabel.Location = new System.Drawing.Point(354, 190);
-            odjel_idOdjelLabel.Name = "odjel_idOdjelLabel";
-            odjel_idOdjelLabel.Size = new System.Drawing.Size(37, 13);
-            odjel_idOdjelLabel.TabIndex = 18;
-            odjel_idOdjelLabel.Text = "Odjel: ";
             // 
             // txtOdjel
             // 

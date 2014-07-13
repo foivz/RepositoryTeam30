@@ -28,18 +28,7 @@ namespace GizmoApp
         public static string porukaGreske(ErrorCodes kod)
         {
            string poruka = "Errors:\n\n";
-            /*
-               switch (id)
-                {
-                    case '1': poruka += "Name and surname must contain letters only."; break;
-                    case '2': poruka += "Name and surname must have a capital letter."; break;
-                    case '3': poruka += "OIB must contain numbers only."; break;
-                    case '4': poruka += "OIB sadrži točno 11 brojeva."; break;
-                    case '5': poruka += "Email nije ispravan! Mora sadržavati barem jedan znak '@' i jednu točku."; break;
-                    case '6': poruka += "Format telefonskog broja je 000-000 gdje 0 predstavlja broj od 0 do 9"; break;
-                    case '7': poruka += "Korisničko ime ne smije imati razmak."; break;
-                }
-             * */
+           
                 if(kod.HasFlag(ErrorCodes.greska1)) poruka += "Name and surname must contain letters only.\n";
                 if(kod.HasFlag(ErrorCodes.greska2)) poruka += "Name and surname must have a capital letter.\n";
                 if(kod.HasFlag(ErrorCodes.greska3)) poruka += "OIB must contain numbers only.\n";

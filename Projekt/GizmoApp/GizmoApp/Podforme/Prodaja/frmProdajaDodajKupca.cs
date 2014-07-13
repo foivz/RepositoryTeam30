@@ -59,7 +59,6 @@ namespace GizmoApp.Podforme.Prodaja
             catch (Exception error)
             {
                 MessageBox.Show("Nepravilan unos podatka!");   
-                //MessageBox.Show(error.ToString());
             }             
         }
 
