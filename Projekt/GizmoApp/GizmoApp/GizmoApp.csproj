@@ -52,8 +52,11 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,17 +108,11 @@
     <Compile Include="Podforme\Administracija\frmAdministracijaUrediZaposlenikaDetalji.Designer.cs">
       <DependentUpon>frmAdministracijaUrediZaposlenikaDetalji.cs</DependentUpon>
     </Compile>
-    <Compile Include="Podforme\Izvjesca\frmIzvjescaKreirajIzvjesce.cs">
+    <Compile Include="Podforme\Izvjesca\frmIzvjescaPopisZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Podforme\Izvjesca\frmIzvjescaKreirajIzvjesce.Designer.cs">
-      <DependentUpon>frmIzvjescaKreirajIzvjesce.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Podforme\Izvjesca\frmIzvjescaPregledIzvjesca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Podforme\Izvjesca\frmIzvjescaPregledIzvjesca.Designer.cs">
-      <DependentUpon>frmIzvjescaPregledIzvjesca.cs</DependentUpon>
+    <Compile Include="Podforme\Izvjesca\frmIzvjescaPopisZaposlenika.Designer.cs">
+      <DependentUpon>frmIzvjescaPopisZaposlenika.cs</DependentUpon>
     </Compile>
     <Compile Include="Podforme\Nabava\frmNabavaDodajDobavljaca.cs">
       <SubType>Form</SubType>
@@ -208,12 +205,10 @@
     <EmbeddedResource Include="Podforme\Administracija\frmAdministracijaUrediZaposlenikaDetalji.resx">
       <DependentUpon>frmAdministracijaUrediZaposlenikaDetalji.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Podforme\Izvjesca\frmIzvjescaKreirajIzvjesce.resx">
-      <DependentUpon>frmIzvjescaKreirajIzvjesce.cs</DependentUpon>
+    <EmbeddedResource Include="Podforme\Izvjesca\frmIzvjescaPopisZaposlenika.resx">
+      <DependentUpon>frmIzvjescaPopisZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Podforme\Izvjesca\frmIzvjescaPregledIzvjesca.resx">
-      <DependentUpon>frmIzvjescaPregledIzvjesca.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Podforme\Izvjesca\Report1.rdlc" />
     <EmbeddedResource Include="Podforme\Nabava\frmNabavaDodajDobavljaca.resx">
       <DependentUpon>frmNabavaDodajDobavljaca.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +255,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="GizmoDBDataSet3.xsc">
       <DependentUpon>GizmoDBDataSet3.xsd</DependentUpon>
     </None>

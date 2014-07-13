@@ -36,7 +36,7 @@ namespace GizmoApp
             miNabava.Visible = false;
             miProdaja.Visible = false;
             miAdministracija.Visible = false;
-            miIzvjesca.Visible = false;
+            //miIzvjesca.Visible = false;
 
             miProdajaKreirajOtpremnicu.Visible = false;
             miNabavaKreirajNarudzbenicu.Visible = false;
@@ -158,19 +158,13 @@ namespace GizmoApp
 
         private void miIzvjescaKreirajIzvjesce_MouseUp(object sender, MouseEventArgs e)
         {
-            Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce frmIzvjescaKreirajIzvjesce = new Podforme.Izvjesca.frmIzvjescaKreirajIzvjesce();
+            Podforme.Izvjesca.frmIzvjescaPopisZaposlenika frmIzvjescaKreirajIzvjesce = new Podforme.Izvjesca.frmIzvjescaPopisZaposlenika();
             frmIzvjescaKreirajIzvjesce.MdiParent = this;
             frmIzvjescaKreirajIzvjesce.WindowState = FormWindowState.Maximized;
             frmIzvjescaKreirajIzvjesce.Show();
         }
 
-        private void miIzvjescaPregledIzvjesca_MouseUp(object sender, MouseEventArgs e)
-        {
-            Podforme.Izvjesca.frmIzvjescaPregledIzvjesca frmIzvjescaPregledIzvjesca = new Podforme.Izvjesca.frmIzvjescaPregledIzvjesca();
-            frmIzvjescaPregledIzvjesca.MdiParent = this;
-            frmIzvjescaPregledIzvjesca.WindowState = FormWindowState.Maximized;
-            frmIzvjescaPregledIzvjesca.Show();
-        }
+        
 
 
         private void frmGlavna_MdiChildActivate(object sender, EventArgs e)

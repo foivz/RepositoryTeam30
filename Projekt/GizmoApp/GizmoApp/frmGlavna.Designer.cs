@@ -50,7 +50,6 @@
             this.miAdministracijaUrediZaposlenika = new System.Windows.Forms.ToolStripMenuItem();
             this.miIzvjesca = new System.Windows.Forms.ToolStripMenuItem();
             this.miIzvjescaKreirajIzvjesce = new System.Windows.Forms.ToolStripMenuItem();
-            this.miIzvjescaPregledIzvjesca = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomoc = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocFAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocKontakt = new System.Windows.Forms.ToolStripMenuItem();
@@ -223,8 +222,7 @@
             // miIzvjesca
             // 
             this.miIzvjesca.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miIzvjescaKreirajIzvjesce,
-            this.miIzvjescaPregledIzvjesca});
+            this.miIzvjescaKreirajIzvjesce});
             this.miIzvjesca.Name = "miIzvjesca";
             this.miIzvjesca.Size = new System.Drawing.Size(59, 20);
             this.miIzvjesca.Text = "Izvješća";
@@ -232,16 +230,9 @@
             // miIzvjescaKreirajIzvjesce
             // 
             this.miIzvjescaKreirajIzvjesce.Name = "miIzvjescaKreirajIzvjesce";
-            this.miIzvjescaKreirajIzvjesce.Size = new System.Drawing.Size(157, 22);
-            this.miIzvjescaKreirajIzvjesce.Text = "Kreiraj izvješće";
+            this.miIzvjescaKreirajIzvjesce.Size = new System.Drawing.Size(167, 22);
+            this.miIzvjescaKreirajIzvjesce.Text = "Popis zaposlenika";
             this.miIzvjescaKreirajIzvjesce.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miIzvjescaKreirajIzvjesce_MouseUp);
-            // 
-            // miIzvjescaPregledIzvjesca
-            // 
-            this.miIzvjescaPregledIzvjesca.Name = "miIzvjescaPregledIzvjesca";
-            this.miIzvjescaPregledIzvjesca.Size = new System.Drawing.Size(157, 22);
-            this.miIzvjescaPregledIzvjesca.Text = "Pregled izvješća";
-            this.miIzvjescaPregledIzvjesca.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miIzvjescaPregledIzvjesca_MouseUp);
             // 
             // miPomoc
             // 
@@ -325,7 +316,6 @@
         private System.Windows.Forms.ToolStripMenuItem miAdministracijaDodajZaposlenika;
         private System.Windows.Forms.ToolStripMenuItem miAdministracijaUrediZaposlenika;
         private System.Windows.Forms.ToolStripMenuItem miIzvjescaKreirajIzvjesce;
-        private System.Windows.Forms.ToolStripMenuItem miIzvjescaPregledIzvjesca;
         private System.Windows.Forms.ToolStripMenuItem miPomocOGizmoApp;
         private System.Windows.Forms.ToolStripMenuItem miSkladisteDodajSektor;
         private System.Windows.Forms.ToolStripMenuItem miNabavaDodajKnjigu;
