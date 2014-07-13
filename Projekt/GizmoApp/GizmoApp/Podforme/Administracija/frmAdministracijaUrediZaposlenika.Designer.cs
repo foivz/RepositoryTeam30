@@ -200,6 +200,8 @@
             this.dgvZaposlenik.DataSource = this.zaposlenikBindingSource;
             this.dgvZaposlenik.Location = new System.Drawing.Point(12, 40);
             this.dgvZaposlenik.Name = "dgvZaposlenik";
+            this.dgvZaposlenik.ReadOnly = true;
+            this.dgvZaposlenik.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenik.Size = new System.Drawing.Size(952, 220);
             this.dgvZaposlenik.TabIndex = 1;
             this.dgvZaposlenik.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZaposlenik_CellDoubleClick);
@@ -236,48 +238,56 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Ime";
             this.dataGridViewTextBoxColumn2.HeaderText = "Ime";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Prezime";
             this.dataGridViewTextBoxColumn3.HeaderText = "Prezime";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "OIB";
             this.dataGridViewTextBoxColumn4.HeaderText = "OIB";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Adresa";
             this.dataGridViewTextBoxColumn5.HeaderText = "Adresa";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
             this.dataGridViewTextBoxColumn6.HeaderText = "Email";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Telefon";
             this.dataGridViewTextBoxColumn7.HeaderText = "Telefon";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Korisnicko_ime";
             this.dataGridViewTextBoxColumn8.HeaderText = "Korisničko ime";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Lozinka";
             this.dataGridViewTextBoxColumn9.HeaderText = "Lozinka";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dgvOdjelHasPogled
             // 
@@ -291,6 +301,7 @@
             this.dgvOdjelHasPogled.DataSource = this.odjel_has_PogledBindingSource;
             this.dgvOdjelHasPogled.Location = new System.Drawing.Point(12, 284);
             this.dgvOdjelHasPogled.Name = "dgvOdjelHasPogled";
+            this.dgvOdjelHasPogled.ReadOnly = true;
             this.dgvOdjelHasPogled.Size = new System.Drawing.Size(160, 202);
             this.dgvOdjelHasPogled.TabIndex = 2;
             // 
@@ -302,6 +313,7 @@
             this.dataGridViewTextBoxColumn11.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn11.HeaderText = "Odjel";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn11.ValueMember = "idOdjel";
@@ -315,6 +327,7 @@
             this.dataGridViewTextBoxColumn12.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn12.HeaderText = "Pogled";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn12.ValueMember = "idPogled";

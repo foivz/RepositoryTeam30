@@ -226,6 +226,8 @@
             this.dgvDobavljaci.DataSource = this.dobavljaciBindingSource;
             this.dgvDobavljaci.Location = new System.Drawing.Point(12, 40);
             this.dgvDobavljaci.Name = "dgvDobavljaci";
+            this.dgvDobavljaci.ReadOnly = true;
+            this.dgvDobavljaci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDobavljaci.Size = new System.Drawing.Size(645, 220);
             this.dgvDobavljaci.TabIndex = 1;
             this.dgvDobavljaci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDobavljaci_CellDoubleClick);
@@ -234,7 +236,7 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idDobavljaci";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID dobavljača";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Šifra";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -243,30 +245,35 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Naziv";
             this.dataGridViewTextBoxColumn2.HeaderText = "Naziv";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Adresa";
             this.dataGridViewTextBoxColumn3.HeaderText = "Adresa";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "OIB";
             this.dataGridViewTextBoxColumn4.HeaderText = "OIB";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
             this.dataGridViewTextBoxColumn5.HeaderText = "Email";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefon";
             this.dataGridViewTextBoxColumn6.HeaderText = "Telefon";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // knjiga_has_DobavljaciBindingSource
             // 
@@ -307,6 +314,8 @@
             this.dgvKnjigaHasDobavljaci.DataSource = this.knjiga_has_DobavljaciBindingSource;
             this.dgvKnjigaHasDobavljaci.Location = new System.Drawing.Point(208, 285);
             this.dgvKnjigaHasDobavljaci.Name = "dgvKnjigaHasDobavljaci";
+            this.dgvKnjigaHasDobavljaci.ReadOnly = true;
+            this.dgvKnjigaHasDobavljaci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKnjigaHasDobavljaci.Size = new System.Drawing.Size(449, 220);
             this.dgvKnjigaHasDobavljaci.TabIndex = 2;
             // 
@@ -318,6 +327,7 @@
             this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn7.HeaderText = "Knjiga";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn7.ValueMember = "idKnjiga";
@@ -327,18 +337,22 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Dobavljaci_idDobavljaci";
             this.dataGridViewTextBoxColumn8.HeaderText = "ID dobavljači";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Kolicina";
             this.dataGridViewTextBoxColumn9.HeaderText = "Kolicina";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Datum_narudzbe";
             this.dataGridViewTextBoxColumn10.HeaderText = "Datum_narudzbe";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // frmNabavaPretraziDobavljace
             // 
@@ -389,18 +403,18 @@
         private GizmoDBDataSetTableAdapters.Knjiga_has_DobavljaciTableAdapter knjiga_has_DobavljaciTableAdapter;
         private System.Windows.Forms.DataGridView dgvDobavljaci;
         private System.Windows.Forms.BindingSource knjiga_has_DobavljaciBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
         private System.Windows.Forms.BindingSource knjigaBindingSource;
         private System.Windows.Forms.BindingSource knjigaBindingSource2;
         private System.Windows.Forms.BindingSource knjigaBindingSource1;
         private System.Windows.Forms.BindingSource knjigaBindingSource3;
         private System.Windows.Forms.DataGridView dgvKnjigaHasDobavljaci;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;

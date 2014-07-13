@@ -32,7 +32,6 @@ namespace GizmoApp.Podforme.Administracija
         public frmAdministracijaDodajZaposlenika()
         {
             InitializeComponent();
-            
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -44,7 +43,7 @@ namespace GizmoApp.Podforme.Administracija
         {
 
             slojBaze.osvjezi(this.gizmoDBDataSet.Zaposlenik, zaposlenikTableAdapter, zaposlenikBindingSource);
-            slojBaze.osvjezi(this.gizmoDBDataSet.Odjel, odjelTableAdapter);
+           
         }
 
         private void btnSpremi_MouseUp(object sender, MouseEventArgs e)

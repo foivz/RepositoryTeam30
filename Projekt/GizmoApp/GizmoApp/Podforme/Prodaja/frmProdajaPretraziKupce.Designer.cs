@@ -195,6 +195,8 @@
             this.dgvKupci.DataSource = this.kupciBindingSource;
             this.dgvKupci.Location = new System.Drawing.Point(12, 41);
             this.dgvKupci.Name = "dgvKupci";
+            this.dgvKupci.ReadOnly = true;
+            this.dgvKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKupci.Size = new System.Drawing.Size(680, 212);
             this.dgvKupci.TabIndex = 1;
             this.dgvKupci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKupci_CellDoubleClick);
@@ -212,30 +214,35 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Naziv";
             this.dataGridViewTextBoxColumn2.HeaderText = "Naziv";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Adresa";
             this.dataGridViewTextBoxColumn3.HeaderText = "Adresa";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "OIB";
             this.dataGridViewTextBoxColumn4.HeaderText = "OIB";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Email";
             this.dataGridViewTextBoxColumn5.HeaderText = "Email";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefon";
             this.dataGridViewTextBoxColumn6.HeaderText = "Telefon";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dgvKnjigaHasKupci
             // 
@@ -252,6 +259,8 @@
             this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
             this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(335, 279);
             this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
+            this.dgvKnjigaHasKupci.ReadOnly = true;
+            this.dgvKnjigaHasKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(357, 220);
             this.dgvKnjigaHasKupci.TabIndex = 2;
             // 
@@ -260,6 +269,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Kupci_idKupci";
             this.dataGridViewTextBoxColumn8.HeaderText = "ID kupca";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn8.Visible = false;
             // 
@@ -271,6 +281,7 @@
             this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn7.HeaderText = "Knjiga";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn7.ValueMember = "idKnjiga";
@@ -285,12 +296,14 @@
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Kolicina";
             this.dataGridViewTextBoxColumn9.HeaderText = "Kolicina";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Datum_prodaje";
             this.dataGridViewTextBoxColumn10.HeaderText = "Datum prodaje";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // knjiga_has_KupciBindingSource
             // 

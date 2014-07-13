@@ -219,6 +219,8 @@
             this.dgvSektorSkladista.Location = new System.Drawing.Point(27, 90);
             this.dgvSektorSkladista.MultiSelect = false;
             this.dgvSektorSkladista.Name = "dgvSektorSkladista";
+            this.dgvSektorSkladista.ReadOnly = true;
+            this.dgvSektorSkladista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSektorSkladista.Size = new System.Drawing.Size(306, 220);
             this.dgvSektorSkladista.TabIndex = 12;
             this.dgvSektorSkladista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSektorSkladista_CellDoubleClick);
@@ -239,6 +241,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Kapacitet";
             this.dataGridViewTextBoxColumn2.HeaderText = "Kapacitet";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dgvKnjigaHasSektorSkladista
             // 
@@ -257,6 +260,8 @@
             this.dgvKnjigaHasSektorSkladista.Location = new System.Drawing.Point(84, 331);
             this.dgvKnjigaHasSektorSkladista.MultiSelect = false;
             this.dgvKnjigaHasSektorSkladista.Name = "dgvKnjigaHasSektorSkladista";
+            this.dgvKnjigaHasSektorSkladista.ReadOnly = true;
+            this.dgvKnjigaHasSektorSkladista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKnjigaHasSektorSkladista.Size = new System.Drawing.Size(360, 220);
             this.dgvKnjigaHasSektorSkladista.TabIndex = 12;
             // 
@@ -266,6 +271,7 @@
             this.dataGridViewTextBoxColumn4.FillWeight = 115F;
             this.dataGridViewTextBoxColumn4.HeaderText = "Sektor skladišta";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
             this.dataGridViewTextBoxColumn4.Width = 115;
             // 
@@ -277,6 +283,7 @@
             this.dataGridViewTextBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.dataGridViewTextBoxColumn3.HeaderText = "Knjiga";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "idKnjiga";
@@ -292,6 +299,7 @@
             this.dataGridViewTextBoxColumn5.FillWeight = 80F;
             this.dataGridViewTextBoxColumn5.HeaderText = "Količina";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 80;
             // 
             // dataGridViewTextBoxColumn6
@@ -300,6 +308,7 @@
             this.dataGridViewTextBoxColumn6.FillWeight = 115F;
             this.dataGridViewTextBoxColumn6.HeaderText = "Datum zaprimanja";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 115;
             // 
             // knjiga_has_Sektor_skladistaBindingSource

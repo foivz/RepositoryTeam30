@@ -16,6 +16,7 @@ namespace GizmoApp.Podforme.Administracija
     public partial class frmAdministracijaUrediZaposlenikaDetalji : Form
     {
         private int idZaposlenika { get; set; }
+        private int idOdjela { get; set; }
 
         private string ime { get; set; }
         private string prezime { get; set; }
@@ -30,8 +31,7 @@ namespace GizmoApp.Podforme.Administracija
         public frmAdministracijaUrediZaposlenikaDetalji(int id)
         {
             InitializeComponent();
-            this.idZaposlenika = id;  
-
+            this.idZaposlenika = id;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace GizmoApp.Podforme.Administracija
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
             this.zaposlenikTableAdapter.FillByZaposlenikId(this.gizmoDBDataSet.Zaposlenik, this.idZaposlenika);
 
+            //this.cbxOdjel.SelectedValue = this.idOdjela;
 
             this.ime = txtbxIme.Text;
             this.prezime = txtbxPrezime.Text;
@@ -66,11 +67,12 @@ namespace GizmoApp.Podforme.Administracija
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.zaposlenikBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
-            MessageBox.Show("Promjene su uspješno spremljene.","Obavijest");
-            this.Close();
+                MessageBox.Show("Tu sam");
+                this.Validate();
+                this.zaposlenikBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.gizmoDBDataSet);
+                MessageBox.Show("Promjene su uspješno spremljene.", "Obavijest");
+                this.Close();
         }
         /// <summary>
         /// Funkcija provjerava jesu li podaci promijenjeni.

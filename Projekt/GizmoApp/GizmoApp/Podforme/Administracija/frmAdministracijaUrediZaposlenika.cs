@@ -16,6 +16,8 @@ namespace GizmoApp.Podforme.Administracija
     public partial class frmAdministracijaUrediZaposlenika : Form
     {
         private int idZaposlenik { get; set; }
+        private int idOdjel { get; set; }
+
         public frmAdministracijaUrediZaposlenika()
         {
             InitializeComponent();
@@ -39,9 +41,9 @@ namespace GizmoApp.Podforme.Administracija
         {
             if (dgvZaposlenik.RowCount > 0)
             {
-                int IDodjel = int.Parse(dgvZaposlenik.CurrentRow.Cells[0].Value.ToString());
+                this.idOdjel = int.Parse(dgvZaposlenik.CurrentRow.Cells[0].Value.ToString());
                 this.idZaposlenik = int.Parse(dgvZaposlenik.CurrentRow.Cells[1].Value.ToString());
-                this.odjel_has_PogledTableAdapter.FillByZaposlenikHasPogled(this.gizmoDBDataSet.Odjel_has_Pogled, IDodjel);
+                this.odjel_has_PogledTableAdapter.FillByZaposlenikHasPogled(this.gizmoDBDataSet.Odjel_has_Pogled, this.idOdjel);
             }
         }
 

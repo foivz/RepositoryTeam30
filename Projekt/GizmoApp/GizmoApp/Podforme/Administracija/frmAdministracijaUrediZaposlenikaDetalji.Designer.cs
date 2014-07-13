@@ -150,7 +150,7 @@
             // odjel_idOdjelLabel
             // 
             odjel_idOdjelLabel.AutoSize = true;
-            odjel_idOdjelLabel.Location = new System.Drawing.Point(21, 100);
+            odjel_idOdjelLabel.Location = new System.Drawing.Point(21, 98);
             odjel_idOdjelLabel.Name = "odjel_idOdjelLabel";
             odjel_idOdjelLabel.Size = new System.Drawing.Size(37, 13);
             odjel_idOdjelLabel.TabIndex = 14;
@@ -166,7 +166,7 @@
             this.gpxPoslovneInformacije.Controls.Add(this.txtbxKorisnickoIme);
             this.gpxPoslovneInformacije.Location = new System.Drawing.Point(326, 118);
             this.gpxPoslovneInformacije.Name = "gpxPoslovneInformacije";
-            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(272, 145);
+            this.gpxPoslovneInformacije.Size = new System.Drawing.Size(272, 135);
             this.gpxPoslovneInformacije.TabIndex = 5;
             this.gpxPoslovneInformacije.TabStop = false;
             this.gpxPoslovneInformacije.Text = "Poslovne informacije";
@@ -174,10 +174,10 @@
             // txtbxOdjel
             // 
             this.txtbxOdjel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposlenikBindingSource, "Odjel_idOdjel", true));
-            this.txtbxOdjel.Location = new System.Drawing.Point(108, 97);
+            this.txtbxOdjel.Location = new System.Drawing.Point(108, 95);
             this.txtbxOdjel.Name = "txtbxOdjel";
-            this.txtbxOdjel.Size = new System.Drawing.Size(158, 20);
-            this.txtbxOdjel.TabIndex = 15;
+            this.txtbxOdjel.Size = new System.Drawing.Size(100, 20);
+            this.txtbxOdjel.TabIndex = 16;
             // 
             // zaposlenikBindingSource
             // 
@@ -195,7 +195,7 @@
             this.txtbxLozinka.Location = new System.Drawing.Point(108, 60);
             this.txtbxLozinka.Name = "txtbxLozinka";
             this.txtbxLozinka.Size = new System.Drawing.Size(100, 20);
-            this.txtbxLozinka.TabIndex = 14;
+            this.txtbxLozinka.TabIndex = 15;
             // 
             // txtbxKorisnickoIme
             // 
@@ -203,7 +203,7 @@
             this.txtbxKorisnickoIme.Location = new System.Drawing.Point(108, 26);
             this.txtbxKorisnickoIme.Name = "txtbxKorisnickoIme";
             this.txtbxKorisnickoIme.Size = new System.Drawing.Size(100, 20);
-            this.txtbxKorisnickoIme.TabIndex = 13;
+            this.txtbxKorisnickoIme.TabIndex = 14;
             // 
             // odjelBindingSource
             // 
@@ -293,7 +293,7 @@
             this.btnOdustani.Location = new System.Drawing.Point(330, 269);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(75, 23);
-            this.btnOdustani.TabIndex = 7;
+            this.btnOdustani.TabIndex = 18;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
@@ -303,7 +303,7 @@
             this.btnSpremi.Location = new System.Drawing.Point(194, 269);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(75, 23);
-            this.btnSpremi.TabIndex = 6;
+            this.btnSpremi.TabIndex = 17;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 312);
+            this.ClientSize = new System.Drawing.Size(612, 327);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.gpxPoslovneInformacije);
@@ -374,7 +374,6 @@
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private GizmoDBDataSetTableAdapters.OdjelTableAdapter odjelTableAdapter;
         private System.Windows.Forms.BindingSource odjelBindingSource;
-        private System.Windows.Forms.TextBox txtbxOdjel;
         private System.Windows.Forms.TextBox txtbxLozinka;
         private System.Windows.Forms.TextBox txtbxKorisnickoIme;
         private System.Windows.Forms.TextBox txtbxTelefon;
@@ -383,5 +382,6 @@
         private System.Windows.Forms.TextBox txtbxOIB;
         private System.Windows.Forms.TextBox txtbxPrezime;
         private System.Windows.Forms.TextBox txtbxIme;
+        private System.Windows.Forms.TextBox txtbxOdjel;
     }
 }
