@@ -211,6 +211,16 @@ namespace GizmoApp
             frm.Show();
         }
 
+        private void frmGlavna_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\Danijel\Documents\GitHub\RepositoryTeam30\Projektna dokumentacija\Help\Documentation.chm");
+        }
+
+        private void miPomocKorisnickaDokumentacija_MouseUp(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\Danijel\Documents\GitHub\RepositoryTeam30\Projektna dokumentacija\Gizmo Net_Korisnička dokumentacija.pdf");
+        }
+
 
     }
 }

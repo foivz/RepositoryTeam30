@@ -33,43 +33,35 @@
             this.lblKolicinaNaSektoru = new System.Windows.Forms.Label();
             this.lblKapacitetSektora = new System.Windows.Forms.Label();
             this.txtbxKolicinaNaSektoru = new System.Windows.Forms.TextBox();
-            this.sektor_skladistaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.sektor_skladistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gizmoDBDataSet = new GizmoApp.GizmoDBDataSet();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvSektorSkladista = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvKnjigaHasSektorSkladista = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.knjiga_has_Sektor_skladistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sektor_skladistaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter();
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
-            this.knjiga_has_Sektor_skladistaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_Sektor_skladistaTableAdapter();
             this.txtbxKapacitetSektora = new System.Windows.Forms.TextBox();
             this.lblSlobodno = new System.Windows.Forms.Label();
             this.txtbxSlobodno = new System.Windows.Forms.TextBox();
             this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingNavigator)).BeginInit();
-            this.sektor_skladistaBindingNavigator.SuspendLayout();
+            this.knjiga_has_Sektor_skladistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.knjiga_has_Sektor_skladistaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_Sektor_skladistaTableAdapter();
+            this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
+            this.knjigaidKnjigaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumzaprimanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idZaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSektorSkladista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasSektorSkladista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_Sektor_skladistaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKolicinaNaSektoru
@@ -100,33 +92,6 @@
             this.txtbxKolicinaNaSektoru.TabIndex = 7;
             this.txtbxKolicinaNaSektoru.TabStop = false;
             // 
-            // sektor_skladistaBindingNavigator
-            // 
-            this.sektor_skladistaBindingNavigator.AddNewItem = null;
-            this.sektor_skladistaBindingNavigator.BindingSource = this.sektor_skladistaBindingSource;
-            this.sektor_skladistaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.sektor_skladistaBindingNavigator.DeleteItem = null;
-            this.sektor_skladistaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.sektor_skladistaBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.sektor_skladistaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.sektor_skladistaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.sektor_skladistaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.sektor_skladistaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.sektor_skladistaBindingNavigator.Name = "sektor_skladistaBindingNavigator";
-            this.sektor_skladistaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sektor_skladistaBindingNavigator.Size = new System.Drawing.Size(503, 25);
-            this.sektor_skladistaBindingNavigator.TabIndex = 12;
-            this.sektor_skladistaBindingNavigator.Text = "bindingNavigator1";
-            // 
             // sektor_skladistaBindingSource
             // 
             this.sektor_skladistaBindingSource.DataMember = "Sektor_skladista";
@@ -136,73 +101,6 @@
             // 
             this.gizmoDBDataSet.DataSetName = "GizmoDBDataSet";
             this.gizmoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // dgvSektorSkladista
             // 
@@ -252,69 +150,24 @@
             this.dgvKnjigaHasSektorSkladista.AutoGenerateColumns = false;
             this.dgvKnjigaHasSektorSkladista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKnjigaHasSektorSkladista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.knjigaidKnjigaDataGridViewTextBoxColumn,
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn,
+            this.kolicinaDataGridViewTextBoxColumn,
+            this.datumzaprimanjaDataGridViewTextBoxColumn,
+            this.idZaposlenikDataGridViewTextBoxColumn});
             this.dgvKnjigaHasSektorSkladista.DataSource = this.knjiga_has_Sektor_skladistaBindingSource;
-            this.dgvKnjigaHasSektorSkladista.Location = new System.Drawing.Point(84, 331);
+            this.dgvKnjigaHasSektorSkladista.Location = new System.Drawing.Point(27, 331);
             this.dgvKnjigaHasSektorSkladista.MultiSelect = false;
             this.dgvKnjigaHasSektorSkladista.Name = "dgvKnjigaHasSektorSkladista";
             this.dgvKnjigaHasSektorSkladista.ReadOnly = true;
             this.dgvKnjigaHasSektorSkladista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKnjigaHasSektorSkladista.Size = new System.Drawing.Size(360, 220);
+            this.dgvKnjigaHasSektorSkladista.Size = new System.Drawing.Size(464, 220);
             this.dgvKnjigaHasSektorSkladista.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Sektor_skladista_idSektor_skladista";
-            this.dataGridViewTextBoxColumn4.FillWeight = 115F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Sektor skladišta";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            this.dataGridViewTextBoxColumn4.Width = 115;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Knjiga_idKnjiga";
-            this.dataGridViewTextBoxColumn3.DataSource = this.knjigaBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Naziv";
-            this.dataGridViewTextBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Knjiga";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "idKnjiga";
             // 
             // knjigaBindingSource
             // 
             this.knjigaBindingSource.DataMember = "Knjiga";
             this.knjigaBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Kolicina";
-            this.dataGridViewTextBoxColumn5.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Količina";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Datum_zaprimanja";
-            this.dataGridViewTextBoxColumn6.FillWeight = 115F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Datum zaprimanja";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 115;
-            // 
-            // knjiga_has_Sektor_skladistaBindingSource
-            // 
-            this.knjiga_has_Sektor_skladistaBindingSource.DataMember = "Knjiga_has_Sektor_skladista";
-            this.knjiga_has_Sektor_skladistaBindingSource.DataSource = this.gizmoDBDataSet;
             // 
             // sektor_skladistaTableAdapter
             // 
@@ -328,7 +181,6 @@
             this.tableAdapterManager.KategorijaTableAdapter = null;
             this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
             this.tableAdapterManager.Knjiga_has_KupciTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = this.knjiga_has_Sektor_skladistaTableAdapter;
             this.tableAdapterManager.KnjigaTableAdapter = null;
             this.tableAdapterManager.KupciTableAdapter = null;
             this.tableAdapterManager.Odjel_has_PogledTableAdapter = null;
@@ -337,10 +189,6 @@
             this.tableAdapterManager.Sektor_skladistaTableAdapter = this.sektor_skladistaTableAdapter;
             this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ZaposlenikTableAdapter = null;
-            // 
-            // knjiga_has_Sektor_skladistaTableAdapter
-            // 
-            this.knjiga_has_Sektor_skladistaTableAdapter.ClearBeforeFill = true;
             // 
             // txtbxKapacitetSektora
             // 
@@ -377,6 +225,73 @@
             // 
             this.knjigaTableAdapter.ClearBeforeFill = true;
             // 
+            // knjiga_has_Sektor_skladistaBindingSource
+            // 
+            this.knjiga_has_Sektor_skladistaBindingSource.DataMember = "Knjiga_has_Sektor_skladista";
+            this.knjiga_has_Sektor_skladistaBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // knjiga_has_Sektor_skladistaTableAdapter
+            // 
+            this.knjiga_has_Sektor_skladistaTableAdapter.ClearBeforeFill = true;
+            // 
+            // zaposlenikBindingSource
+            // 
+            this.zaposlenikBindingSource.DataMember = "Zaposlenik";
+            this.zaposlenikBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // zaposlenikTableAdapter
+            // 
+            this.zaposlenikTableAdapter.ClearBeforeFill = true;
+            // 
+            // knjigaidKnjigaDataGridViewTextBoxColumn
+            // 
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DataPropertyName = "Knjiga_idKnjiga";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DataSource = this.knjigaBindingSource;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DisplayMember = "Naziv";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.HeaderText = "Knjiga";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.Name = "knjigaidKnjigaDataGridViewTextBoxColumn";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.ValueMember = "idKnjiga";
+            // 
+            // sektorskladistaidSektorskladistaDataGridViewTextBoxColumn
+            // 
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn.DataPropertyName = "Sektor_skladista_idSektor_skladista";
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn.HeaderText = "Sektor_skladista_idSektor_skladista";
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn.Name = "sektorskladistaidSektorskladistaDataGridViewTextBoxColumn";
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sektorskladistaidSektorskladistaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "Kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kolicinaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // datumzaprimanjaDataGridViewTextBoxColumn
+            // 
+            this.datumzaprimanjaDataGridViewTextBoxColumn.DataPropertyName = "Datum_zaprimanja";
+            this.datumzaprimanjaDataGridViewTextBoxColumn.HeaderText = "Datum zaprimanja";
+            this.datumzaprimanjaDataGridViewTextBoxColumn.Name = "datumzaprimanjaDataGridViewTextBoxColumn";
+            this.datumzaprimanjaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idZaposlenikDataGridViewTextBoxColumn
+            // 
+            this.idZaposlenikDataGridViewTextBoxColumn.DataPropertyName = "idZaposlenik";
+            this.idZaposlenikDataGridViewTextBoxColumn.DataSource = this.zaposlenikBindingSource;
+            this.idZaposlenikDataGridViewTextBoxColumn.DisplayMember = "Korisnicko_ime";
+            this.idZaposlenikDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idZaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
+            this.idZaposlenikDataGridViewTextBoxColumn.Name = "idZaposlenikDataGridViewTextBoxColumn";
+            this.idZaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idZaposlenikDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idZaposlenikDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idZaposlenikDataGridViewTextBoxColumn.ValueMember = "idZaposlenik";
+            // 
             // frmSkladistePretrazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +302,6 @@
             this.Controls.Add(this.txtbxKapacitetSektora);
             this.Controls.Add(this.dgvKnjigaHasSektorSkladista);
             this.Controls.Add(this.dgvSektorSkladista);
-            this.Controls.Add(this.sektor_skladistaBindingNavigator);
             this.Controls.Add(this.lblKolicinaNaSektoru);
             this.Controls.Add(this.lblKapacitetSektora);
             this.Controls.Add(this.txtbxKolicinaNaSektoru);
@@ -396,15 +310,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pretraži skladište";
             this.Load += new System.EventHandler(this.frmSkladistePretrazi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingNavigator)).EndInit();
-            this.sektor_skladistaBindingNavigator.ResumeLayout(false);
-            this.sektor_skladistaBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sektor_skladistaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSektorSkladista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasSektorSkladista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_Sektor_skladistaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,19 +331,7 @@
         private System.Windows.Forms.BindingSource sektor_skladistaBindingSource;
         private GizmoDBDataSetTableAdapters.Sektor_skladistaTableAdapter sektor_skladistaTableAdapter;
         private GizmoDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator sektor_skladistaBindingNavigator;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView dgvSektorSkladista;
-        private GizmoDBDataSetTableAdapters.Knjiga_has_Sektor_skladistaTableAdapter knjiga_has_Sektor_skladistaTableAdapter;
-        private System.Windows.Forms.BindingSource knjiga_has_Sektor_skladistaBindingSource;
         private System.Windows.Forms.DataGridView dgvKnjigaHasSektorSkladista;
         private System.Windows.Forms.TextBox txtbxKapacitetSektora;
         private System.Windows.Forms.Label lblSlobodno;
@@ -440,10 +340,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.BindingSource knjigaBindingSource;
         private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.BindingSource knjiga_has_Sektor_skladistaBindingSource;
+        private GizmoDBDataSetTableAdapters.Knjiga_has_Sektor_skladistaTableAdapter knjiga_has_Sektor_skladistaTableAdapter;
+        private System.Windows.Forms.BindingSource zaposlenikBindingSource;
+        private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter;
+        private System.Windows.Forms.DataGridViewComboBoxColumn knjigaidKnjigaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sektorskladistaidSektorskladistaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumzaprimanjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idZaposlenikDataGridViewTextBoxColumn;
 
     }
 }

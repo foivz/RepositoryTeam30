@@ -23,6 +23,10 @@ namespace GizmoApp.Podforme.Skladiste
 
         private void frmSkladistePretrazi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
+            this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Knjiga_has_Sektor_skladista' table. You can move, or remove it, as needed.
+            this.knjiga_has_Sektor_skladistaTableAdapter.Fill(this.gizmoDBDataSet.Knjiga_has_Sektor_skladista);
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Knjiga' table. You can move, or remove it, as needed.
             this.knjigaTableAdapter.Fill(this.gizmoDBDataSet.Knjiga);
             this.sektor_skladistaTableAdapter.Fill(this.gizmoDBDataSet.Sektor_skladista);

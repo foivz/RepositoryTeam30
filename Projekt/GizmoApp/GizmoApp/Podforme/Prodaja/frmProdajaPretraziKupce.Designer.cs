@@ -43,25 +43,27 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvKupci = new System.Windows.Forms.DataGridView();
+            this.dgvKnjigaHasKupci = new System.Windows.Forms.DataGridView();
+            this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KupciTableAdapter();
+            this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
+            this.knjigahasDobavljaciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
+            this.knjiga_has_KupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.knjiga_has_KupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter();
+            this.zaposlenikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zaposlenikTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter();
+            this.knjigaidKnjigaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.kupciidKupciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumprodajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idZaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvKnjigaHasKupci = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.knjigaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.knjiga_has_KupciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KupciTableAdapter();
-            this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
-            this.knjiga_has_KupciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter();
-            this.knjigahasDobavljaciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.knjiga_has_DobavljaciTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.Knjiga_has_DobavljaciTableAdapter();
-            this.knjigaTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.KnjigaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.kupciBindingNavigator)).BeginInit();
             this.kupciBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kupciBindingSource)).BeginInit();
@@ -69,8 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasKupci)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigahasDobavljaciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kupciBindingNavigator
@@ -202,10 +205,132 @@
             this.dgvKupci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKupci_CellDoubleClick);
             this.dgvKupci.SelectionChanged += new System.EventHandler(this.dvgKupci_SelectionChanged);
             // 
+            // dgvKnjigaHasKupci
+            // 
+            this.dgvKnjigaHasKupci.AllowUserToAddRows = false;
+            this.dgvKnjigaHasKupci.AllowUserToDeleteRows = false;
+            this.dgvKnjigaHasKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvKnjigaHasKupci.AutoGenerateColumns = false;
+            this.dgvKnjigaHasKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKnjigaHasKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.knjigaidKnjigaDataGridViewTextBoxColumn,
+            this.kupciidKupciDataGridViewTextBoxColumn,
+            this.kolicinaDataGridViewTextBoxColumn,
+            this.datumprodajeDataGridViewTextBoxColumn,
+            this.idZaposlenikDataGridViewTextBoxColumn});
+            this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
+            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(193, 279);
+            this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
+            this.dgvKnjigaHasKupci.ReadOnly = true;
+            this.dgvKnjigaHasKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(499, 220);
+            this.dgvKnjigaHasKupci.TabIndex = 2;
+            // 
+            // knjigaBindingSource
+            // 
+            this.knjigaBindingSource.DataMember = "Knjiga";
+            this.knjigaBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // kupciTableAdapter
+            // 
+            this.kupciTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Kategorija_has_KnjigaTableAdapter = null;
+            this.tableAdapterManager.KategorijaTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
+            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.KnjigaTableAdapter = null;
+            this.tableAdapterManager.KupciTableAdapter = this.kupciTableAdapter;
+            this.tableAdapterManager.Odjel_has_PogledTableAdapter = null;
+            this.tableAdapterManager.OdjelTableAdapter = null;
+            this.tableAdapterManager.PogledTableAdapter = null;
+            this.tableAdapterManager.Sektor_skladistaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ZaposlenikTableAdapter = null;
+            // 
+            // knjigahasDobavljaciBindingSource
+            // 
+            this.knjigahasDobavljaciBindingSource.DataMember = "Knjiga_has_Dobavljaci";
+            this.knjigahasDobavljaciBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // knjigaTableAdapter
+            // 
+            this.knjigaTableAdapter.ClearBeforeFill = true;
+            // 
+            // knjiga_has_KupciBindingSource
+            // 
+            this.knjiga_has_KupciBindingSource.DataMember = "Knjiga_has_Kupci";
+            this.knjiga_has_KupciBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // knjiga_has_KupciTableAdapter
+            // 
+            this.knjiga_has_KupciTableAdapter.ClearBeforeFill = true;
+            // 
+            // zaposlenikBindingSource
+            // 
+            this.zaposlenikBindingSource.DataMember = "Zaposlenik";
+            this.zaposlenikBindingSource.DataSource = this.gizmoDBDataSet;
+            // 
+            // zaposlenikTableAdapter
+            // 
+            this.zaposlenikTableAdapter.ClearBeforeFill = true;
+            // 
+            // knjigaidKnjigaDataGridViewTextBoxColumn
+            // 
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DataPropertyName = "Knjiga_idKnjiga";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DataSource = this.knjigaBindingSource;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DisplayMember = "Naziv";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.HeaderText = "Knjiga";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.Name = "knjigaidKnjigaDataGridViewTextBoxColumn";
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.knjigaidKnjigaDataGridViewTextBoxColumn.ValueMember = "idKnjiga";
+            // 
+            // kupciidKupciDataGridViewTextBoxColumn
+            // 
+            this.kupciidKupciDataGridViewTextBoxColumn.DataPropertyName = "Kupci_idKupci";
+            this.kupciidKupciDataGridViewTextBoxColumn.HeaderText = "Kupci_idKupci";
+            this.kupciidKupciDataGridViewTextBoxColumn.Name = "kupciidKupciDataGridViewTextBoxColumn";
+            this.kupciidKupciDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kupciidKupciDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "Kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datumprodajeDataGridViewTextBoxColumn
+            // 
+            this.datumprodajeDataGridViewTextBoxColumn.DataPropertyName = "Datum_prodaje";
+            this.datumprodajeDataGridViewTextBoxColumn.HeaderText = "Datum prodaje";
+            this.datumprodajeDataGridViewTextBoxColumn.Name = "datumprodajeDataGridViewTextBoxColumn";
+            this.datumprodajeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idZaposlenikDataGridViewTextBoxColumn
+            // 
+            this.idZaposlenikDataGridViewTextBoxColumn.DataPropertyName = "idZaposlenik";
+            this.idZaposlenikDataGridViewTextBoxColumn.DataSource = this.zaposlenikBindingSource;
+            this.idZaposlenikDataGridViewTextBoxColumn.DisplayMember = "Korisnicko_ime";
+            this.idZaposlenikDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idZaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
+            this.idZaposlenikDataGridViewTextBoxColumn.Name = "idZaposlenikDataGridViewTextBoxColumn";
+            this.idZaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idZaposlenikDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idZaposlenikDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idZaposlenikDataGridViewTextBoxColumn.ValueMember = "idZaposlenik";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idKupci";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID kupca";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Šifra";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -244,111 +369,6 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dgvKnjigaHasKupci
-            // 
-            this.dgvKnjigaHasKupci.AllowUserToAddRows = false;
-            this.dgvKnjigaHasKupci.AllowUserToDeleteRows = false;
-            this.dgvKnjigaHasKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvKnjigaHasKupci.AutoGenerateColumns = false;
-            this.dgvKnjigaHasKupci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKnjigaHasKupci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvKnjigaHasKupci.DataSource = this.knjiga_has_KupciBindingSource;
-            this.dgvKnjigaHasKupci.Location = new System.Drawing.Point(335, 279);
-            this.dgvKnjigaHasKupci.Name = "dgvKnjigaHasKupci";
-            this.dgvKnjigaHasKupci.ReadOnly = true;
-            this.dgvKnjigaHasKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKnjigaHasKupci.Size = new System.Drawing.Size(357, 220);
-            this.dgvKnjigaHasKupci.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Kupci_idKupci";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ID kupca";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Knjiga_idKnjiga";
-            this.dataGridViewTextBoxColumn7.DataSource = this.knjigaBindingSource;
-            this.dataGridViewTextBoxColumn7.DisplayMember = "Naziv";
-            this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Knjiga";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn7.ValueMember = "idKnjiga";
-            // 
-            // knjigaBindingSource
-            // 
-            this.knjigaBindingSource.DataMember = "Knjiga";
-            this.knjigaBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Kolicina";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Kolicina";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Datum_prodaje";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Datum prodaje";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // knjiga_has_KupciBindingSource
-            // 
-            this.knjiga_has_KupciBindingSource.DataMember = "Knjiga_has_Kupci";
-            this.knjiga_has_KupciBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // kupciTableAdapter
-            // 
-            this.kupciTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DobavljaciTableAdapter = null;
-            this.tableAdapterManager.Kategorija_has_KnjigaTableAdapter = null;
-            this.tableAdapterManager.KategorijaTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_DobavljaciTableAdapter = null;
-            this.tableAdapterManager.Knjiga_has_KupciTableAdapter = this.knjiga_has_KupciTableAdapter;
-            this.tableAdapterManager.Knjiga_has_Sektor_skladistaTableAdapter = null;
-            this.tableAdapterManager.KnjigaTableAdapter = null;
-            this.tableAdapterManager.KupciTableAdapter = this.kupciTableAdapter;
-            this.tableAdapterManager.Odjel_has_PogledTableAdapter = null;
-            this.tableAdapterManager.OdjelTableAdapter = null;
-            this.tableAdapterManager.PogledTableAdapter = null;
-            this.tableAdapterManager.Sektor_skladistaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ZaposlenikTableAdapter = null;
-            // 
-            // knjiga_has_KupciTableAdapter
-            // 
-            this.knjiga_has_KupciTableAdapter.ClearBeforeFill = true;
-            // 
-            // knjigahasDobavljaciBindingSource
-            // 
-            this.knjigahasDobavljaciBindingSource.DataMember = "Knjiga_has_Dobavljaci";
-            this.knjigahasDobavljaciBindingSource.DataSource = this.gizmoDBDataSet;
-            // 
-            // knjiga_has_DobavljaciTableAdapter
-            // 
-            this.knjiga_has_DobavljaciTableAdapter.ClearBeforeFill = true;
-            // 
-            // knjigaTableAdapter
-            // 
-            this.knjigaTableAdapter.ClearBeforeFill = true;
-            // 
             // frmProdajaPretraziKupce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,8 +391,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjigaHasKupci)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knjigahasDobavljaciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knjiga_has_KupciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,24 +415,26 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter knjiga_has_KupciTableAdapter;
         private System.Windows.Forms.DataGridView dgvKupci;
-        private System.Windows.Forms.BindingSource knjiga_has_KupciBindingSource;
         private System.Windows.Forms.DataGridView dgvKnjigaHasKupci;
+        private System.Windows.Forms.BindingSource knjigahasDobavljaciBindingSource;
+        private System.Windows.Forms.BindingSource knjigaBindingSource;
+        private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
+        private System.Windows.Forms.BindingSource knjiga_has_KupciBindingSource;
+        private GizmoDBDataSetTableAdapters.Knjiga_has_KupciTableAdapter knjiga_has_KupciTableAdapter;
+        private System.Windows.Forms.BindingSource zaposlenikBindingSource;
+        private GizmoDBDataSetTableAdapters.ZaposlenikTableAdapter zaposlenikTableAdapter;
+        private System.Windows.Forms.DataGridViewComboBoxColumn knjigaidKnjigaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kupciidKupciDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumprodajeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idZaposlenikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.BindingSource knjigahasDobavljaciBindingSource;
-        private GizmoDBDataSetTableAdapters.Knjiga_has_DobavljaciTableAdapter knjiga_has_DobavljaciTableAdapter;
-        private System.Windows.Forms.BindingSource knjigaBindingSource;
-        private GizmoDBDataSetTableAdapters.KnjigaTableAdapter knjigaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
 
 
     }

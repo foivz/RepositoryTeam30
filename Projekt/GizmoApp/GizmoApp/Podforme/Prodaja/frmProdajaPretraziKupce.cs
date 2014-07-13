@@ -25,10 +25,12 @@ namespace GizmoApp.Podforme.Prodaja
 
         private void frmProdajaPretraziKupce_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Zaposlenik' table. You can move, or remove it, as needed.
+            this.zaposlenikTableAdapter.Fill(this.gizmoDBDataSet.Zaposlenik);
+            // TODO: This line of code loads data into the 'gizmoDBDataSet.Knjiga_has_Kupci' table. You can move, or remove it, as needed.
+            this.knjiga_has_KupciTableAdapter.Fill(this.gizmoDBDataSet.Knjiga_has_Kupci);
             // TODO: This line of code loads data into the 'gizmoDBDataSet.Knjiga' table. You can move, or remove it, as needed.
             this.knjigaTableAdapter.Fill(this.gizmoDBDataSet.Knjiga);
-            // TODO: This line of code loads data into the 'gizmoDBDataSet.Knjiga_has_Dobavljaci' table. You can move, or remove it, as needed.
-            this.knjiga_has_DobavljaciTableAdapter.Fill(this.gizmoDBDataSet.Knjiga_has_Dobavljaci);
             this.kupciTableAdapter.Fill(this.gizmoDBDataSet.Kupci);
         }
 

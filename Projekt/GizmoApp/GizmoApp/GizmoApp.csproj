@@ -258,7 +258,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="GizmoDBDataSet3.xsc">
       <DependentUpon>GizmoDBDataSet3.xsd</DependentUpon>
     </None>

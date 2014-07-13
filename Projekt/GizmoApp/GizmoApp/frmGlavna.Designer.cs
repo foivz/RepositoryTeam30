@@ -55,6 +55,7 @@
             this.miPomocKontakt = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocOGizmoApp = new System.Windows.Forms.ToolStripMenuItem();
             this.odjel_has_PogledTableAdapter1 = new GizmoApp.GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter();
+            this.miPomocKorisnickaDokumentacija = new System.Windows.Forms.ToolStripMenuItem();
             this.msIzbornik.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,7 +240,8 @@
             this.miPomoc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miPomocFAQ,
             this.miPomocKontakt,
-            this.miPomocOGizmoApp});
+            this.miPomocOGizmoApp,
+            this.miPomocKorisnickaDokumentacija});
             this.miPomoc.Name = "miPomoc";
             this.miPomoc.Size = new System.Drawing.Size(57, 20);
             this.miPomoc.Text = "Pomoć";
@@ -247,27 +249,34 @@
             // miPomocFAQ
             // 
             this.miPomocFAQ.Name = "miPomocFAQ";
-            this.miPomocFAQ.Size = new System.Drawing.Size(145, 22);
+            this.miPomocFAQ.Size = new System.Drawing.Size(210, 22);
             this.miPomocFAQ.Text = "FAQ";
             this.miPomocFAQ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocFAQ_MouseUp);
             // 
             // miPomocKontakt
             // 
             this.miPomocKontakt.Name = "miPomocKontakt";
-            this.miPomocKontakt.Size = new System.Drawing.Size(145, 22);
+            this.miPomocKontakt.Size = new System.Drawing.Size(210, 22);
             this.miPomocKontakt.Text = "Kontakt";
             this.miPomocKontakt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocKontakt_MouseUp);
             // 
             // miPomocOGizmoApp
             // 
             this.miPomocOGizmoApp.Name = "miPomocOGizmoApp";
-            this.miPomocOGizmoApp.Size = new System.Drawing.Size(145, 22);
+            this.miPomocOGizmoApp.Size = new System.Drawing.Size(210, 22);
             this.miPomocOGizmoApp.Text = "O Gizmo App";
             this.miPomocOGizmoApp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocOGizmoApp_MouseUp);
             // 
             // odjel_has_PogledTableAdapter1
             // 
             this.odjel_has_PogledTableAdapter1.ClearBeforeFill = true;
+            // 
+            // miPomocKorisnickaDokumentacija
+            // 
+            this.miPomocKorisnickaDokumentacija.Name = "miPomocKorisnickaDokumentacija";
+            this.miPomocKorisnickaDokumentacija.Size = new System.Drawing.Size(210, 22);
+            this.miPomocKorisnickaDokumentacija.Text = "Korisnička dokumentacija";
+            this.miPomocKorisnickaDokumentacija.MouseUp += new System.Windows.Forms.MouseEventHandler(this.miPomocKorisnickaDokumentacija_MouseUp);
             // 
             // frmGlavna
             // 
@@ -287,6 +296,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGlavna_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmGlavna_MdiChildActivate);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.frmGlavna_HelpRequested);
             this.msIzbornik.ResumeLayout(false);
             this.msIzbornik.PerformLayout();
             this.ResumeLayout(false);
@@ -322,5 +332,6 @@
         private System.Windows.Forms.ToolStripMenuItem miPomocFAQ;
         private System.Windows.Forms.ToolStripMenuItem miPomocKontakt;
         private GizmoDBDataSetTableAdapters.Odjel_has_PogledTableAdapter odjel_has_PogledTableAdapter1;
+        private System.Windows.Forms.ToolStripMenuItem miPomocKorisnickaDokumentacija;
     }
 }
