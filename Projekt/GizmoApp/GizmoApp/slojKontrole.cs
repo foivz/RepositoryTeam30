@@ -148,6 +148,7 @@ namespace GizmoApp
             if (txt[0] >= 'A' && txt[0] <= 'Z') return true;
             else return false;
         }
+
         public static void postaviKrivo(Greske.ErrorCodes greska)
         {
             ispravno = false;

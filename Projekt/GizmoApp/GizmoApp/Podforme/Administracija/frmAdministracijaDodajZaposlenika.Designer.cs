@@ -55,6 +55,11 @@
             this.tableAdapterManager = new GizmoApp.GizmoDBDataSetTableAdapters.TableAdapterManager();
             this.odjelTableAdapter = new GizmoApp.GizmoDBDataSetTableAdapters.OdjelTableAdapter();
             this.txtOdjel = new System.Windows.Forms.TextBox();
+            this.gbxOdjeli = new System.Windows.Forms.GroupBox();
+            this.lblOdjel1 = new System.Windows.Forms.Label();
+            this.lblOdjel2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             lblEmail = new System.Windows.Forms.Label();
             lblTelefon = new System.Windows.Forms.Label();
             lblKorisnickoIme = new System.Windows.Forms.Label();
@@ -66,6 +71,7 @@
             odjel_idOdjelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).BeginInit();
+            this.gbxOdjeli.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -286,11 +292,61 @@
             this.txtOdjel.Size = new System.Drawing.Size(100, 20);
             this.txtOdjel.TabIndex = 19;
             // 
+            // gbxOdjeli
+            // 
+            this.gbxOdjeli.Controls.Add(this.label3);
+            this.gbxOdjeli.Controls.Add(this.label2);
+            this.gbxOdjeli.Controls.Add(this.lblOdjel2);
+            this.gbxOdjeli.Controls.Add(this.lblOdjel1);
+            this.gbxOdjeli.Location = new System.Drawing.Point(577, 159);
+            this.gbxOdjeli.Name = "gbxOdjeli";
+            this.gbxOdjeli.Size = new System.Drawing.Size(134, 112);
+            this.gbxOdjeli.TabIndex = 20;
+            this.gbxOdjeli.TabStop = false;
+            this.gbxOdjeli.Text = "Odjeli";
+            // 
+            // lblOdjel1
+            // 
+            this.lblOdjel1.AutoSize = true;
+            this.lblOdjel1.Location = new System.Drawing.Point(6, 19);
+            this.lblOdjel1.Name = "lblOdjel1";
+            this.lblOdjel1.Size = new System.Drawing.Size(104, 13);
+            this.lblOdjel1.TabIndex = 0;
+            this.lblOdjel1.Text = "1 - Odjel skladištenja";
+            // 
+            // lblOdjel2
+            // 
+            this.lblOdjel2.AutoSize = true;
+            this.lblOdjel2.Location = new System.Drawing.Point(6, 44);
+            this.lblOdjel2.Name = "lblOdjel2";
+            this.lblOdjel2.Size = new System.Drawing.Size(85, 13);
+            this.lblOdjel2.TabIndex = 1;
+            this.lblOdjel2.Text = "2 - Odjel nabave";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "3 - Odjel prodaje";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "4 - Odjel administracije";
+            // 
             // frmAdministracijaDodajZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 283);
+            this.ClientSize = new System.Drawing.Size(723, 283);
+            this.Controls.Add(this.gbxOdjeli);
             this.Controls.Add(odjel_idOdjelLabel);
             this.Controls.Add(this.txtOdjel);
             this.Controls.Add(this.txtbxTelefon);
@@ -318,6 +374,8 @@
             this.Load += new System.EventHandler(this.frmAdministracijaDodajZaposlenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gizmoDBDataSet)).EndInit();
+            this.gbxOdjeli.ResumeLayout(false);
+            this.gbxOdjeli.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +399,11 @@
         private System.Windows.Forms.TextBox txtbxOIB;
         private System.Windows.Forms.TextBox txtbxAdresa;
         private System.Windows.Forms.TextBox txtOdjel;
+        private System.Windows.Forms.GroupBox gbxOdjeli;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOdjel2;
+        private System.Windows.Forms.Label lblOdjel1;
 
     }
 }

@@ -29,11 +29,7 @@ namespace GizmoApp
             Program.korime = txtbxKorisnickoIme.Text.ToString();
             string lozinka = txtbxLozinka.Text.ToString();
 
-            //MessageBox.Show("Korime: " + korime + "\n" + "Lozinka: " + lozinka);
-
-            //provjera login podataka, zatim close
-
-            
+          
             string result = this.zaposlenikTableAdapter1.Login(Program.korime, lozinka).ToString();
 
             if (result == "")

@@ -15,6 +15,9 @@ namespace GizmoApp.Podforme.Skladiste
     /// </summary>
     public partial class frmSkladisteDodajSektor : Form
     {
+        /// <summary>
+        /// Konstrukt za formu
+        /// </summary>
         public frmSkladisteDodajSektor()
         {
             InitializeComponent();

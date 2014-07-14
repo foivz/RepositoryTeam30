@@ -743,6 +743,11 @@
             Forma za dodavanje novog sektora skladišta određenog kapaciteta.
             </summary>
         </member>
+        <member name="M:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.#ctor">
+            <summary>
+            Konstrukt za formu
+            </summary>
+        </member>
         <member name="M:GizmoApp.Podforme.Skladiste.frmSkladisteDodajSektor.createNewSektor">
             <summary>
             Provjerava unos podataka i služi za unos novog sektora skladišta.

@@ -14,6 +14,7 @@ namespace GizmoApp
     class slojBaze
     {
         public static bool uspjesno;
+
         public static void osvjezi(GizmoDBDataSet.ZaposlenikDataTable tablica, ZaposlenikTableAdapter adapter)
         {
             adapter.Fill(tablica);

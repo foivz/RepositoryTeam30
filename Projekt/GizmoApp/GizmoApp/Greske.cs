@@ -9,6 +9,7 @@ namespace GizmoApp
     class Greske
     {
         public static ErrorCodes kod = 0;
+
         public enum ErrorCodes
         {
             greska1 = 1 << 0,
@@ -25,6 +26,7 @@ namespace GizmoApp
             greska12 = 1 << 11,
             greska13 = 1 << 12
         }
+
         public static string porukaGreske(ErrorCodes kod)
         {
            string poruka = "Errors:\n\n";
